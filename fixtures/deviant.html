@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Deviant fixture</title>
+</head>
+<body>
+  <!--
+    Button/primary: every property deliberately off-spec against
+    fixtures/token-spec.json, with magnitudes chosen to be hand-checkable:
+      - background-color #33CC66 / color #00AA44: off-brand greens, far in
+        Delta-E from every spec color (not a near-miss on any token).
+      - padding 10px 20px: 10 is 2px off the nearest scale rung (8),
+        20 is 4px off the nearest rung (16).
+      - border-radius 6px: 2px off the nearest rung (4).
+      - font-size 18px: 2px off the nearest rung (16), which saturates
+        normalized deviation to 1.0 given this scale's 2px min gap.
+      - font-family 'Comic Sans MS': not in the allowed family list.
+      - font-weight 600: not an allowed weight (nearest is 500, distance 100).
+  -->
+  <button data-component="Button/primary" data-bde-state="default"
+    style="background-color:#33CC66;color:#00AA44;padding:10px 20px;border-radius:6px;font-size:18px;font-family:'Comic Sans MS', cursive;font-weight:600;margin:0;border:none;">
+    Primary
+  </button>
+
+  <!-- Left unchanged from the compliant fixture: proves the aggregator scores this component near 0 even on an otherwise-deviant page. -->
+  <div data-component="Card" data-bde-state="default"
+    style="background-color:#FFFFFF;color:#111111;padding:24px;border-radius:16px;font-size:14px;font-family:Helvetica, Arial, sans-serif;font-weight:400;margin:0;">
+    Card content
+  </div>
+
+  <!-- Also left unchanged: dark-theme resolution should still hold amid Button/primary's drift. -->
+  <div data-component="Badge/dark" data-bde-state="default"
+    style="background-color:#1A1A1A;color:#7A9CFF;padding:4px;border-radius:4px;font-size:12px;font-family:Arial, sans-serif;font-weight:500;margin:0;">
+    Dark badge
+  </div>
+</body>
+</html>

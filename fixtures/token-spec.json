@@ -1,0 +1,20 @@
+{
+  "colors": {
+    "brand-primary": "#3366FF",
+    "brand-text": "#111111",
+    "surface": "#FFFFFF",
+    "danger": "#CC0000"
+  },
+  "themes": {
+    "dark": {
+      "brand-primary": "#7A9CFF",
+      "brand-text": "#F5F5F5",
+      "surface": "#1A1A1A"
+    }
+  },
+  "spacing": [4, 8, 16, 24, 32],
+  "radius": [4, 8, 16],
+  "fontSize": [12, 14, 16, 20, 24],
+  "fontFamily": ["Arial", "Helvetica", "sans-serif"],
+  "fontWeight": [400, 500, 700]
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Compliant fixture</title>
+</head>
+<body>
+  <!-- Every value below is drawn exactly from fixtures/token-spec.json. -->
+
+  <button data-component="Button/primary" data-bde-state="default"
+    style="background-color:#3366FF;color:#FFFFFF;padding:8px 16px;border-radius:8px;font-size:16px;font-family:Arial, sans-serif;font-weight:700;margin:0;border:none;">
+    Primary
+  </button>
+
+  <!-- Opacity variant of brand-primary: exercises the alpha edge case, should resolve back to colors.brand-primary with ~0 deviation. -->
+  <button data-component="Button/primary" data-bde-state="hover"
+    style="background-color:rgba(51,102,255,0.85);color:#FFFFFF;padding:8px 16px;border-radius:8px;font-size:16px;font-family:Arial, sans-serif;font-weight:700;margin:0;border:none;">
+    Primary Hover
+  </button>
+
+  <div data-component="Card" data-bde-state="default"
+    style="background-color:#FFFFFF;color:#111111;padding:24px;border-radius:16px;font-size:14px;font-family:Helvetica, Arial, sans-serif;font-weight:400;margin:0;">
+    Card content
+  </div>
+
+  <!-- Dark-theme variant: exercises theme resolution, should match themes.dark.* with ~0 deviation. -->
+  <div data-component="Badge/dark" data-bde-state="default"
+    style="background-color:#1A1A1A;color:#7A9CFF;padding:4px;border-radius:4px;font-size:12px;font-family:Arial, sans-serif;font-weight:500;margin:0;">
+    Dark badge
+  </div>
+</body>
+</html>
