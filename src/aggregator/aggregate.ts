@@ -10,7 +10,7 @@ export interface InstanceReport {
   component: string;
   instanceId: string;
   deviations: PropertyDeviation[];
-  /** 0 (fully compliant) - 100 (maximally deviant): mean of this instance's property deviations, scaled. */
+  /** 0 (fully compliant) - 100 (maximally deviant): mean across the color/spacing/typography/radius category means, not a flat per-property mean (see categoryWeightedScore). */
   score: number;
 }
 
@@ -61,6 +61,47 @@ export interface Offender {
 function mean(values: number[]): number {
   if (values.length === 0) return 0;
   return values.reduce((a, b) => a + b, 0) / values.length;
+}
+
+type Category = "color" | "spacing" | "typography" | "radius";
+
+function categoryOf(property: PropertyKind): Category {
+  switch (property) {
+    case "color":
+    case "background-color":
+    case "border-color":
+      return "color";
+    case "spacing":
+      return "spacing";
+    case "font-size":
+    case "font-family":
+    case "font-weight":
+      return "typography";
+    case "border-radius":
+      return "radius";
+  }
+}
+
+/**
+ * An instance's score is a mean *of category means*, not a flat mean over
+ * every pushed PropertyDeviation. Spacing alone contributes up to 8
+ * entries (four padding sides, four margin sides) versus 1-3 for every
+ * other category — a flat mean lets spacing's vote count drown out color
+ * and typography, which is what actually reads as "off-brand" visually.
+ * A category with zero applicable entries (e.g. no visible border) is
+ * left out of the average entirely rather than counted as compliant —
+ * "not applicable" isn't the same claim as "confirmed on-spec".
+ */
+function categoryWeightedScore(deviations: PropertyDeviation[]): number {
+  const byCategory = new Map<Category, number[]>();
+  for (const d of deviations) {
+    const category = categoryOf(d.property);
+    const list = byCategory.get(category) ?? [];
+    list.push(d.normalized);
+    byCategory.set(category, list);
+  }
+  const categoryMeans = Array.from(byCategory.values()).map(mean);
+  return mean(categoryMeans) * 100;
 }
 
 /**
@@ -116,7 +157,7 @@ export function scoreElement(el: ExtractedElement, spec: TokenSpec): InstanceRep
     }
   }
 
-  const score = mean(deviations.map((d) => d.normalized)) * 100;
+  const score = categoryWeightedScore(deviations);
   return { component: el.component, instanceId: el.instanceId, deviations, score };
 }
 

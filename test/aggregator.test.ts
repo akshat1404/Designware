@@ -80,6 +80,32 @@ describe("scoreElement non-px scale values", () => {
   });
 });
 
+describe("scoreElement category-weighted scoring", () => {
+  it("does not let 8 compliant spacing entries dilute a single badly-wrong color", () => {
+    // Spacing/radius/typography are all exactly on-spec (COMPLIANT_STYLES).
+    // Background and border are made not-applicable (transparent / no
+    // border) so the color category holds exactly one entry: the wrong
+    // `color` value. Under the old flat per-property mean, this one bad
+    // entry among ~13 total (1 color + 3 typography + 1 radius + 8
+    // spacing) would score under 8/100 — invisible next to a real
+    // deviation. Category weighting should put it far higher, since color
+    // is 1 of 4 equally-weighted categories, not 1 of 13 raw properties.
+    const result = scoreElement(
+      element({
+        color: "rgb(0, 200, 80)", // far from every spec color (blue/near-black/white)
+        backgroundColor: "rgba(0, 0, 0, 0)",
+        borderTopStyle: "none",
+      }),
+      spec
+    );
+
+    const colorDeviation = result.deviations.find((d) => d.property === "color");
+    expect(colorDeviation!.normalized).toBeGreaterThan(0.5);
+    expect(result.deviations.filter((d) => d.property === "background-color" || d.property === "border-color")).toHaveLength(0);
+    expect(result.score).toBeGreaterThan(20);
+  });
+});
+
 describe("scoreProduct breakdown and worst offenders", () => {
   const compliantPage: ExtractedPage = { page: "compliant-page", elements: [element()] };
   const deviantPage: ExtractedPage = {
