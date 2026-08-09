@@ -35,6 +35,8 @@ export interface ProductReport {
   breakdown: PropertyBreakdown[];
   /** every flagged deviation across the product, worst first, capped — enough context to manually verify each one. */
   worstOffenders: Offender[];
+  /** pages excluded from scoring because their capture looked incomplete/unstable, listed rather than silently blended in. */
+  unstablePages: string[];
 }
 
 export interface PropertyBreakdown {
@@ -179,12 +181,14 @@ function worstOffenders(pages: PageReport[], limit: number): Offender[] {
 }
 
 export function scoreProduct(product: string, extractedPages: ExtractedPage[], spec: TokenSpec, worstOffendersLimit = 50): ProductReport {
-  const pages = extractedPages.map((p) => scorePage(p, spec));
+  const unstablePages = extractedPages.filter((p) => p.unstable).map((p) => p.page);
+  const pages = extractedPages.filter((p) => !p.unstable).map((p) => scorePage(p, spec));
   return {
     product,
     pages,
     score: mean(pages.map((p) => p.score)),
     breakdown: propertyBreakdown(pages.flatMap((p) => flattenDeviations(p.components))),
     worstOffenders: worstOffenders(pages, worstOffendersLimit),
+    unstablePages,
   };
 }

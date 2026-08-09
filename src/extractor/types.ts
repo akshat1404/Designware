@@ -28,9 +28,13 @@ export interface ExtractedElement {
   component: string;
   instanceId: string;
   styles: CapturedStyles;
+  /** number of DOM nodes deduped into this one instance (real-page sampling only — e.g. "40 buttons, 1 unique style"). Undefined/1 for tag-based fixture extraction. */
+  count?: number;
 }
 
 export interface ExtractedPage {
   page: string;
   elements: ExtractedElement[];
+  /** true if this page's capture looks incomplete/unstable (e.g. too few elements found) — callers should exclude it from scoring rather than blend in bad data. */
+  unstable?: boolean;
 }
