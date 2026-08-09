@@ -6,6 +6,7 @@
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "report": "npm run build && node dist/src/cli.js",
+    "validate": "npm run build && node dist/src/validate.js",
     "test": "vitest run",
     "test:watch": "vitest"
   },
