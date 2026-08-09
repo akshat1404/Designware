@@ -1,6 +1,7 @@
 import { chromium, type Browser } from "playwright";
 import { pathToFileURL } from "node:url";
 import type { ExtractedElement, ExtractedPage } from "./types.js";
+import { disableAnimations } from "./stabilize.js";
 
 /**
  * Which nodes get measured is driven by markup, not CSS-selector guessing:
@@ -50,12 +51,12 @@ export interface ExtractOptions {
 async function extractFromPage(browser: Browser, url: string, pageId: string, opts: ExtractOptions): Promise<ExtractedPage> {
   const page = await browser.newPage();
   try {
-    if (opts.disableAnimations !== false) {
-      await page.addStyleTag({
-        content: `*, *::before, *::after { animation: none !important; transition: none !important; caret-color: transparent !important; }`,
-      });
-    }
     await page.goto(url, { waitUntil: "networkidle" });
+    // Applied after load, not before: a style tag added pre-navigation
+    // doesn't survive the goto that follows it.
+    if (opts.disableAnimations !== false) {
+      await disableAnimations(page);
+    }
     const elements = (await page.evaluate(EXTRACT_SCRIPT)) as ExtractedElement[];
     return { page: pageId, elements };
   } finally {
