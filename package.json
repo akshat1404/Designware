@@ -11,6 +11,9 @@
     "test:watch": "vitest"
   },
   "devDependencies": {
+    "@carbon/colors": "^11.55.0",
+    "@carbon/layout": "^11.56.0",
+    "@carbon/themes": "^11.78.0",
     "@playwright/test": "^1.47.0",
     "@primer/primitives": "^11.10.0",
     "@types/node": "^20.14.0",

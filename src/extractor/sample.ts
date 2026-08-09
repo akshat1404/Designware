@@ -127,11 +127,18 @@ async function samplePage(browser: Browser, url: string, pageId: string): Promis
       "DesignwareBot/0.1 (+brand deviation research; see repo README) Mozilla/5.0 (compatible)",
   });
   try {
-    await page.goto(url, { waitUntil: "networkidle", timeout: 30_000 });
+    // Heavy real sites (analytics beacons, chat widgets, personalization
+    // scripts) often never go fully network-idle — waiting on it here
+    // reliably timed out the whole capture on sites like ibm.com.
+    // domcontentloaded is enough to start sampling; stabilizePage's
+    // triggerLazyLoad already makes a best-effort, non-fatal networkidle
+    // attempt afterward.
+    await page.goto(url, { waitUntil: "domcontentloaded", timeout: 30_000 });
     await stabilizePage(page);
     const raw = (await page.evaluate(SAMPLE_SCRIPT)) as RawSample[];
     return { page: pageId, elements: dedupe(raw), unstable: raw.length < MIN_RAW_ELEMENTS };
-  } catch {
+  } catch (err) {
+    console.error(`  capture failed for ${url}: ${(err as Error).message}`);
     return { page: pageId, elements: [], unstable: true };
   } finally {
     await page.close();

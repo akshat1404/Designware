@@ -3,7 +3,7 @@ import { readFileSync, rmSync } from "node:fs";
 import path from "node:path";
 import { writeReport } from "../src/report/report.js";
 import type { CrawlTarget } from "../src/targets/types.js";
-import type { ProductReport } from "../src/aggregator/aggregate.js";
+import type { PageReport, ProductReport } from "../src/aggregator/aggregate.js";
 
 const TEST_KEY = "test-report-target";
 
@@ -18,9 +18,16 @@ const target: CrawlTarget = {
   urls: ["https://example.com/"],
 };
 
+const scoredPage: PageReport = {
+  page: "https://example.com/",
+  components: [],
+  score: 42.5,
+  breakdown: [],
+};
+
 const report: ProductReport = {
   product: "Test Target",
-  pages: [],
+  pages: [scoredPage],
   score: 42.5,
   breakdown: [{ property: "color", meanNormalized: 0.7, count: 3 }],
   worstOffenders: [
@@ -62,5 +69,14 @@ describe("writeReport", () => {
     const mdPath = path.resolve(process.cwd(), "reports", TEST_KEY, "summary.md");
     const summary = readFileSync(mdPath, "utf-8");
     expect(summary).toMatch(/treat that as a matcher bug/i);
+  });
+
+  it('reports "N/A" rather than a misleading 0.0/100 when every page was excluded as unstable', () => {
+    const allUnstable: ProductReport = { ...report, pages: [], unstablePages: target.urls };
+    writeReport(target, allUnstable);
+    const mdPath = path.resolve(process.cwd(), "reports", TEST_KEY, "summary.md");
+    const summary = readFileSync(mdPath, "utf-8");
+    expect(summary).toContain("N/A");
+    expect(summary).not.toContain("0.0 / 100");
   });
 });

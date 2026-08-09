@@ -9,7 +9,11 @@ function summaryMarkdown(target: CrawlTarget, report: ProductReport): string {
   const lines: string[] = [];
   lines.push(`# ${target.label} (${target.kind})`);
   lines.push("");
-  lines.push(`**Score: ${report.score.toFixed(1)} / 100** — 0 is fully on-spec, 100 is maximally deviant.`);
+  if (report.pages.length === 0) {
+    lines.push(`**Score: N/A — every crawled page was excluded as unstable, there is no data to score.**`);
+  } else {
+    lines.push(`**Score: ${report.score.toFixed(1)} / 100** — 0 is fully on-spec, 100 is maximally deviant.`);
+  }
   if (target.kind === "on-spec") {
     lines.push("");
     lines.push("_This is the company's own design-system site — it should score near zero. If it doesn't, treat that as a matcher bug, not real drift._");
