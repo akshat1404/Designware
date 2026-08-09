@@ -1,8 +1,8 @@
 import type { TokenSpec } from "../schema/tokenSpec.js";
 import type { ExtractedElement, ExtractedPage } from "../extractor/types.js";
-import type { PropertyDeviation } from "../matchers/types.js";
+import type { PropertyDeviation, PropertyKind } from "../matchers/types.js";
 import { matchColor } from "../matchers/color.js";
-import { matchScale } from "../matchers/scale.js";
+import { matchScale, parsePx } from "../matchers/scale.js";
 import { matchFontFamily, matchFontWeight } from "../matchers/font.js";
 import { parseCssColor } from "../color/convert.js";
 
@@ -24,12 +24,36 @@ export interface PageReport {
   page: string;
   components: ComponentReport[];
   score: number;
+  /** mean normalized deviation per property kind, for "which category is worst" reporting. */
+  breakdown: PropertyBreakdown[];
 }
 
 export interface ProductReport {
   product: string;
   pages: PageReport[];
   score: number;
+  breakdown: PropertyBreakdown[];
+  /** every flagged deviation across the product, worst first, capped — enough context to manually verify each one. */
+  worstOffenders: Offender[];
+}
+
+export interface PropertyBreakdown {
+  property: PropertyKind;
+  /** mean normalized deviation (0-1) across every instance of this property kind. */
+  meanNormalized: number;
+  count: number;
+}
+
+export interface Offender {
+  page: string;
+  component: string;
+  instanceId: string;
+  property: PropertyKind;
+  detail?: string;
+  rawValue: string | number;
+  nearestToken: string;
+  distance: number;
+  normalized: number;
 }
 
 function mean(values: number[]): number {
@@ -52,6 +76,13 @@ export function scoreElement(el: ExtractedElement, spec: TokenSpec): InstanceRep
   const bg = parseCssColor(s.backgroundColor);
   if (bg.a > 0) {
     deviations.push(matchColor(s.backgroundColor, spec, "background-color"));
+  }
+
+  // A 0-width or `border-style: none` border isn't rendered, so its color
+  // (often an unset browser default) isn't a real deviation to flag.
+  const borderColor = parseCssColor(s.borderTopColor);
+  if (s.borderTopStyle !== "none" && parsePx(s.borderTopWidth) > 0 && borderColor.a > 0) {
+    deviations.push({ ...matchColor(s.borderTopColor, spec, "border-color"), detail: "border-top-color" });
   }
 
   deviations.push({ ...matchScale(s.borderTopLeftRadius, spec.radius, "border-radius"), detail: "border-top-left-radius" });
@@ -81,6 +112,22 @@ function aggregateComponent(component: string, instances: InstanceReport[]): Com
   return { component, instances, score: mean(instances.map((i) => i.score)) };
 }
 
+function propertyBreakdown(deviations: PropertyDeviation[]): PropertyBreakdown[] {
+  const byProperty = new Map<PropertyKind, number[]>();
+  for (const d of deviations) {
+    const list = byProperty.get(d.property) ?? [];
+    list.push(d.normalized);
+    byProperty.set(d.property, list);
+  }
+  return Array.from(byProperty.entries())
+    .map(([property, values]) => ({ property, meanNormalized: mean(values), count: values.length }))
+    .sort((a, b) => b.meanNormalized - a.meanNormalized);
+}
+
+function flattenDeviations(components: ComponentReport[]): PropertyDeviation[] {
+  return components.flatMap((c) => c.instances.flatMap((i) => i.deviations));
+}
+
 export function scorePage(extracted: ExtractedPage, spec: TokenSpec): PageReport {
   const instances = extracted.elements.map((el) => scoreElement(el, spec));
 
@@ -92,10 +139,52 @@ export function scorePage(extracted: ExtractedPage, spec: TokenSpec): PageReport
   }
 
   const components = Array.from(byComponent.entries()).map(([name, list]) => aggregateComponent(name, list));
-  return { page: extracted.page, components, score: mean(components.map((c) => c.score)) };
+  return {
+    page: extracted.page,
+    components,
+    score: mean(components.map((c) => c.score)),
+    breakdown: propertyBreakdown(flattenDeviations(components)),
+  };
 }
 
-export function scoreProduct(product: string, extractedPages: ExtractedPage[], spec: TokenSpec): ProductReport {
+/**
+ * Flattens every deviation across every page/component/instance into a
+ * sorted "worst offenders" list — enough context (page, component,
+ * instance, property, raw value, nearest token) to manually pull up the
+ * flagged element and confirm it's a real deviation, not a false positive
+ * from an unhandled edge case.
+ */
+function worstOffenders(pages: PageReport[], limit: number): Offender[] {
+  const offenders: Offender[] = [];
+  for (const page of pages) {
+    for (const component of page.components) {
+      for (const instance of component.instances) {
+        for (const d of instance.deviations) {
+          offenders.push({
+            page: page.page,
+            component: component.component,
+            instanceId: instance.instanceId,
+            property: d.property,
+            detail: d.detail,
+            rawValue: d.rawValue,
+            nearestToken: d.nearestToken,
+            distance: d.distance,
+            normalized: d.normalized,
+          });
+        }
+      }
+    }
+  }
+  return offenders.sort((a, b) => b.normalized - a.normalized).slice(0, limit);
+}
+
+export function scoreProduct(product: string, extractedPages: ExtractedPage[], spec: TokenSpec, worstOffendersLimit = 50): ProductReport {
   const pages = extractedPages.map((p) => scorePage(p, spec));
-  return { product, pages, score: mean(pages.map((p) => p.score)) };
+  return {
+    product,
+    pages,
+    score: mean(pages.map((p) => p.score)),
+    breakdown: propertyBreakdown(pages.flatMap((p) => flattenDeviations(p.components))),
+    worstOffenders: worstOffenders(pages, worstOffendersLimit),
+  };
 }

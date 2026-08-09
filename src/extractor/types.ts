@@ -2,6 +2,9 @@
 export interface CapturedStyles {
   color: string;
   backgroundColor: string;
+  borderTopColor: string;
+  borderTopWidth: string;
+  borderTopStyle: string;
   borderTopLeftRadius: string;
   fontSize: string;
   fontFamily: string;

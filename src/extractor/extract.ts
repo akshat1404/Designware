@@ -22,6 +22,9 @@ const EXTRACT_SCRIPT = () => {
       styles: {
         color: cs.color,
         backgroundColor: cs.backgroundColor,
+        borderTopColor: cs.borderTopColor,
+        borderTopWidth: cs.borderTopWidth,
+        borderTopStyle: cs.borderTopStyle,
         borderTopLeftRadius: cs.borderTopLeftRadius,
         fontSize: cs.fontSize,
         fontFamily: cs.fontFamily,
