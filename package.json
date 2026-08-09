@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.47.0",
+    "@primer/primitives": "^11.10.0",
     "@types/node": "^20.14.0",
     "playwright": "^1.47.0",
     "typescript": "^5.5.0",

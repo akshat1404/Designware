@@ -2,7 +2,7 @@ import type { TokenSpec } from "../schema/tokenSpec.js";
 import type { ExtractedElement, ExtractedPage } from "../extractor/types.js";
 import type { PropertyDeviation, PropertyKind } from "../matchers/types.js";
 import { matchColor } from "../matchers/color.js";
-import { matchScale, parsePx } from "../matchers/scale.js";
+import { matchScale, parsePx, isPxValue } from "../matchers/scale.js";
 import { matchFontFamily, matchFontWeight } from "../matchers/font.js";
 import { parseCssColor } from "../color/convert.js";
 
@@ -87,8 +87,16 @@ export function scoreElement(el: ExtractedElement, spec: TokenSpec): InstanceRep
     deviations.push({ ...matchColor(s.borderTopColor, spec, "border-color"), detail: "border-top-color" });
   }
 
-  deviations.push({ ...matchScale(s.borderTopLeftRadius, spec.radius, "border-radius"), detail: "border-top-left-radius" });
-  deviations.push(matchScale(s.fontSize, spec.fontSize, "font-size"));
+  // border-radius is the one property that can stay a percentage in
+  // computed style (e.g. "50%" for a circular avatar) rather than
+  // resolving to px — not a position on an absolute-px scale, so skip it
+  // rather than crash or force a nonsensical comparison.
+  if (isPxValue(s.borderTopLeftRadius)) {
+    deviations.push({ ...matchScale(s.borderTopLeftRadius, spec.radius, "border-radius"), detail: "border-top-left-radius" });
+  }
+  if (isPxValue(s.fontSize)) {
+    deviations.push(matchScale(s.fontSize, spec.fontSize, "font-size"));
+  }
   deviations.push(matchFontFamily(s.fontFamily, spec.fontFamily));
   deviations.push(matchFontWeight(s.fontWeight, spec.fontWeight));
 
@@ -103,7 +111,9 @@ export function scoreElement(el: ExtractedElement, spec: TokenSpec): InstanceRep
     ["marginLeft", "margin-left"],
   ];
   for (const [key, detail] of spacingSides) {
-    deviations.push({ ...matchScale(s[key], spec.spacing, "spacing"), detail });
+    if (isPxValue(s[key])) {
+      deviations.push({ ...matchScale(s[key], spec.spacing, "spacing"), detail });
+    }
   }
 
   const score = mean(deviations.map((d) => d.normalized)) * 100;

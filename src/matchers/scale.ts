@@ -11,6 +11,18 @@ export function parsePx(value: string): number {
 }
 
 /**
+ * Some computed values that are normally px aren't always — most notably
+ * `border-radius` stays as a percentage (e.g. "50%" for a circular
+ * avatar) when authored that way, since it's relative to the box's own
+ * size rather than resolvable to an absolute length. A percentage isn't a
+ * position on an absolute-px scale, so callers should skip scoring it
+ * rather than crash or force a nonsensical comparison.
+ */
+export function isPxValue(value: string): boolean {
+  return PX_RE.test(value.trim());
+}
+
+/**
  * Smallest gap between adjacent (sorted) scale values. Used as the
  * saturation reference for normalization: a deviation as large as the
  * scale's own step size is "fully off-scale", regardless of whether the

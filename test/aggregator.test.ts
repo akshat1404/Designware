@@ -67,6 +67,19 @@ describe("scoreElement border-color handling", () => {
   });
 });
 
+describe("scoreElement non-px scale values", () => {
+  it("skips border-radius scoring when the computed value is a percentage (e.g. a circular avatar)", () => {
+    const result = scoreElement(element({ borderTopLeftRadius: "50%" }), spec);
+    expect(result.deviations.find((d) => d.property === "border-radius")).toBeUndefined();
+  });
+
+  it("does not throw and still scores every other property normally", () => {
+    expect(() => scoreElement(element({ borderTopLeftRadius: "50%" }), spec)).not.toThrow();
+    const result = scoreElement(element({ borderTopLeftRadius: "50%" }), spec);
+    expect(result.deviations.find((d) => d.property === "font-size")).toBeDefined();
+  });
+});
+
 describe("scoreProduct breakdown and worst offenders", () => {
   const compliantPage: ExtractedPage = { page: "compliant-page", elements: [element()] };
   const deviantPage: ExtractedPage = {
