@@ -1,7 +1,10 @@
 import { chromium, type Browser } from "playwright";
 import { createHash } from "node:crypto";
-import type { CapturedStyles, ExtractedElement, ExtractedPage } from "./types.js";
+import { mkdirSync } from "node:fs";
+import path from "node:path";
+import type { CapturedStyles, ExtractedElement, ExtractedPage, Position } from "./types.js";
 import { stabilizePage } from "./stabilize.js";
+import { screenshotPath } from "../cache/cache.js";
 
 /**
  * Below this many *raw* (pre-dedupe) sampled elements, a page is treated as
@@ -16,6 +19,7 @@ export interface RawSample {
   tag: string;
   isText: boolean;
   styles: CapturedStyles;
+  position: Position;
 }
 
 /**
@@ -62,9 +66,18 @@ const SAMPLE_SCRIPT = (): RawSample[] => {
     const isText = hasDirectText(el);
     if (!isVisibleBackground(cs) && !isVisibleBorder(cs) && !isText) continue;
 
+    const rect = el.getBoundingClientRect();
     results.push({
       tag: el.tagName.toLowerCase(),
       isText,
+      position: {
+        // page-relative, not viewport-relative — a full-page screenshot's
+        // coordinate space doesn't depend on scroll offset at capture time.
+        x: rect.left + window.scrollX,
+        y: rect.top + window.scrollY,
+        width: rect.width,
+        height: rect.height,
+      },
       styles: {
         color: cs.color,
         backgroundColor: cs.backgroundColor,
@@ -99,7 +112,7 @@ function styleSignature(styles: CapturedStyles): string {
  * `count`, rather than N separate report entries for the same style.
  */
 export function dedupe(raw: RawSample[]): ExtractedElement[] {
-  const groups = new Map<string, { component: string; styles: CapturedStyles; count: number }>();
+  const groups = new Map<string, { component: string; styles: CapturedStyles; positions: Position[] }>();
 
   for (const sample of raw) {
     const component = sample.isText ? `${sample.tag}/text` : sample.tag;
@@ -107,9 +120,9 @@ export function dedupe(raw: RawSample[]): ExtractedElement[] {
     const key = `${component}|${signature}`;
     const existing = groups.get(key);
     if (existing) {
-      existing.count += 1;
+      existing.positions.push(sample.position);
     } else {
-      groups.set(key, { component, styles: sample.styles, count: 1 });
+      groups.set(key, { component, styles: sample.styles, positions: [sample.position] });
     }
   }
 
@@ -117,11 +130,12 @@ export function dedupe(raw: RawSample[]): ExtractedElement[] {
     component: group.component,
     instanceId: createHash("sha256").update(key).digest("hex").slice(0, 8),
     styles: group.styles,
-    count: group.count,
+    positions: group.positions,
+    count: group.positions.length,
   }));
 }
 
-async function samplePage(browser: Browser, url: string, pageId: string): Promise<ExtractedPage> {
+async function samplePage(browser: Browser, url: string, pageId: string, targetKey: string): Promise<ExtractedPage> {
   const page = await browser.newPage({
     userAgent:
       "DesignwareBot/0.1 (+brand deviation research; see repo README) Mozilla/5.0 (compatible)",
@@ -135,8 +149,18 @@ async function samplePage(browser: Browser, url: string, pageId: string): Promis
     // attempt afterward.
     await page.goto(url, { waitUntil: "domcontentloaded", timeout: 30_000 });
     await stabilizePage(page);
+
+    const shotAbsPath = screenshotPath(targetKey, url);
+    mkdirSync(path.dirname(shotAbsPath), { recursive: true });
+    await page.screenshot({ path: shotAbsPath, fullPage: true });
+
     const raw = (await page.evaluate(SAMPLE_SCRIPT)) as RawSample[];
-    return { page: pageId, elements: dedupe(raw), unstable: raw.length < MIN_RAW_ELEMENTS };
+    return {
+      page: pageId,
+      elements: dedupe(raw),
+      unstable: raw.length < MIN_RAW_ELEMENTS,
+      screenshotPath: path.relative(process.cwd(), shotAbsPath),
+    };
   } catch (err) {
     console.error(`  capture failed for ${url}: ${(err as Error).message}`);
     return { page: pageId, elements: [], unstable: true };
@@ -150,14 +174,18 @@ async function samplePage(browser: Browser, url: string, pageId: string): Promis
  * real URLs with no markup cooperation — used by Level 2 validation
  * targets. Pages that fail to load or render enough content are marked
  * `unstable` rather than silently contributing a near-empty capture to a
- * target's score.
+ * target's score. `targetKey` namespaces the saved screenshots the same
+ * way the extraction cache is namespaced.
  */
-export async function samplePages(targets: { url: string; pageId: string }[]): Promise<ExtractedPage[]> {
+export async function samplePages(
+  targets: { url: string; pageId: string }[],
+  targetKey: string
+): Promise<ExtractedPage[]> {
   const browser = await chromium.launch();
   try {
     const results: ExtractedPage[] = [];
     for (const target of targets) {
-      results.push(await samplePage(browser, target.url, target.pageId));
+      results.push(await samplePage(browser, target.url, target.pageId, targetKey));
     }
     return results;
   } finally {

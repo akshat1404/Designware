@@ -35,7 +35,7 @@ async function runTarget(entry: RegisteredTarget, refresh: boolean): Promise<voi
       continue;
     }
     console.log(`  fetching ${url}`);
-    const [fetched] = await samplePages([{ url, pageId: url }]);
+    const [fetched] = await samplePages([{ url, pageId: url }], target.key);
     writeCache(target.key, url, fetched);
     pages.push(fetched);
     await sleep(REQUEST_DELAY_MS);
