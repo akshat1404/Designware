@@ -13,4 +13,12 @@ export interface CrawlTarget {
   kind: TargetKind;
   /** absolute URLs to crawl — small, explicit list, no auto-discovery */
   urls: string[];
+  /**
+   * Set when an "on-spec" target could not be confirmed to actually render
+   * the real component library (e.g. a docs page *about* the design system
+   * rather than pages built *with* it). An unverified on-spec score is not
+   * a trustworthy near-zero baseline and must not be read next to genuine
+   * on-spec targets as if it were one.
+   */
+  unverified?: string;
 }

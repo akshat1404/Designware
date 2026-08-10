@@ -14,7 +14,11 @@ function summaryMarkdown(target: CrawlTarget, report: ProductReport): string {
   } else {
     lines.push(`**Score: ${report.score.toFixed(1)} / 100** — 0 is fully on-spec, 100 is maximally deviant.`);
   }
-  if (target.kind === "on-spec") {
+  if (target.unverified) {
+    lines.push("");
+    lines.push(`> ⚠️ **UNVERIFIED ON-SPEC BASELINE** — ${target.unverified}`);
+    lines.push("> Do not compare this score against genuine on-spec targets.");
+  } else if (target.kind === "on-spec") {
     lines.push("");
     lines.push("_This is the company's own design-system site — it should score near zero. If it doesn't, treat that as a matcher bug, not real drift._");
   }

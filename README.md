@@ -77,7 +77,7 @@ at a handful of pages per site):
 | IBM (ibm.com) | real-app | 2.0/100 | Helvetica fallback where Plex is expected; marketing-hero type/spacing/radius beyond the core component scale |
 | Atlassian Design (atlassian.design) | on-spec | 1.9/100 | Near-zero; residual noise is oversized marketing headings |
 | Jira (jira.atlassian.com) | real-app | 18.3/100 | Legacy `/projects/<KEY>/summary` pages resolve to a generic OS font stack, not `"Atlassian Sans"` — drift concentrates in older, unmigrated UI, not the homepage |
-| Shopify Polaris (shopify.dev) | on-spec | 15.5/100 | Not a matcher bug: Polaris's classic style guide was retired and redirects to a generic shopify.dev docs page whose own shell isn't built with Polaris tokens |
+| Shopify Polaris (shopify.dev) | on-spec, **unverified** | 15.5/100 | Not a matcher bug, but not a trustworthy baseline either: confirmed via DOM inspection that neither page (nor any other publicly reachable shopify.dev/polaris.shopify.com/storybook URL) renders actual Polaris components — no `Polaris-` classes, no Polaris custom elements. This is a generic docs-shell score, not comparable to the other three companies' on-spec numbers |
 
 Two real bugs were found and fixed during this validation (not synthetic
 fixtures — genuinely surfaced by messy real-world pages):
