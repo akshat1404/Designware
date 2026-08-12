@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Deviation overlay - https://www.ibm.com/cloud</title>
+<style>
+  body { margin: 0; font-family: system-ui, sans-serif; background: #1a1a1a; }
+  .legend { position: sticky; top: 0; z-index: 10; background: #222; color: #eee; padding: 8px 12px; display: flex; gap: 16px; align-items: center; font-size: 13px; }
+  .legend-item { display: flex; align-items: center; gap: 6px; }
+  .swatch { width: 12px; height: 12px; border-radius: 2px; display: inline-block; }
+  .count { margin-left: auto; color: #999; }
+  .stage { position: relative; display: inline-block; }
+  .stage img { display: block; max-width: none; }
+  .dev-box { position: absolute; border: 2px solid; background: rgba(255, 255, 255, 0.08); box-sizing: border-box; cursor: help; }
+</style>
+</head>
+<body>
+<div class="legend">
+  <strong>https://www.ibm.com/cloud</strong>
+  <span class="legend-item"><span class="swatch" style="background:#e53e3e"></span>color</span><span class="legend-item"><span class="swatch" style="background:#dd6b20"></span>spacing</span><span class="legend-item"><span class="swatch" style="background:#3182ce"></span>typography</span><span class="legend-item"><span class="swatch" style="background:#805ad5"></span>radius</span>
+  <span class="count">3 flagged occurrences (score &gt; 15)</span>
+</div>
+<div class="stage">
+  <img src="../../cache/ibm-real-app/ee0ea7afaaeed2fc9743a7db78531b9fefc3b04a6aa0a62b116ceda8ff305950.png" alt="page screenshot">
+  <div class="dev-box" style="left:1064.765625px;top:547px;width:183.234375px;height:48px;border-color:#805ad5;" title="button #7fd57f95 — score 17.9
+border-radius (border-top-left-radius): 4 -&gt; border-radius:0 (distance 4.00)"></div>
+  <div class="dev-box" style="left:32px;top:5746.75px;width:208.203125px;height:48px;border-color:#805ad5;" title="a #21f1c312 — score 21.9
+border-radius (border-top-left-radius): 4 -&gt; border-radius:0 (distance 4.00)"></div>
+  <div class="dev-box" style="left:256.203125px;top:5746.75px;width:208.203125px;height:48px;border-color:#805ad5;" title="a #116ea9d9 — score 21.9
+border-radius (border-top-left-radius): 4 -&gt; border-radius:0 (distance 4.00)"></div>
+</div>
+</body>
+</html>

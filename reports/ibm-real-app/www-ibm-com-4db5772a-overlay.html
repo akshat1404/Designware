@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Deviation overlay - https://www.ibm.com/</title>
+<style>
+  body { margin: 0; font-family: system-ui, sans-serif; background: #1a1a1a; }
+  .legend { position: sticky; top: 0; z-index: 10; background: #222; color: #eee; padding: 8px 12px; display: flex; gap: 16px; align-items: center; font-size: 13px; }
+  .legend-item { display: flex; align-items: center; gap: 6px; }
+  .swatch { width: 12px; height: 12px; border-radius: 2px; display: inline-block; }
+  .count { margin-left: auto; color: #999; }
+  .stage { position: relative; display: inline-block; }
+  .stage img { display: block; max-width: none; }
+  .dev-box { position: absolute; border: 2px solid; background: rgba(255, 255, 255, 0.08); box-sizing: border-box; cursor: help; }
+</style>
+</head>
+<body>
+<div class="legend">
+  <strong>https://www.ibm.com/</strong>
+  <span class="legend-item"><span class="swatch" style="background:#e53e3e"></span>color</span><span class="legend-item"><span class="swatch" style="background:#dd6b20"></span>spacing</span><span class="legend-item"><span class="swatch" style="background:#3182ce"></span>typography</span><span class="legend-item"><span class="swatch" style="background:#805ad5"></span>radius</span>
+  <span class="count">4 flagged occurrences (score &gt; 15)</span>
+</div>
+<div class="stage">
+  <img src="../../cache/ibm-real-app/4db5772aa8fc1c7a50a7385bb67e0b14b80fc4b707112af559d251bd37cca700.png" alt="page screenshot">
+  <div class="dev-box" style="left:128.796875px;top:1265.8125px;width:113.03125px;height:24px;border-color:#805ad5;" title="span/text #9011f910 — score 25.0
+border-radius (border-top-left-radius): 16 -&gt; border-radius:0 (distance 16.00)"></div>
+  <div class="dev-box" style="left:444.796875px;top:1265.8125px;width:113.03125px;height:24px;border-color:#805ad5;" title="span/text #17820a53 — score 25.0
+border-radius (border-top-left-radius): 16 -&gt; border-radius:0 (distance 16.00)"></div>
+  <div class="dev-box" style="left:760.796875px;top:1247.8125px;width:163.0625px;height:24px;border-color:#805ad5;" title="span/text #17820a53 — score 25.0
+border-radius (border-top-left-radius): 16 -&gt; border-radius:0 (distance 16.00)"></div>
+  <div class="dev-box" style="left:688px;top:4076.21875px;width:288px;height:47.96875px;border-color:#805ad5;" title="button/text #057cd0f5 — score 30.2
+border-radius (border-top-left-radius): 4 -&gt; border-radius:0 (distance 4.00)"></div>
+</div>
+</body>
+</html>

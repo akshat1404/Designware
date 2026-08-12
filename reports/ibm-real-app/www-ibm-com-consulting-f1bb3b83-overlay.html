@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Deviation overlay - https://www.ibm.com/consulting</title>
+<style>
+  body { margin: 0; font-family: system-ui, sans-serif; background: #1a1a1a; }
+  .legend { position: sticky; top: 0; z-index: 10; background: #222; color: #eee; padding: 8px 12px; display: flex; gap: 16px; align-items: center; font-size: 13px; }
+  .legend-item { display: flex; align-items: center; gap: 6px; }
+  .swatch { width: 12px; height: 12px; border-radius: 2px; display: inline-block; }
+  .count { margin-left: auto; color: #999; }
+  .stage { position: relative; display: inline-block; }
+  .stage img { display: block; max-width: none; }
+  .dev-box { position: absolute; border: 2px solid; background: rgba(255, 255, 255, 0.08); box-sizing: border-box; cursor: help; }
+</style>
+</head>
+<body>
+<div class="legend">
+  <strong>https://www.ibm.com/consulting</strong>
+  <span class="legend-item"><span class="swatch" style="background:#e53e3e"></span>color</span><span class="legend-item"><span class="swatch" style="background:#dd6b20"></span>spacing</span><span class="legend-item"><span class="swatch" style="background:#3182ce"></span>typography</span><span class="legend-item"><span class="swatch" style="background:#805ad5"></span>radius</span>
+  <span class="count">1 flagged occurrence (score &gt; 15)</span>
+</div>
+<div class="stage">
+  <img src="../../cache/ibm-real-app/f1bb3b831fe2659c8122c7a8ad514da696977c5ebcc6bac9a3f3fcc7d0da7b25.png" alt="page screenshot">
+  <div class="dev-box" style="left:32px;top:3603.6875px;width:303.5px;height:48px;border-color:#805ad5;" title="a #21f1c312 — score 21.9
+border-radius (border-top-left-radius): 4 -&gt; border-radius:0 (distance 4.00)"></div>
+</div>
+</body>
+</html>
