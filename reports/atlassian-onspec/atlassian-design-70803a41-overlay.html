@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Deviation overlay - https://atlassian.design/</title>
+<style>
+  body { margin: 0; font-family: system-ui, sans-serif; background: #1a1a1a; }
+  .legend { position: sticky; top: 0; z-index: 10; background: #222; color: #eee; padding: 8px 12px; display: flex; gap: 16px; align-items: center; font-size: 13px; }
+  .legend-item { display: flex; align-items: center; gap: 6px; }
+  .swatch { width: 12px; height: 12px; border-radius: 2px; display: inline-block; }
+  .count { margin-left: auto; color: #999; }
+  .stage { position: relative; display: inline-block; }
+  .stage img { display: block; max-width: none; }
+  .dev-box { position: absolute; border: 2px solid; background: rgba(255, 255, 255, 0.08); box-sizing: border-box; cursor: help; }
+</style>
+</head>
+<body>
+<div class="legend">
+  <strong>https://atlassian.design/</strong>
+  <span class="legend-item"><span class="swatch" style="background:#e53e3e"></span>color</span><span class="legend-item"><span class="swatch" style="background:#dd6b20"></span>spacing</span><span class="legend-item"><span class="swatch" style="background:#3182ce"></span>typography</span><span class="legend-item"><span class="swatch" style="background:#805ad5"></span>radius</span>
+  <span class="count">5 flagged occurrences (score &gt; 15)</span>
+</div>
+<div class="stage">
+  <img src="../../cache/atlassian-onspec/70803a415e0d1d7de7a8ffbf7886b8e44c422727e54130b68b619d2893b003b3.png" alt="page screenshot">
+  <div class="dev-box" style="left:826px;top:952px;width:368px;height:524px;border-color:#805ad5;" title="div #15314f58 — score 25.0
+border-radius (border-top-left-radius): 32 -&gt; border-radius:16 (distance 16.00)"></div>
+  <div class="dev-box" style="left:78px;top:216px;width:65.53125px;height:36px;border-color:#805ad5;" title="div/text #c528e946 — score 25.0
+border-radius (border-top-left-radius): 28 -&gt; border-radius:16 (distance 12.00)"></div>
+  <div class="dev-box" style="left:614px;top:528px;width:68px;height:36px;border-color:#805ad5;" title="div/text #cf4fd402 — score 25.0
+border-radius (border-top-left-radius): 28 -&gt; border-radius:16 (distance 12.00)"></div>
+  <div class="dev-box" style="left:944px;top:227px;width:67.875px;height:36px;border-color:#805ad5;" title="div/text #1a864d8d — score 25.0
+border-radius (border-top-left-radius): 27 -&gt; border-radius:16 (distance 11.00)"></div>
+  <div class="dev-box" style="left:1022.390625px;top:5056.8125px;width:135.75px;height:72px;border-color:#805ad5;" title="div/text #1a864d8d — score 25.0
+border-radius (border-top-left-radius): 27 -&gt; border-radius:16 (distance 11.00)"></div>
+</div>
+</body>
+</html>
