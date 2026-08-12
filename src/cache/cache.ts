@@ -16,6 +16,12 @@ export function screenshotPath(targetKey: string, url: string): string {
   return path.join(CACHE_ROOT, targetKey, `${hash}.png`);
 }
 
+/** Same content-address again, for the "every correctable deviation fixed" render. */
+export function correctedScreenshotPath(targetKey: string, url: string): string {
+  const hash = createHash("sha256").update(url).digest("hex");
+  return path.join(CACHE_ROOT, targetKey, `${hash}-corrected.png`);
+}
+
 /**
  * Content-addressed extraction cache, keyed by target + URL. Real Level-2
  * targets are live production sites — this is what keeps repeat dev/test

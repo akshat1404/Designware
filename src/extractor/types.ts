@@ -49,4 +49,6 @@ export interface ExtractedPage {
   unstable?: boolean;
   /** path (relative to repo root) to a full-page screenshot taken at capture time, for later overlay/comparison work. Undefined for tag-based fixture extraction. */
   screenshotPath?: string;
+  /** path (relative to repo root) to a screenshot taken after every correctable deviation (color/background-color/border-color/border-radius/font-family) was patched in-page to its nearest spec value. Undefined for tag-based fixture extraction. */
+  correctedScreenshotPath?: string;
 }

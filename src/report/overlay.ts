@@ -99,8 +99,8 @@ export function buildOverlayBoxes(page: ExtractedPage, pageReport: PageReport, t
   return boxes;
 }
 
-/** Stable, filesystem-safe, collision-resistant filename for a page's overlay file. */
-export function overlayFilename(url: string): string {
+/** Stable, filesystem-safe, collision-resistant base name for a page's generated visual artifacts (shared by the overlay and the corrected-render screenshot). */
+export function pageSlug(url: string): string {
   const slug =
     url
       .replace(/^https?:\/\//, "")
@@ -108,7 +108,11 @@ export function overlayFilename(url: string): string {
       .replace(/^-+|-+$/g, "")
       .slice(0, 60) || "page";
   const hash = createHash("sha256").update(url).digest("hex").slice(0, 8);
-  return `${slug}-${hash}-overlay.html`;
+  return `${slug}-${hash}`;
+}
+
+export function overlayFilename(url: string): string {
+  return `${pageSlug(url)}-overlay.html`;
 }
 
 function escapeHtml(s: string): string {

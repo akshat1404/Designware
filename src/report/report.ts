@@ -1,13 +1,13 @@
-import { mkdirSync, writeFileSync } from "node:fs";
+import { copyFileSync, mkdirSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import type { PageReport, ProductReport } from "../aggregator/aggregate.js";
 import type { CrawlTarget } from "../targets/types.js";
 import type { ExtractedPage } from "../extractor/types.js";
-import { buildOverlayBoxes, overlayFilename, renderOverlayHtml } from "./overlay.js";
+import { buildOverlayBoxes, overlayFilename, pageSlug, renderOverlayHtml } from "./overlay.js";
 
 const REPORTS_ROOT = path.resolve(process.cwd(), "reports");
 
-function summaryMarkdown(target: CrawlTarget, report: ProductReport, overlayLinks: Map<string, string>): string {
+function summaryMarkdown(target: CrawlTarget, report: ProductReport, overlayLinks: Map<string, string>, correctedLinks: Map<string, string>): string {
   const lines: string[] = [];
   lines.push(`# ${target.label} (${target.kind})`);
   lines.push("");
@@ -33,14 +33,21 @@ function summaryMarkdown(target: CrawlTarget, report: ProductReport, overlayLink
     for (const p of report.unstablePages) lines.push(`- ${p}`);
   }
 
-  if (overlayLinks.size > 0) {
+  if (overlayLinks.size > 0 || correctedLinks.size > 0) {
     lines.push("");
-    lines.push("## Page overlays");
+    lines.push("## Visual diagnostics");
     lines.push("");
-    lines.push("Screenshot of each page with flagged deviations boxed and color-coded by category.");
+    lines.push(
+      "Per page: an overlay of the captured screenshot with flagged deviations boxed and color-coded by category, and a corrected render — the same page with every color/background-color/border-color/border-radius/font-family deviation patched to its nearest spec value in place (spacing, font-size, and font-weight are left alone since correcting them can reflow the layout)."
+    );
+    lines.push("");
     for (const page of report.pages) {
-      const file = overlayLinks.get(page.page);
-      if (file) lines.push(`- [${page.page}](./${file})`);
+      const overlay = overlayLinks.get(page.page);
+      const corrected = correctedLinks.get(page.page);
+      const parts: string[] = [];
+      if (overlay) parts.push(`[overlay](./${overlay})`);
+      if (corrected) parts.push(`[as it should have looked](./${corrected})`);
+      if (parts.length > 0) lines.push(`- ${page.page} — ${parts.join(" · ")}`);
     }
   }
 
@@ -93,10 +100,32 @@ function writePageOverlays(dir: string, pages: PageReport[], extractedByUrl: Map
 }
 
 /**
+ * Copies each page's already-captured corrected-render screenshot (taken
+ * in sample.ts, in the same live session as the original capture) from
+ * the content-addressed cache into the report directory as a plain,
+ * standalone PNG — no HTML wrapper, unlike the overlay, since the point
+ * is that it reads as a real screenshot.
+ */
+function writePageCorrectedScreenshots(dir: string, pages: PageReport[], extractedByUrl: Map<string, ExtractedPage>): Map<string, string> {
+  const links = new Map<string, string>();
+  for (const pageReport of pages) {
+    const extracted = extractedByUrl.get(pageReport.page);
+    if (!extracted?.correctedScreenshotPath) continue;
+
+    const srcAbsPath = path.resolve(process.cwd(), extracted.correctedScreenshotPath);
+    const filename = `${pageSlug(pageReport.page)}-corrected.png`;
+    copyFileSync(srcAbsPath, path.join(dir, filename));
+    links.set(pageReport.page, filename);
+  }
+  return links;
+}
+
+/**
  * Writes reports/<target-key>/report.json (full data), summary.md
- * (human-readable), and a per-page overlay HTML file for any page in
- * `extractedPages` that carries a screenshot (Level 2 real-page crawls —
- * Level 1 fixture runs don't pass this and simply get no overlays).
+ * (human-readable), and per-page overlay HTML + corrected-render PNG
+ * files for any page in `extractedPages` that carries a screenshot
+ * (Level 2 real-page crawls — Level 1 fixture runs don't pass this and
+ * simply get no visual artifacts).
  */
 export function writeReport(target: CrawlTarget, report: ProductReport, extractedPages: ExtractedPage[] = []): void {
   const dir = path.join(REPORTS_ROOT, target.key);
@@ -104,7 +133,8 @@ export function writeReport(target: CrawlTarget, report: ProductReport, extracte
 
   const extractedByUrl = new Map(extractedPages.map((p) => [p.page, p]));
   const overlayLinks = writePageOverlays(dir, report.pages, extractedByUrl);
+  const correctedLinks = writePageCorrectedScreenshots(dir, report.pages, extractedByUrl);
 
   writeFileSync(path.join(dir, "report.json"), JSON.stringify({ target, report }, null, 2), "utf-8");
-  writeFileSync(path.join(dir, "summary.md"), summaryMarkdown(target, report, overlayLinks), "utf-8");
+  writeFileSync(path.join(dir, "summary.md"), summaryMarkdown(target, report, overlayLinks, correctedLinks), "utf-8");
 }

@@ -4,7 +4,11 @@ import { mkdirSync } from "node:fs";
 import path from "node:path";
 import type { CapturedStyles, ExtractedElement, ExtractedPage, Position } from "./types.js";
 import { stabilizePage } from "./stabilize.js";
-import { screenshotPath } from "../cache/cache.js";
+import { screenshotPath, correctedScreenshotPath } from "../cache/cache.js";
+import type { TokenSpec } from "../schema/tokenSpec.js";
+import type { PropertyKind } from "../matchers/types.js";
+import { scoreElement } from "../aggregator/aggregate.js";
+import { resolveToken } from "../matchers/resolve.js";
 
 /**
  * Below this many *raw* (pre-dedupe) sampled elements, a page is treated as
@@ -23,12 +27,29 @@ export interface RawSample {
 }
 
 /**
+ * `"component|styleSignature"` (the exact key `dedupe` groups by) -> CSS
+ * property -> corrected value. Built once per page from the *first* walk's
+ * scored deviations, then handed back into a *second* run of the same
+ * in-page script so every element sharing a flagged style signature gets
+ * corrected, wherever it appears.
+ */
+export type CorrectionMap = Record<string, Record<string, string>>;
+
+/**
  * Runs entirely inside the page. Real pages have no `data-component`
  * markup to key off of (see extract.ts), so inclusion is driven by what
  * the brief calls out directly: elements with a visible non-transparent
  * background or border, and text-containing leaf nodes.
+ *
+ * Doubles as the correction pass: called a second time (same page, same
+ * live DOM, no reload) with a `corrections` map, it re-walks with the
+ * identical selection/signature logic and patches any matching element's
+ * style in place. Reusing one script for both passes — rather than a
+ * second near-duplicate — guarantees the signature computed here always
+ * matches the one `dedupe` computed from this same script's first-pass
+ * output, with no risk of the two drifting out of sync.
  */
-const SAMPLE_SCRIPT = (): RawSample[] => {
+const SAMPLE_SCRIPT = (corrections?: CorrectionMap): RawSample[] => {
   function isVisible(el: HTMLElement): boolean {
     if (el.offsetParent === null && getComputedStyle(el).position !== "fixed") return false;
     const rect = el.getBoundingClientRect();
@@ -66,9 +87,45 @@ const SAMPLE_SCRIPT = (): RawSample[] => {
     const isText = hasDirectText(el);
     if (!isVisibleBackground(cs) && !isVisibleBorder(cs) && !isText) continue;
 
+    const tag = el.tagName.toLowerCase();
+    const styles = {
+      color: cs.color,
+      backgroundColor: cs.backgroundColor,
+      borderTopColor: cs.borderTopColor,
+      borderTopWidth: cs.borderTopWidth,
+      borderTopStyle: cs.borderTopStyle,
+      borderTopLeftRadius: cs.borderTopLeftRadius,
+      fontSize: cs.fontSize,
+      fontFamily: cs.fontFamily,
+      fontWeight: cs.fontWeight,
+      paddingTop: cs.paddingTop,
+      paddingRight: cs.paddingRight,
+      paddingBottom: cs.paddingBottom,
+      paddingLeft: cs.paddingLeft,
+      marginTop: cs.marginTop,
+      marginRight: cs.marginRight,
+      marginBottom: cs.marginBottom,
+      marginLeft: cs.marginLeft,
+    };
+
+    if (corrections) {
+      // Same grouping key dedupe() uses ("component|styleSignature") — see
+      // that function's own comment for why this one-liner is duplicated
+      // here rather than imported: this runs inside the page, dedupe runs
+      // in Node, and Playwright's evaluate() can't share a closure across
+      // two separate calls.
+      const component = isText ? `${tag}/text` : tag;
+      const fix = corrections[`${component}|${JSON.stringify(styles)}`];
+      if (fix) {
+        for (const prop in fix) {
+          el.style.setProperty(prop, fix[prop], "important");
+        }
+      }
+    }
+
     const rect = el.getBoundingClientRect();
     results.push({
-      tag: el.tagName.toLowerCase(),
+      tag,
       isText,
       position: {
         // page-relative, not viewport-relative — a full-page screenshot's
@@ -78,25 +135,7 @@ const SAMPLE_SCRIPT = (): RawSample[] => {
         width: rect.width,
         height: rect.height,
       },
-      styles: {
-        color: cs.color,
-        backgroundColor: cs.backgroundColor,
-        borderTopColor: cs.borderTopColor,
-        borderTopWidth: cs.borderTopWidth,
-        borderTopStyle: cs.borderTopStyle,
-        borderTopLeftRadius: cs.borderTopLeftRadius,
-        fontSize: cs.fontSize,
-        fontFamily: cs.fontFamily,
-        fontWeight: cs.fontWeight,
-        paddingTop: cs.paddingTop,
-        paddingRight: cs.paddingRight,
-        paddingBottom: cs.paddingBottom,
-        paddingLeft: cs.paddingLeft,
-        marginTop: cs.marginTop,
-        marginRight: cs.marginRight,
-        marginBottom: cs.marginBottom,
-        marginLeft: cs.marginLeft,
-      },
+      styles,
     });
   }
   return results;
@@ -135,7 +174,56 @@ export function dedupe(raw: RawSample[]): ExtractedElement[] {
   }));
 }
 
-async function samplePage(browser: Browser, url: string, pageId: string, targetKey: string): Promise<ExtractedPage> {
+/**
+ * Only properties whose correction can't shift surrounding layout. Spacing
+ * and font-size are the obvious reflow risks; font-weight is excluded for
+ * the same reason — a heavier weight is frequently wider and can wrap or
+ * push neighboring content, same as a font-size change would.
+ */
+const CORRECTABLE_PROPERTIES: readonly PropertyKind[] = ["color", "background-color", "border-color", "border-radius", "font-family"];
+
+/**
+ * Below this normalized deviation, treat an instance's property as already
+ * on-spec rather than needing correction. Not 0: matchColor's Delta-E path
+ * goes through an RGB -> Lab round trip, which can leave a genuinely exact
+ * match at a normalized value like 1e-13 instead of literal 0 — this floor
+ * sits far below any real, visually-meaningful deviation (the smallest
+ * scale-based normalized "spacing:16" mismatch is already orders of
+ * magnitude above it) while safely absorbing that float noise.
+ */
+const CORRECTION_EPSILON = 1e-3;
+
+/**
+ * Scores each deduped element and, for every deviation in a
+ * layout-safe property, resolves its nearest token back to a real CSS
+ * value. Keyed the same way `dedupe` groups elements, so applying a
+ * correction to one matching signature in-page automatically covers every
+ * occurrence of it — no position tracking needed here at all.
+ */
+export function buildCorrections(elements: ExtractedElement[], spec: TokenSpec): CorrectionMap {
+  const corrections: CorrectionMap = {};
+
+  for (const el of elements) {
+    const { deviations } = scoreElement(el, spec);
+    const fixes: Record<string, string> = {};
+
+    for (const d of deviations) {
+      if (!CORRECTABLE_PROPERTIES.includes(d.property)) continue;
+      if (d.normalized <= CORRECTION_EPSILON) continue;
+
+      const resolved = resolveToken(d.nearestToken, spec);
+      fixes[d.property] = d.property === "border-radius" ? `${resolved}px` : d.property === "font-family" ? `"${resolved}"` : String(resolved);
+    }
+
+    if (Object.keys(fixes).length > 0) {
+      corrections[`${el.component}|${styleSignature(el.styles)}`] = fixes;
+    }
+  }
+
+  return corrections;
+}
+
+async function samplePage(browser: Browser, url: string, pageId: string, targetKey: string, spec: TokenSpec): Promise<ExtractedPage> {
   const page = await browser.newPage({
     userAgent:
       "DesignwareBot/0.1 (+brand deviation research; see repo README) Mozilla/5.0 (compatible)",
@@ -154,12 +242,31 @@ async function samplePage(browser: Browser, url: string, pageId: string, targetK
     mkdirSync(path.dirname(shotAbsPath), { recursive: true });
     await page.screenshot({ path: shotAbsPath, fullPage: true });
 
-    const raw = (await page.evaluate(SAMPLE_SCRIPT)) as RawSample[];
+    const raw = (await page.evaluate(SAMPLE_SCRIPT, undefined)) as RawSample[];
+    const elements = dedupe(raw);
+
+    // Corrections are applied in this same page/session, not by reloading
+    // and re-targeting via the captured positions — a fresh page.goto() is
+    // a new render (dynamic content, ad slots, timing, minor layout shift)
+    // with no guarantee the DOM lines up with what was just sampled. The
+    // overlay doesn't have this problem (it only ever draws on top of the
+    // original screenshot), but a corrected *render* needs the actual live
+    // DOM patched in place before it closes.
+    const corrections = buildCorrections(elements, spec);
+    if (Object.keys(corrections).length > 0) {
+      await page.evaluate(SAMPLE_SCRIPT, corrections);
+    }
+
+    const correctedAbsPath = correctedScreenshotPath(targetKey, url);
+    mkdirSync(path.dirname(correctedAbsPath), { recursive: true });
+    await page.screenshot({ path: correctedAbsPath, fullPage: true });
+
     return {
       page: pageId,
-      elements: dedupe(raw),
+      elements,
       unstable: raw.length < MIN_RAW_ELEMENTS,
       screenshotPath: path.relative(process.cwd(), shotAbsPath),
+      correctedScreenshotPath: path.relative(process.cwd(), correctedAbsPath),
     };
   } catch (err) {
     console.error(`  capture failed for ${url}: ${(err as Error).message}`);
@@ -175,17 +282,19 @@ async function samplePage(browser: Browser, url: string, pageId: string, targetK
  * targets. Pages that fail to load or render enough content are marked
  * `unstable` rather than silently contributing a near-empty capture to a
  * target's score. `targetKey` namespaces the saved screenshots the same
- * way the extraction cache is namespaced.
+ * way the extraction cache is namespaced. `spec` drives the in-page
+ * correction pass (see buildCorrections/samplePage).
  */
 export async function samplePages(
   targets: { url: string; pageId: string }[],
-  targetKey: string
+  targetKey: string,
+  spec: TokenSpec
 ): Promise<ExtractedPage[]> {
   const browser = await chromium.launch();
   try {
     const results: ExtractedPage[] = [];
     for (const target of targets) {
-      results.push(await samplePage(browser, target.url, target.pageId, targetKey));
+      results.push(await samplePage(browser, target.url, target.pageId, targetKey, spec));
     }
     return results;
   } finally {

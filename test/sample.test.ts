@@ -1,6 +1,7 @@
 import { describe, it, expect } from "vitest";
-import { dedupe, type RawSample } from "../src/extractor/sample.js";
-import type { CapturedStyles, Position } from "../src/extractor/types.js";
+import { buildCorrections, dedupe, type RawSample } from "../src/extractor/sample.js";
+import { validateTokenSpec, type TokenSpec } from "../src/schema/tokenSpec.js";
+import type { CapturedStyles, ExtractedElement, Position } from "../src/extractor/types.js";
 
 const BUTTON_STYLES: CapturedStyles = {
   color: "rgb(255, 255, 255)",
@@ -95,5 +96,101 @@ describe("dedupe", () => {
       expect(result[0].positions).toHaveLength(4);
       expect(result[0].count).toBe(result[0].positions!.length);
     });
+  });
+});
+
+describe("buildCorrections", () => {
+  const spec: TokenSpec = validateTokenSpec({
+    colors: { "brand-primary": "#3366FF", "brand-text": "#111111", "brand-bg": "#F5F5F5" },
+    spacing: [4, 8, 16, 24, 32],
+    radius: [4, 8, 16],
+    fontSize: [12, 14, 16, 20, 24],
+    fontFamily: ["Arial", "sans-serif"],
+    fontWeight: [400, 700],
+  });
+
+  const DEVIANT_STYLES: CapturedStyles = {
+    color: "rgb(0, 200, 80)", // off-brand green
+    backgroundColor: "rgb(10, 10, 10)", // off from brand-bg
+    borderTopColor: "rgb(0, 200, 80)",
+    borderTopWidth: "2px",
+    borderTopStyle: "solid",
+    borderTopLeftRadius: "20px", // off-scale, nearest is 16
+    fontSize: "22px", // off-scale — must NOT be corrected (reflow risk)
+    fontFamily: "Comic Sans MS", // not an allowed family
+    fontWeight: "900", // off-scale — must NOT be corrected (reflow risk)
+    paddingTop: "10px", // off-scale — must NOT be corrected (reflow risk)
+    paddingRight: "10px",
+    paddingBottom: "10px",
+    paddingLeft: "10px",
+    marginTop: "0px",
+    marginRight: "0px",
+    marginBottom: "0px",
+    marginLeft: "0px",
+  };
+
+  function element(overrides: Partial<CapturedStyles> = {}, positions: Position[] = [{ x: 0, y: 0, width: 10, height: 10 }]): ExtractedElement {
+    return { component: "button", instanceId: "inst1", styles: { ...DEVIANT_STYLES, ...overrides }, positions };
+  }
+
+  it("resolves each deviant correctable property to its nearest token's real CSS value", () => {
+    const el = element();
+    const corrections = buildCorrections([el], spec);
+    const fix = corrections[`${el.component}|${JSON.stringify(el.styles)}`];
+
+    expect(fix).toBeDefined();
+    expect(fix.color).toMatch(/^#[0-9A-Fa-f]{6}$/);
+    expect(fix["background-color"]).toMatch(/^#[0-9A-Fa-f]{6}$/);
+    expect(fix["border-color"]).toMatch(/^#[0-9A-Fa-f]{6}$/);
+    expect(fix["border-radius"]).toBe("16px");
+    expect(fix["font-family"]).toBe('"Arial"');
+  });
+
+  it("never sets a reflow-risk property (spacing/font-size/font-weight), even when that property is deviant on the same instance", () => {
+    const el = element();
+    const corrections = buildCorrections([el], spec);
+    const fix = corrections[`${el.component}|${JSON.stringify(el.styles)}`];
+
+    expect(Object.keys(fix).sort()).toEqual(["background-color", "border-color", "border-radius", "color", "font-family"]);
+    expect(fix).not.toHaveProperty("font-size");
+    expect(fix).not.toHaveProperty("font-weight");
+    expect(fix).not.toHaveProperty("padding-top");
+    expect(fix).not.toHaveProperty("spacing");
+  });
+
+  it("produces no correction entry for a fully compliant element", () => {
+    const compliant = element({
+      color: "rgb(17, 17, 17)", // brand-text, exact
+      backgroundColor: "rgb(245, 245, 245)", // brand-bg, exact
+      borderTopColor: "rgb(51, 102, 255)", // brand-primary, exact
+      borderTopLeftRadius: "16px",
+      fontFamily: "Arial, sans-serif",
+      fontWeight: "400",
+      paddingTop: "8px",
+      paddingRight: "8px",
+      paddingBottom: "8px",
+      paddingLeft: "8px",
+    });
+    const corrections = buildCorrections([compliant], spec);
+    expect(Object.keys(corrections)).toHaveLength(0);
+  });
+
+  it("keys each correction by the same component|styleSignature dedupe groups elements by", () => {
+    const el = element();
+    const corrections = buildCorrections([el], spec);
+    expect(Object.keys(corrections)).toEqual([`${el.component}|${JSON.stringify(el.styles)}`]);
+  });
+
+  it("keys corrections independent of position count — one map entry covers every occurrence sharing that signature during the in-page walk, no position tracking needed", () => {
+    const many = element(
+      {},
+      [
+        { x: 0, y: 0, width: 10, height: 10 },
+        { x: 20, y: 0, width: 10, height: 10 },
+        { x: 40, y: 0, width: 10, height: 10 },
+      ]
+    );
+    const corrections = buildCorrections([many], spec);
+    expect(Object.keys(corrections)).toHaveLength(1);
   });
 });
