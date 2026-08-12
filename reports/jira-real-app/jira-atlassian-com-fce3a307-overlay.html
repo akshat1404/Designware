@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Deviation overlay - https://jira.atlassian.com/</title>
+<style>
+  body { margin: 0; font-family: system-ui, sans-serif; background: #1a1a1a; }
+  .legend { position: sticky; top: 0; z-index: 10; background: #222; color: #eee; padding: 8px 12px; display: flex; gap: 16px; align-items: center; font-size: 13px; }
+  .legend-item { display: flex; align-items: center; gap: 6px; }
+  .swatch { width: 12px; height: 12px; border-radius: 2px; display: inline-block; }
+  .count { margin-left: auto; color: #999; }
+  .stage { position: relative; display: inline-block; }
+  .stage img { display: block; max-width: none; }
+  .dev-box { position: absolute; border: 2px solid; background: rgba(255, 255, 255, 0.08); box-sizing: border-box; cursor: help; }
+</style>
+</head>
+<body>
+<div class="legend">
+  <strong>https://jira.atlassian.com/</strong>
+  <span class="legend-item"><span class="swatch" style="background:#e53e3e"></span>color</span><span class="legend-item"><span class="swatch" style="background:#dd6b20"></span>spacing</span><span class="legend-item"><span class="swatch" style="background:#3182ce"></span>typography</span><span class="legend-item"><span class="swatch" style="background:#805ad5"></span>radius</span>
+  <span class="count">9 flagged occurrences (score &gt; 15)</span>
+</div>
+<div class="stage">
+  <img src="../../cache/jira-real-app/fce3a307ba2987ac26dc15b32910a4d681c46974011081bdcc3583b3f2442450.png" alt="page screenshot">
+  <div class="dev-box" style="left:199.15625px;top:0px;width:117.546875px;height:68px;border-color:#805ad5;" title="a/text #95733991 — score 25.0
+border-radius (border-top-left-radius): 3 -&gt; border-radius:2 (distance 1.00)"></div>
+  <div class="dev-box" style="left:316.703125px;top:0px;width:122.140625px;height:68px;border-color:#805ad5;" title="a/text #95733991 — score 25.0
+border-radius (border-top-left-radius): 3 -&gt; border-radius:2 (distance 1.00)"></div>
+  <div class="dev-box" style="left:438.84375px;top:0px;width:75.859375px;height:68px;border-color:#805ad5;" title="a/text #95733991 — score 25.0
+border-radius (border-top-left-radius): 3 -&gt; border-radius:2 (distance 1.00)"></div>
+  <div class="dev-box" style="left:514.703125px;top:0px;width:129.984375px;height:68px;border-color:#805ad5;" title="a/text #95733991 — score 25.0
+border-radius (border-top-left-radius): 3 -&gt; border-radius:2 (distance 1.00)"></div>
+  <div class="dev-box" style="left:644.6875px;top:0px;width:83.109375px;height:68px;border-color:#805ad5;" title="a/text #95733991 — score 25.0
+border-radius (border-top-left-radius): 3 -&gt; border-radius:2 (distance 1.00)"></div>
+  <div class="dev-box" style="left:960.859375px;top:14px;width:124.140625px;height:40px;border-color:#805ad5;" title="a/text #fbf49916 — score 31.3
+border-radius (border-top-left-radius): 10000 -&gt; border-radius:9999 (distance 1.00)"></div>
+  <div class="dev-box" style="left:64px;top:348px;width:120px;height:42px;border-color:#805ad5;" title="a/text #bd8671c7 — score 31.3
+border-radius (border-top-left-radius): 10000 -&gt; border-radius:9999 (distance 1.00)"></div>
+  <div class="dev-box" style="left:1147px;top:14px;width:40px;height:40px;border-color:#805ad5;" title="div #3b70567f — score 37.5
+border-radius (border-top-left-radius): 40 -&gt; border-radius:16 (distance 24.00)"></div>
+  <div class="dev-box" style="left:64px;top:148px;width:461.328125px;height:168px;border-color:#3182ce;" title="h1/text #95842ab2 — score 16.7
+font-size: 48 -&gt; font-size:32 (distance 16.00)
+font-family: &quot;Charlie Display&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif -&gt; font-family:Charlie Display (distance 0.00)
+font-weight: 800 -&gt; font-weight:653 (distance 147.00)"></div>
+</div>
+</body>
+</html>
