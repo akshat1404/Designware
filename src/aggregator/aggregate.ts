@@ -63,9 +63,9 @@ function mean(values: number[]): number {
   return values.reduce((a, b) => a + b, 0) / values.length;
 }
 
-type Category = "color" | "spacing" | "typography" | "radius";
+export type Category = "color" | "spacing" | "typography" | "radius";
 
-function categoryOf(property: PropertyKind): Category {
+export function categoryOf(property: PropertyKind): Category {
   switch (property) {
     case "color":
     case "background-color":

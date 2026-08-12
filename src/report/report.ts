@@ -1,11 +1,13 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import path from "node:path";
-import type { ProductReport } from "../aggregator/aggregate.js";
+import type { PageReport, ProductReport } from "../aggregator/aggregate.js";
 import type { CrawlTarget } from "../targets/types.js";
+import type { ExtractedPage } from "../extractor/types.js";
+import { buildOverlayBoxes, overlayFilename, renderOverlayHtml } from "./overlay.js";
 
 const REPORTS_ROOT = path.resolve(process.cwd(), "reports");
 
-function summaryMarkdown(target: CrawlTarget, report: ProductReport): string {
+function summaryMarkdown(target: CrawlTarget, report: ProductReport, overlayLinks: Map<string, string>): string {
   const lines: string[] = [];
   lines.push(`# ${target.label} (${target.kind})`);
   lines.push("");
@@ -29,6 +31,17 @@ function summaryMarkdown(target: CrawlTarget, report: ProductReport): string {
     lines.push("");
     lines.push("## Unstable pages (excluded from score)");
     for (const p of report.unstablePages) lines.push(`- ${p}`);
+  }
+
+  if (overlayLinks.size > 0) {
+    lines.push("");
+    lines.push("## Page overlays");
+    lines.push("");
+    lines.push("Screenshot of each page with flagged deviations boxed and color-coded by category.");
+    for (const page of report.pages) {
+      const file = overlayLinks.get(page.page);
+      if (file) lines.push(`- [${page.page}](./${file})`);
+    }
   }
 
   lines.push("");
@@ -55,10 +68,43 @@ function summaryMarkdown(target: CrawlTarget, report: ProductReport): string {
   return lines.join("\n");
 }
 
-/** Writes reports/<target-key>/report.json (full data) and summary.md (human-readable). */
-export function writeReport(target: CrawlTarget, report: ProductReport): void {
+/**
+ * Writes one overlay HTML file per page that has both a captured
+ * screenshot and scored data, alongside the report. Pages with no
+ * screenshot (Level 1 fixture runs, which don't call this) or no
+ * boxes above the threshold still get skipped/produced gracefully —
+ * an overlay with zero boxes is a legitimate "nothing flagged" result.
+ */
+function writePageOverlays(dir: string, pages: PageReport[], extractedByUrl: Map<string, ExtractedPage>): Map<string, string> {
+  const links = new Map<string, string>();
+  for (const pageReport of pages) {
+    const extracted = extractedByUrl.get(pageReport.page);
+    if (!extracted?.screenshotPath) continue;
+
+    const boxes = buildOverlayBoxes(extracted, pageReport);
+    const screenshotAbsPath = path.resolve(process.cwd(), extracted.screenshotPath);
+    const screenshotHref = path.relative(dir, screenshotAbsPath).split(path.sep).join("/");
+
+    const filename = overlayFilename(pageReport.page);
+    writeFileSync(path.join(dir, filename), renderOverlayHtml(pageReport.page, screenshotHref, boxes), "utf-8");
+    links.set(pageReport.page, filename);
+  }
+  return links;
+}
+
+/**
+ * Writes reports/<target-key>/report.json (full data), summary.md
+ * (human-readable), and a per-page overlay HTML file for any page in
+ * `extractedPages` that carries a screenshot (Level 2 real-page crawls —
+ * Level 1 fixture runs don't pass this and simply get no overlays).
+ */
+export function writeReport(target: CrawlTarget, report: ProductReport, extractedPages: ExtractedPage[] = []): void {
   const dir = path.join(REPORTS_ROOT, target.key);
   mkdirSync(dir, { recursive: true });
+
+  const extractedByUrl = new Map(extractedPages.map((p) => [p.page, p]));
+  const overlayLinks = writePageOverlays(dir, report.pages, extractedByUrl);
+
   writeFileSync(path.join(dir, "report.json"), JSON.stringify({ target, report }, null, 2), "utf-8");
-  writeFileSync(path.join(dir, "summary.md"), summaryMarkdown(target, report), "utf-8");
+  writeFileSync(path.join(dir, "summary.md"), summaryMarkdown(target, report, overlayLinks), "utf-8");
 }

@@ -42,7 +42,7 @@ async function runTarget(entry: RegisteredTarget, refresh: boolean): Promise<voi
   }
 
   const report = scoreProduct(target.label, pages, spec);
-  writeReport(target, report);
+  writeReport(target, report, pages);
   console.log(`  score: ${report.score.toFixed(1)} / 100  ->  reports/${target.key}/summary.md`);
 }
 
