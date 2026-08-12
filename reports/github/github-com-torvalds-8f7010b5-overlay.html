@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Deviation overlay - https://github.com/torvalds</title>
+<style>
+  body { margin: 0; font-family: system-ui, sans-serif; background: #1a1a1a; }
+  .legend { position: sticky; top: 0; z-index: 10; background: #222; color: #eee; padding: 8px 12px; display: flex; gap: 16px; align-items: center; font-size: 13px; }
+  .legend-item { display: flex; align-items: center; gap: 6px; }
+  .swatch { width: 12px; height: 12px; border-radius: 2px; display: inline-block; }
+  .count { margin-left: auto; color: #999; }
+  .stage { position: relative; display: inline-block; }
+  .stage img { display: block; max-width: none; }
+  .dev-box { position: absolute; border: 2px solid; background: rgba(255, 255, 255, 0.08); box-sizing: border-box; cursor: help; }
+</style>
+</head>
+<body>
+<div class="legend">
+  <strong>https://github.com/torvalds</strong>
+  <span class="legend-item"><span class="swatch" style="background:#e53e3e"></span>color</span><span class="legend-item"><span class="swatch" style="background:#dd6b20"></span>spacing</span><span class="legend-item"><span class="swatch" style="background:#3182ce"></span>typography</span><span class="legend-item"><span class="swatch" style="background:#805ad5"></span>radius</span>
+  <span class="count">7 flagged occurrences (score &gt; 15)</span>
+</div>
+<div class="stage">
+  <img src="../../cache/github/8f7010b5f16cb3ba9bedbdea974e92a90412992bb3888988983c35522171c327.png" alt="page screenshot">
+  <div class="dev-box" style="left:1052.859375px;top:20px;width:66.15625px;height:32px;border-color:#805ad5;" title="a/text #5b128de8 — score 16.7
+border-radius (border-top-left-radius): 8 -&gt; border-radius:6 (distance 2.00)"></div>
+  <div class="dev-box" style="left:1131.015625px;top:20px;width:72.984375px;height:32px;border-color:#805ad5;" title="a/text #f431fac8 — score 22.7
+border-radius (border-top-left-radius): 8 -&gt; border-radius:6 (distance 2.00)"></div>
+  <div class="dev-box" style="left:832.859375px;top:17px;width:208px;height:38px;border-color:#805ad5;" title="button #c0862669 — score 28.9
+border-radius (border-top-left-radius): 8 -&gt; border-radius:6 (distance 2.00)"></div>
+  <div class="dev-box" style="left:1216px;top:20px;width:32px;height:32px;border-color:#805ad5;" title="button #592f26b2 — score 22.7
+border-radius (border-top-left-radius): 8 -&gt; border-radius:6 (distance 2.00)"></div>
+  <div class="dev-box" style="left:591.078125px;top:110px;width:25.5px;height:20px;border-color:#805ad5;" title="span/text #10190443 — score 31.3
+border-radius (border-top-left-radius): 24 -&gt; border-radius:12 (distance 12.00)"></div>
+  <div class="dev-box" style="left:903.578125px;top:110px;width:20.671875px;height:20px;border-color:#805ad5;" title="span/text #10190443 — score 31.3
+border-radius (border-top-left-radius): 24 -&gt; border-radius:12 (distance 12.00)"></div>
+  <div class="dev-box" style="left:903.265625px;top:30px;width:16.609375px;height:16px;border-color:#3182ce;" title="kbd/text #e777c4fc — score 20.8
+font-size: 11 -&gt; font-size:12 (distance 1.00)
+font-family: &quot;Mona Sans Mono&quot;, monospace -&gt; font-family:ui-monospace (distance 1.00)
+font-weight: 400 -&gt; font-weight:400 (distance 0.00)"></div>
+</div>
+</body>
+</html>
