@@ -72,7 +72,7 @@ at a handful of pages per site):
 
 | Target | Kind | Score | Notable finding |
 |---|---|---|---|
-| GitHub (github.com) | real-app | 5.4/100 | Homepage resolves to `"Mona Sans"`, not the token's `"Mona Sans VF"` — a marketing-vs-app font naming inconsistency |
+| GitHub (github.com) | real-app | 7.1/100 | Font-family is the largest contributor — resolves to `"Mona Sans"` in places, not the token's `"Mona Sans VF"` — a marketing-vs-app font naming inconsistency |
 | Carbon (carbondesignsystem.com) | on-spec | 1.8/100 | Residual noise is doc-site-shell CSS resets, not component drift |
 | IBM (ibm.com) | real-app | 2.0/100 | Helvetica fallback where Plex is expected; marketing-hero type/spacing/radius beyond the core component scale |
 | Atlassian Design (atlassian.design) | on-spec | 1.9/100 | Near-zero; residual noise is oversized marketing headings |
@@ -100,6 +100,13 @@ averaging *category* means (color, spacing, typography, radius) instead of
 a flat per-property mean — confirmed by the on-spec/real-app score
 ordering becoming directionally correct (real-app now scores at or above
 its own on-spec baseline, not below it).
+
+Each target's `reports/<key>/` also has an HTML overlay (captured
+screenshot with flagged deviations boxed, color-coded by category) and a
+corrected-render PNG (same page, layout-safe properties — color,
+background-color, border-color, border-radius, font-family — patched to
+their nearest token in the same live session, before the page closes) per
+crawled page, linked from that target's `summary.md`.
 
 Deliberately unresolved for now (deployment/integration decisions, not
 blocking the core math):
