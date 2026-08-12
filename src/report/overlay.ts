@@ -129,10 +129,12 @@ function boxLabel(box: OverlayBox): string {
 /**
  * Standalone HTML overlay: the captured screenshot as a background image
  * with absolutely-positioned, color-coded boxes drawn over every flagged
- * occurrence. `screenshotHref` must already be relative to (or otherwise
- * resolvable from) wherever this HTML file itself gets written.
+ * occurrence. `screenshotSrc` goes straight into the `<img src>` — pass a
+ * `data:` URI (see writePageOverlays), not a file path, so the generated
+ * file has no dependency on cache/, the report directory, or any relative
+ * path surviving outside the checkout that produced it.
  */
-export function renderOverlayHtml(pageUrl: string, screenshotHref: string, boxes: OverlayBox[]): string {
+export function renderOverlayHtml(pageUrl: string, screenshotSrc: string, boxes: OverlayBox[]): string {
   const boxDivs = boxes
     .map((box) => {
       const color = CATEGORY_COLORS[box.category];
@@ -168,7 +170,7 @@ export function renderOverlayHtml(pageUrl: string, screenshotHref: string, boxes
   <span class="count">${boxes.length} flagged occurrence${boxes.length === 1 ? "" : "s"} (score &gt; ${OVERLAY_SCORE_THRESHOLD})</span>
 </div>
 <div class="stage">
-  <img src="${escapeHtml(screenshotHref)}" alt="page screenshot">
+  <img src="${screenshotSrc}" alt="page screenshot">
   ${boxDivs}
 </div>
 </body>

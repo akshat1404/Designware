@@ -1,14 +1,20 @@
 import { describe, it, expect, afterEach } from "vitest";
-import { readFileSync, rmSync } from "node:fs";
+import { mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { writeReport } from "../src/report/report.js";
+import { overlayFilename } from "../src/report/overlay.js";
 import type { CrawlTarget } from "../src/targets/types.js";
 import type { PageReport, ProductReport } from "../src/aggregator/aggregate.js";
+import type { ExtractedPage } from "../src/extractor/types.js";
 
 const TEST_KEY = "test-report-target";
 
+// Smallest possible valid PNG (1x1, transparent) — enough to round-trip through readFileSync/base64.
+const FAKE_PNG = Buffer.from("iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=", "base64");
+
 afterEach(() => {
   rmSync(path.resolve(process.cwd(), "reports", TEST_KEY), { recursive: true, force: true });
+  rmSync(path.resolve(process.cwd(), "cache", TEST_KEY), { recursive: true, force: true });
 });
 
 const target: CrawlTarget = {
@@ -78,5 +84,29 @@ describe("writeReport", () => {
     const summary = readFileSync(mdPath, "utf-8");
     expect(summary).toContain("N/A");
     expect(summary).not.toContain("0.0 / 100");
+  });
+
+  it("embeds the overlay's screenshot as a data URI, not a link back into cache/", () => {
+    const cacheDir = path.resolve(process.cwd(), "cache", TEST_KEY);
+    mkdirSync(cacheDir, { recursive: true });
+    const screenshotAbsPath = path.join(cacheDir, "fake.png");
+    writeFileSync(screenshotAbsPath, FAKE_PNG);
+
+    const extractedPages: ExtractedPage[] = [
+      {
+        page: scoredPage.page,
+        elements: [],
+        screenshotPath: path.relative(process.cwd(), screenshotAbsPath),
+      },
+    ];
+
+    writeReport(target, report, extractedPages);
+
+    const overlayPath = path.resolve(process.cwd(), "reports", TEST_KEY, overlayFilename(scoredPage.page));
+    const overlayHtml = readFileSync(overlayPath, "utf-8");
+
+    expect(overlayHtml).toContain(`data:image/png;base64,${FAKE_PNG.toString("base64")}`);
+    expect(overlayHtml).not.toContain("cache");
+    expect(overlayHtml).not.toContain("fake.png");
   });
 });

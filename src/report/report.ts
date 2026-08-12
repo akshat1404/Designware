@@ -1,4 +1,4 @@
-import { copyFileSync, mkdirSync, writeFileSync } from "node:fs";
+import { copyFileSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import type { PageReport, ProductReport } from "../aggregator/aggregate.js";
 import type { CrawlTarget } from "../targets/types.js";
@@ -81,6 +81,12 @@ function summaryMarkdown(target: CrawlTarget, report: ProductReport, overlayLink
  * screenshot (Level 1 fixture runs, which don't call this) or no
  * boxes above the threshold still get skipped/produced gracefully —
  * an overlay with zero boxes is a legitimate "nothing flagged" result.
+ *
+ * The screenshot is embedded as a base64 data URI rather than linked by
+ * relative path: a link back into cache/ (gitignored, never travels with
+ * the report) leaves the overlay broken the moment it's opened anywhere
+ * other than the exact checkout that produced it. A data URI makes the
+ * file genuinely standalone — open it anywhere, hand it to anyone.
  */
 function writePageOverlays(dir: string, pages: PageReport[], extractedByUrl: Map<string, ExtractedPage>): Map<string, string> {
   const links = new Map<string, string>();
@@ -90,10 +96,10 @@ function writePageOverlays(dir: string, pages: PageReport[], extractedByUrl: Map
 
     const boxes = buildOverlayBoxes(extracted, pageReport);
     const screenshotAbsPath = path.resolve(process.cwd(), extracted.screenshotPath);
-    const screenshotHref = path.relative(dir, screenshotAbsPath).split(path.sep).join("/");
+    const screenshotDataUri = `data:image/png;base64,${readFileSync(screenshotAbsPath).toString("base64")}`;
 
     const filename = overlayFilename(pageReport.page);
-    writeFileSync(path.join(dir, filename), renderOverlayHtml(pageReport.page, screenshotHref, boxes), "utf-8");
+    writeFileSync(path.join(dir, filename), renderOverlayHtml(pageReport.page, screenshotDataUri, boxes), "utf-8");
     links.set(pageReport.page, filename);
   }
   return links;
