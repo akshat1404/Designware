@@ -43,6 +43,15 @@ ${corrected}
 </section>`;
 }
 
+/** Same warning as summaryMarkdown's `> ⚠️ **UNVERIFIED ON-SPEC BASELINE**` banner, ported to HTML — same wording/severity, not a reinvented one, so it reads as the same caveat wherever it's seen. */
+function renderUnverifiedBanner(target: CrawlTarget): string {
+  if (!target.unverified) return "";
+  return `<div class="unverified-banner">
+<strong>⚠️ UNVERIFIED ON-SPEC BASELINE</strong> — ${escapeHtml(target.unverified)}
+<br>Do not compare this score against genuine on-spec targets.
+</div>`;
+}
+
 function renderBreakdownTable(report: ProductReport): string {
   const rows = report.breakdown
     .map((b) => `<tr><td>${escapeHtml(b.property)}</td><td>${b.meanNormalized.toFixed(2)}</td><td>${b.count}</td></tr>`)
@@ -100,6 +109,7 @@ export function renderStandaloneReportHtml(target: CrawlTarget, report: ProductR
   table { border-collapse: collapse; width: 100%; margin-bottom: 32px; }
   th, td { border: 1px solid #333; padding: 6px 10px; text-align: left; font-size: 13px; vertical-align: top; }
   th { background: #222; }
+  .unverified-banner { margin: 16px 24px 0; padding: 12px 16px; background: #4a2e00; border: 2px solid #d9822b; border-radius: 4px; color: #ffd8a8; font-size: 14px; }
   .page { margin-bottom: 40px; border-top: 1px solid #333; padding-top: 16px; }
   .page-visuals { display: flex; gap: 16px; flex-wrap: wrap; align-items: flex-start; }
   .overlay, .corrected { max-width: 100%; overflow: auto; }
@@ -112,6 +122,7 @@ ${OVERLAY_CSS}
 <h1>${escapeHtml(target.label)} (${escapeHtml(target.kind)})</h1>
 <div class="score">${scoreLine}</div>
 </header>
+${renderUnverifiedBanner(target)}
 <main>
 ${renderBreakdownTable(report)}
 ${renderOffendersTable(report)}

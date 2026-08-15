@@ -149,4 +149,16 @@ describe("writeReport", () => {
     expect(html).not.toContain("cache");
     expect(html).not.toContain("fake.png");
   });
+
+  it("shows the unverified-baseline warning in report.html when target.unverified is set, and omits it otherwise", () => {
+    const unverifiedTarget: CrawlTarget = { ...target, unverified: "Could not confirm these pages render actual Polaris components." };
+    writeReport(unverifiedTarget, report);
+    const unverifiedHtml = readFileSync(path.resolve(process.cwd(), "reports", TEST_KEY, "report.html"), "utf-8");
+    expect(unverifiedHtml).toContain("UNVERIFIED ON-SPEC BASELINE");
+    expect(unverifiedHtml).toContain("Could not confirm these pages render actual Polaris components.");
+
+    writeReport(target, report);
+    const regularHtml = readFileSync(path.resolve(process.cwd(), "reports", TEST_KEY, "report.html"), "utf-8");
+    expect(regularHtml).not.toContain("UNVERIFIED ON-SPEC BASELINE");
+  });
 });
