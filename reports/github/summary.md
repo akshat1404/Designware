@@ -1,5 +1,7 @@
 # GitHub (github.com) (real-app)
 
+[**View the full report**](./report.html) — one self-contained file with the score, plain-English breakdown, and screenshots; opens directly in a browser from anywhere, no other files needed.
+
 **Score: 7.1 / 100** — 0 is fully on-spec, 100 is maximally deviant.
 
 Pages scored: 6
@@ -30,35 +32,35 @@ Per page: an overlay of the captured screenshot with flagged deviations boxed an
 
 ## Worst offenders
 
-| page | component | instance | property | value | nearest token | normalized |
+| what's wrong | page | component | instance | raw value | nearest token | normalized |
 |---|---|---|---|---|---|---|
-| https://github.com/ | a/text | f4b727af | font-family | "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji" | font-family:ui-monospace | 1.00 |
-| https://github.com/ | a/text | 3d74cc57 | font-family | "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji" | font-family:ui-monospace | 1.00 |
-| https://github.com/ | a/text | 4078d039 | font-family | "Mona Sans Mono", monospace | font-family:ui-monospace | 1.00 |
-| https://github.com/ | h2/text | cd6a62ad | font-size | 24 | font-size:20 | 1.00 |
-| https://github.com/ | h2/text | f999644f | font-family | "Mona Sans Mono", monospace | font-family:ui-monospace | 1.00 |
-| https://github.com/ | h2/text | 9c141e11 | font-family | "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji" | font-family:ui-monospace | 1.00 |
-| https://github.com/ | h2/text | 6b9efd59 | font-size | 48 | font-size:40 | 1.00 |
-| https://github.com/ | h2/text | 6b9efd59 | font-family | "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji" | font-family:ui-monospace | 1.00 |
-| https://github.com/ | h2/text | 3fcace53 | font-size | 24 | font-size:20 | 1.00 |
-| https://github.com/ | h2/text | 3fcace53 | font-family | "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji" | font-family:ui-monospace | 1.00 |
-| https://github.com/ | button/text | 2caba805 | font-family | "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji" | font-family:ui-monospace | 1.00 |
-| https://github.com/ | button/text | df0af6f3 | font-family | "Mona Sans Mono", monospace | font-family:ui-monospace | 1.00 |
-| https://github.com/ | button | c0862669 | spacing (padding-top) | 6 | spacing:4 | 1.00 |
-| https://github.com/ | button | c0862669 | spacing (padding-bottom) | 6 | spacing:4 | 1.00 |
-| https://github.com/ | button | 7e815292 | font-family | "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji" | font-family:ui-monospace | 1.00 |
-| https://github.com/ | button | 7e815292 | spacing (padding-top) | 6 | spacing:4 | 1.00 |
-| https://github.com/ | button | 7e815292 | spacing (padding-right) | 20 | spacing:16 | 1.00 |
-| https://github.com/ | button | 7e815292 | spacing (padding-bottom) | 6 | spacing:4 | 1.00 |
-| https://github.com/ | button | 7e815292 | spacing (padding-left) | 20 | spacing:16 | 1.00 |
-| https://github.com/ | button | 7882110f | border-radius (border-top-left-radius) | 60 | border-radius:12 | 1.00 |
-| https://github.com/ | button | 176b915e | border-radius (border-top-left-radius) | 60 | border-radius:12 | 1.00 |
-| https://github.com/ | button | b1797ee2 | border-radius (border-top-left-radius) | 48 | border-radius:12 | 1.00 |
-| https://github.com/ | button | 64ff766d | font-family | "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji" | font-family:ui-monospace | 1.00 |
-| https://github.com/ | span/text | ff8d5650 | font-family | "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji" | font-family:ui-monospace | 1.00 |
-| https://github.com/ | span/text | 6c66a0a6 | font-size | 22 | font-size:20 | 1.00 |
-| https://github.com/ | span/text | 6c66a0a6 | font-family | "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji" | font-family:ui-monospace | 1.00 |
-| https://github.com/ | span/text | 4843603b | font-size | 22 | font-size:20 | 1.00 |
-| https://github.com/ | span/text | 4843603b | font-family | "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji" | font-family:ui-monospace | 1.00 |
-| https://github.com/ | span/text | db41f809 | font-size | 22 | font-size:20 | 1.00 |
-| https://github.com/ | span/text | db41f809 | font-family | "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji" | font-family:ui-monospace | 1.00 |
+| using "Mona Sans" instead of "ui-monospace" | https://github.com/ | a/text | f4b727af | font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji" | font-family:ui-monospace | 1.00 |
+| using "Mona Sans" instead of "ui-monospace" | https://github.com/ | a/text | 3d74cc57 | font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji" | font-family:ui-monospace | 1.00 |
+| using "Mona Sans Mono" instead of "ui-monospace" | https://github.com/ | a/text | 4078d039 | font-family: "Mona Sans Mono", monospace | font-family:ui-monospace | 1.00 |
+| font size is 24px, should be 20px | https://github.com/ | h2/text | cd6a62ad | font-size: 24 | font-size:20 | 1.00 |
+| using "Mona Sans Mono" instead of "ui-monospace" | https://github.com/ | h2/text | f999644f | font-family: "Mona Sans Mono", monospace | font-family:ui-monospace | 1.00 |
+| using "Mona Sans" instead of "ui-monospace" | https://github.com/ | h2/text | 9c141e11 | font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji" | font-family:ui-monospace | 1.00 |
+| font size is 48px, should be 40px | https://github.com/ | h2/text | 6b9efd59 | font-size: 48 | font-size:40 | 1.00 |
+| using "Mona Sans" instead of "ui-monospace" | https://github.com/ | h2/text | 6b9efd59 | font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji" | font-family:ui-monospace | 1.00 |
+| font size is 24px, should be 20px | https://github.com/ | h2/text | 3fcace53 | font-size: 24 | font-size:20 | 1.00 |
+| using "Mona Sans" instead of "ui-monospace" | https://github.com/ | h2/text | 3fcace53 | font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji" | font-family:ui-monospace | 1.00 |
+| using "Mona Sans" instead of "ui-monospace" | https://github.com/ | button/text | 2caba805 | font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji" | font-family:ui-monospace | 1.00 |
+| using "Mona Sans Mono" instead of "ui-monospace" | https://github.com/ | button/text | df0af6f3 | font-family: "Mona Sans Mono", monospace | font-family:ui-monospace | 1.00 |
+| padding-top is 6px, should be 4px | https://github.com/ | button | c0862669 | spacing (padding-top): 6 | spacing:4 | 1.00 |
+| padding-bottom is 6px, should be 4px | https://github.com/ | button | c0862669 | spacing (padding-bottom): 6 | spacing:4 | 1.00 |
+| using "Mona Sans" instead of "ui-monospace" | https://github.com/ | button | 7e815292 | font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji" | font-family:ui-monospace | 1.00 |
+| padding-top is 6px, should be 4px | https://github.com/ | button | 7e815292 | spacing (padding-top): 6 | spacing:4 | 1.00 |
+| padding-right is 20px, should be 16px | https://github.com/ | button | 7e815292 | spacing (padding-right): 20 | spacing:16 | 1.00 |
+| padding-bottom is 6px, should be 4px | https://github.com/ | button | 7e815292 | spacing (padding-bottom): 6 | spacing:4 | 1.00 |
+| padding-left is 20px, should be 16px | https://github.com/ | button | 7e815292 | spacing (padding-left): 20 | spacing:16 | 1.00 |
+| top-left corner radius is 60px, should be 12px | https://github.com/ | button | 7882110f | border-radius (border-top-left-radius): 60 | border-radius:12 | 1.00 |
+| top-left corner radius is 60px, should be 12px | https://github.com/ | button | 176b915e | border-radius (border-top-left-radius): 60 | border-radius:12 | 1.00 |
+| top-left corner radius is 48px, should be 12px | https://github.com/ | button | b1797ee2 | border-radius (border-top-left-radius): 48 | border-radius:12 | 1.00 |
+| using "Mona Sans" instead of "ui-monospace" | https://github.com/ | button | 64ff766d | font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji" | font-family:ui-monospace | 1.00 |
+| using "Mona Sans" instead of "ui-monospace" | https://github.com/ | span/text | ff8d5650 | font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji" | font-family:ui-monospace | 1.00 |
+| font size is 22px, should be 20px | https://github.com/ | span/text | 6c66a0a6 | font-size: 22 | font-size:20 | 1.00 |
+| using "Mona Sans" instead of "ui-monospace" | https://github.com/ | span/text | 6c66a0a6 | font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji" | font-family:ui-monospace | 1.00 |
+| font size is 22px, should be 20px | https://github.com/ | span/text | 4843603b | font-size: 22 | font-size:20 | 1.00 |
+| using "Mona Sans" instead of "ui-monospace" | https://github.com/ | span/text | 4843603b | font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji" | font-family:ui-monospace | 1.00 |
+| font size is 22px, should be 20px | https://github.com/ | span/text | db41f809 | font-size: 22 | font-size:20 | 1.00 |
+| using "Mona Sans" instead of "ui-monospace" | https://github.com/ | span/text | db41f809 | font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji" | font-family:ui-monospace | 1.00 |

@@ -42876,7 +42876,8 @@
         "rawValue": "\"Mona Sans\", MonaSansFallback, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\"",
         "nearestToken": "font-family:ui-monospace",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "using \"Mona Sans\" instead of \"ui-monospace\""
       },
       {
         "page": "https://github.com/",
@@ -42886,7 +42887,8 @@
         "rawValue": "\"Mona Sans\", MonaSansFallback, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\"",
         "nearestToken": "font-family:ui-monospace",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "using \"Mona Sans\" instead of \"ui-monospace\""
       },
       {
         "page": "https://github.com/",
@@ -42896,7 +42898,8 @@
         "rawValue": "\"Mona Sans Mono\", monospace",
         "nearestToken": "font-family:ui-monospace",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "using \"Mona Sans Mono\" instead of \"ui-monospace\""
       },
       {
         "page": "https://github.com/",
@@ -42906,7 +42909,8 @@
         "rawValue": 24,
         "nearestToken": "font-size:20",
         "distance": 4,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 24px, should be 20px"
       },
       {
         "page": "https://github.com/",
@@ -42916,7 +42920,8 @@
         "rawValue": "\"Mona Sans Mono\", monospace",
         "nearestToken": "font-family:ui-monospace",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "using \"Mona Sans Mono\" instead of \"ui-monospace\""
       },
       {
         "page": "https://github.com/",
@@ -42926,7 +42931,8 @@
         "rawValue": "\"Mona Sans\", MonaSansFallback, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\"",
         "nearestToken": "font-family:ui-monospace",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "using \"Mona Sans\" instead of \"ui-monospace\""
       },
       {
         "page": "https://github.com/",
@@ -42936,7 +42942,8 @@
         "rawValue": 48,
         "nearestToken": "font-size:40",
         "distance": 8,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 48px, should be 40px"
       },
       {
         "page": "https://github.com/",
@@ -42946,7 +42953,8 @@
         "rawValue": "\"Mona Sans\", MonaSansFallback, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\"",
         "nearestToken": "font-family:ui-monospace",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "using \"Mona Sans\" instead of \"ui-monospace\""
       },
       {
         "page": "https://github.com/",
@@ -42956,7 +42964,8 @@
         "rawValue": 24,
         "nearestToken": "font-size:20",
         "distance": 4,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 24px, should be 20px"
       },
       {
         "page": "https://github.com/",
@@ -42966,7 +42975,8 @@
         "rawValue": "\"Mona Sans\", MonaSansFallback, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\"",
         "nearestToken": "font-family:ui-monospace",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "using \"Mona Sans\" instead of \"ui-monospace\""
       },
       {
         "page": "https://github.com/",
@@ -42976,7 +42986,8 @@
         "rawValue": "\"Mona Sans\", MonaSansFallback, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\"",
         "nearestToken": "font-family:ui-monospace",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "using \"Mona Sans\" instead of \"ui-monospace\""
       },
       {
         "page": "https://github.com/",
@@ -42986,7 +42997,8 @@
         "rawValue": "\"Mona Sans Mono\", monospace",
         "nearestToken": "font-family:ui-monospace",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "using \"Mona Sans Mono\" instead of \"ui-monospace\""
       },
       {
         "page": "https://github.com/",
@@ -42997,7 +43009,8 @@
         "rawValue": 6,
         "nearestToken": "spacing:4",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-top is 6px, should be 4px"
       },
       {
         "page": "https://github.com/",
@@ -43008,7 +43021,8 @@
         "rawValue": 6,
         "nearestToken": "spacing:4",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-bottom is 6px, should be 4px"
       },
       {
         "page": "https://github.com/",
@@ -43018,7 +43032,8 @@
         "rawValue": "\"Mona Sans\", MonaSansFallback, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\"",
         "nearestToken": "font-family:ui-monospace",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "using \"Mona Sans\" instead of \"ui-monospace\""
       },
       {
         "page": "https://github.com/",
@@ -43029,7 +43044,8 @@
         "rawValue": 6,
         "nearestToken": "spacing:4",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-top is 6px, should be 4px"
       },
       {
         "page": "https://github.com/",
@@ -43040,7 +43056,8 @@
         "rawValue": 20,
         "nearestToken": "spacing:16",
         "distance": 4,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-right is 20px, should be 16px"
       },
       {
         "page": "https://github.com/",
@@ -43051,7 +43068,8 @@
         "rawValue": 6,
         "nearestToken": "spacing:4",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-bottom is 6px, should be 4px"
       },
       {
         "page": "https://github.com/",
@@ -43062,7 +43080,8 @@
         "rawValue": 20,
         "nearestToken": "spacing:16",
         "distance": 4,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-left is 20px, should be 16px"
       },
       {
         "page": "https://github.com/",
@@ -43073,7 +43092,8 @@
         "rawValue": 60,
         "nearestToken": "border-radius:12",
         "distance": 48,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "top-left corner radius is 60px, should be 12px"
       },
       {
         "page": "https://github.com/",
@@ -43084,7 +43104,8 @@
         "rawValue": 60,
         "nearestToken": "border-radius:12",
         "distance": 48,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "top-left corner radius is 60px, should be 12px"
       },
       {
         "page": "https://github.com/",
@@ -43095,7 +43116,8 @@
         "rawValue": 48,
         "nearestToken": "border-radius:12",
         "distance": 36,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "top-left corner radius is 48px, should be 12px"
       },
       {
         "page": "https://github.com/",
@@ -43105,7 +43127,8 @@
         "rawValue": "\"Mona Sans\", MonaSansFallback, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\"",
         "nearestToken": "font-family:ui-monospace",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "using \"Mona Sans\" instead of \"ui-monospace\""
       },
       {
         "page": "https://github.com/",
@@ -43115,7 +43138,8 @@
         "rawValue": "\"Mona Sans\", MonaSansFallback, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\"",
         "nearestToken": "font-family:ui-monospace",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "using \"Mona Sans\" instead of \"ui-monospace\""
       },
       {
         "page": "https://github.com/",
@@ -43125,7 +43149,8 @@
         "rawValue": 22,
         "nearestToken": "font-size:20",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 22px, should be 20px"
       },
       {
         "page": "https://github.com/",
@@ -43135,7 +43160,8 @@
         "rawValue": "\"Mona Sans\", MonaSansFallback, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\"",
         "nearestToken": "font-family:ui-monospace",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "using \"Mona Sans\" instead of \"ui-monospace\""
       },
       {
         "page": "https://github.com/",
@@ -43145,7 +43171,8 @@
         "rawValue": 22,
         "nearestToken": "font-size:20",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 22px, should be 20px"
       },
       {
         "page": "https://github.com/",
@@ -43155,7 +43182,8 @@
         "rawValue": "\"Mona Sans\", MonaSansFallback, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\"",
         "nearestToken": "font-family:ui-monospace",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "using \"Mona Sans\" instead of \"ui-monospace\""
       },
       {
         "page": "https://github.com/",
@@ -43165,7 +43193,8 @@
         "rawValue": 22,
         "nearestToken": "font-size:20",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 22px, should be 20px"
       },
       {
         "page": "https://github.com/",
@@ -43175,7 +43204,8 @@
         "rawValue": "\"Mona Sans\", MonaSansFallback, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\"",
         "nearestToken": "font-family:ui-monospace",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "using \"Mona Sans\" instead of \"ui-monospace\""
       },
       {
         "page": "https://github.com/",
@@ -43185,7 +43215,8 @@
         "rawValue": 18,
         "nearestToken": "font-size:16",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 18px, should be 16px"
       },
       {
         "page": "https://github.com/",
@@ -43195,7 +43226,8 @@
         "rawValue": "\"Mona Sans\", MonaSansFallback, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\"",
         "nearestToken": "font-family:ui-monospace",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "using \"Mona Sans\" instead of \"ui-monospace\""
       },
       {
         "page": "https://github.com/",
@@ -43205,7 +43237,8 @@
         "rawValue": 18,
         "nearestToken": "font-size:16",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 18px, should be 16px"
       },
       {
         "page": "https://github.com/",
@@ -43215,7 +43248,8 @@
         "rawValue": "\"Mona Sans\", MonaSansFallback, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\"",
         "nearestToken": "font-family:ui-monospace",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "using \"Mona Sans\" instead of \"ui-monospace\""
       },
       {
         "page": "https://github.com/",
@@ -43225,7 +43259,8 @@
         "rawValue": 22,
         "nearestToken": "font-size:20",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 22px, should be 20px"
       },
       {
         "page": "https://github.com/",
@@ -43235,7 +43270,8 @@
         "rawValue": "\"Mona Sans\", MonaSansFallback, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\"",
         "nearestToken": "font-family:ui-monospace",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "using \"Mona Sans\" instead of \"ui-monospace\""
       },
       {
         "page": "https://github.com/",
@@ -43245,7 +43281,8 @@
         "rawValue": 18,
         "nearestToken": "font-size:16",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 18px, should be 16px"
       },
       {
         "page": "https://github.com/",
@@ -43255,7 +43292,8 @@
         "rawValue": "\"Mona Sans\", MonaSansFallback, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\"",
         "nearestToken": "font-family:ui-monospace",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "using \"Mona Sans\" instead of \"ui-monospace\""
       },
       {
         "page": "https://github.com/",
@@ -43265,7 +43303,8 @@
         "rawValue": "\"Mona Sans\", MonaSansFallback, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\"",
         "nearestToken": "font-family:ui-monospace",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "using \"Mona Sans\" instead of \"ui-monospace\""
       },
       {
         "page": "https://github.com/",
@@ -43275,7 +43314,8 @@
         "rawValue": 48,
         "nearestToken": "font-size:40",
         "distance": 8,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 48px, should be 40px"
       },
       {
         "page": "https://github.com/",
@@ -43285,7 +43325,8 @@
         "rawValue": "\"Mona Sans\", MonaSansFallback, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\"",
         "nearestToken": "font-family:ui-monospace",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "using \"Mona Sans\" instead of \"ui-monospace\""
       },
       {
         "page": "https://github.com/",
@@ -43295,7 +43336,8 @@
         "rawValue": 800,
         "nearestToken": "font-weight:600",
         "distance": 200,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font weight is 800, should be 600 (lighter than what's used)"
       },
       {
         "page": "https://github.com/",
@@ -43305,7 +43347,8 @@
         "rawValue": 22,
         "nearestToken": "font-size:20",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 22px, should be 20px"
       },
       {
         "page": "https://github.com/",
@@ -43315,7 +43358,8 @@
         "rawValue": "\"Mona Sans\", MonaSansFallback, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\"",
         "nearestToken": "font-family:ui-monospace",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "using \"Mona Sans\" instead of \"ui-monospace\""
       },
       {
         "page": "https://github.com/",
@@ -43325,7 +43369,8 @@
         "rawValue": "\"Mona Sans Mono\", monospace",
         "nearestToken": "font-family:ui-monospace",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "using \"Mona Sans Mono\" instead of \"ui-monospace\""
       },
       {
         "page": "https://github.com/",
@@ -43335,7 +43380,8 @@
         "rawValue": "\"Mona Sans\", MonaSansFallback, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\"",
         "nearestToken": "font-family:ui-monospace",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "using \"Mona Sans\" instead of \"ui-monospace\""
       },
       {
         "page": "https://github.com/",
@@ -43345,7 +43391,8 @@
         "rawValue": "\"Mona Sans\", MonaSansFallback, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\"",
         "nearestToken": "font-family:ui-monospace",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "using \"Mona Sans\" instead of \"ui-monospace\""
       },
       {
         "page": "https://github.com/",
@@ -43355,7 +43402,8 @@
         "rawValue": "\"Mona Sans\", MonaSansFallback, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\"",
         "nearestToken": "font-family:ui-monospace",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "using \"Mona Sans\" instead of \"ui-monospace\""
       },
       {
         "page": "https://github.com/",
@@ -43365,7 +43413,8 @@
         "rawValue": "\"Mona Sans\", MonaSansFallback, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\"",
         "nearestToken": "font-family:ui-monospace",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "using \"Mona Sans\" instead of \"ui-monospace\""
       },
       {
         "page": "https://github.com/",
@@ -43375,7 +43424,8 @@
         "rawValue": "\"Mona Sans\", MonaSansFallback, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\"",
         "nearestToken": "font-family:ui-monospace",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "using \"Mona Sans\" instead of \"ui-monospace\""
       }
     ],
     "unstablePages": []

@@ -41063,7 +41063,8 @@
         "rawValue": 344,
         "nearestToken": "spacing:160",
         "distance": 184,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-left is 344px, should be 160px"
       },
       {
         "page": "https://carbondesignsystem.com/",
@@ -41074,7 +41075,8 @@
         "rawValue": 73.4844,
         "nearestToken": "spacing:80",
         "distance": 6.515600000000006,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-right is 73.4844px, should be 80px"
       },
       {
         "page": "https://carbondesignsystem.com/",
@@ -41085,7 +41087,8 @@
         "rawValue": 344,
         "nearestToken": "spacing:160",
         "distance": 184,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-left is 344px, should be 160px"
       },
       {
         "page": "https://carbondesignsystem.com/",
@@ -41096,7 +41099,8 @@
         "rawValue": -1,
         "nearestToken": "spacing:2",
         "distance": 3,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "margin-top is -1px, should be 2px"
       },
       {
         "page": "https://carbondesignsystem.com/",
@@ -41107,7 +41111,8 @@
         "rawValue": -1,
         "nearestToken": "spacing:2",
         "distance": 3,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "margin-right is -1px, should be 2px"
       },
       {
         "page": "https://carbondesignsystem.com/",
@@ -41118,7 +41123,8 @@
         "rawValue": -1,
         "nearestToken": "spacing:2",
         "distance": 3,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "margin-bottom is -1px, should be 2px"
       },
       {
         "page": "https://carbondesignsystem.com/",
@@ -41129,7 +41135,8 @@
         "rawValue": -1,
         "nearestToken": "spacing:2",
         "distance": 3,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "margin-left is -1px, should be 2px"
       },
       {
         "page": "https://carbondesignsystem.com/",
@@ -41140,7 +41147,8 @@
         "rawValue": 6,
         "nearestToken": "spacing:4",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-top is 6px, should be 4px"
       },
       {
         "page": "https://carbondesignsystem.com/",
@@ -41151,7 +41159,8 @@
         "rawValue": 6,
         "nearestToken": "spacing:4",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-bottom is 6px, should be 4px"
       },
       {
         "page": "https://carbondesignsystem.com/",
@@ -41162,7 +41171,8 @@
         "rawValue": 69.9844,
         "nearestToken": "spacing:64",
         "distance": 5.984399999999994,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-right is 69.9844px, should be 64px"
       },
       {
         "page": "https://carbondesignsystem.com/",
@@ -41173,7 +41183,8 @@
         "rawValue": 77.7344,
         "nearestToken": "spacing:80",
         "distance": 2.2656000000000063,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-right is 77.7344px, should be 80px"
       },
       {
         "page": "https://carbondesignsystem.com/",
@@ -41184,7 +41195,8 @@
         "rawValue": -1,
         "nearestToken": "spacing:2",
         "distance": 3,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "margin-top is -1px, should be 2px"
       },
       {
         "page": "https://carbondesignsystem.com/",
@@ -41195,7 +41207,8 @@
         "rawValue": -1,
         "nearestToken": "spacing:2",
         "distance": 3,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "margin-right is -1px, should be 2px"
       },
       {
         "page": "https://carbondesignsystem.com/",
@@ -41206,7 +41219,8 @@
         "rawValue": -1,
         "nearestToken": "spacing:2",
         "distance": 3,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "margin-bottom is -1px, should be 2px"
       },
       {
         "page": "https://carbondesignsystem.com/",
@@ -41217,7 +41231,8 @@
         "rawValue": -1,
         "nearestToken": "spacing:2",
         "distance": 3,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "margin-left is -1px, should be 2px"
       },
       {
         "page": "https://carbondesignsystem.com/components/button/usage/",
@@ -41228,7 +41243,8 @@
         "rawValue": -1,
         "nearestToken": "spacing:2",
         "distance": 3,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "margin-top is -1px, should be 2px"
       },
       {
         "page": "https://carbondesignsystem.com/components/button/usage/",
@@ -41239,7 +41255,8 @@
         "rawValue": -1,
         "nearestToken": "spacing:2",
         "distance": 3,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "margin-right is -1px, should be 2px"
       },
       {
         "page": "https://carbondesignsystem.com/components/button/usage/",
@@ -41250,7 +41267,8 @@
         "rawValue": -1,
         "nearestToken": "spacing:2",
         "distance": 3,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "margin-bottom is -1px, should be 2px"
       },
       {
         "page": "https://carbondesignsystem.com/components/button/usage/",
@@ -41261,7 +41279,8 @@
         "rawValue": -1,
         "nearestToken": "spacing:2",
         "distance": 3,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "margin-left is -1px, should be 2px"
       },
       {
         "page": "https://carbondesignsystem.com/components/button/usage/",
@@ -41272,7 +41291,8 @@
         "rawValue": 6,
         "nearestToken": "spacing:4",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-top is 6px, should be 4px"
       },
       {
         "page": "https://carbondesignsystem.com/components/button/usage/",
@@ -41283,7 +41303,8 @@
         "rawValue": 6,
         "nearestToken": "spacing:4",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-bottom is 6px, should be 4px"
       },
       {
         "page": "https://carbondesignsystem.com/components/button/usage/",
@@ -41294,7 +41315,8 @@
         "rawValue": 77.6562,
         "nearestToken": "spacing:80",
         "distance": 2.3438000000000017,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-right is 77.6562px, should be 80px"
       },
       {
         "page": "https://carbondesignsystem.com/components/button/usage/",
@@ -41305,7 +41327,8 @@
         "rawValue": 16,
         "nearestToken": "border-radius:0",
         "distance": 16,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "top-left corner radius is 16px, should be 0px"
       },
       {
         "page": "https://carbondesignsystem.com/components/button/usage/",
@@ -41316,7 +41339,8 @@
         "rawValue": 16,
         "nearestToken": "border-radius:0",
         "distance": 16,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "top-left corner radius is 16px, should be 0px"
       },
       {
         "page": "https://carbondesignsystem.com/components/button/usage/",
@@ -41327,7 +41351,8 @@
         "rawValue": -1,
         "nearestToken": "spacing:2",
         "distance": 3,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "margin-top is -1px, should be 2px"
       },
       {
         "page": "https://carbondesignsystem.com/components/button/usage/",
@@ -41338,7 +41363,8 @@
         "rawValue": -1,
         "nearestToken": "spacing:2",
         "distance": 3,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "margin-right is -1px, should be 2px"
       },
       {
         "page": "https://carbondesignsystem.com/components/button/usage/",
@@ -41349,7 +41375,8 @@
         "rawValue": -1,
         "nearestToken": "spacing:2",
         "distance": 3,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "margin-bottom is -1px, should be 2px"
       },
       {
         "page": "https://carbondesignsystem.com/components/button/usage/",
@@ -41360,7 +41387,8 @@
         "rawValue": -1,
         "nearestToken": "spacing:2",
         "distance": 3,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "margin-left is -1px, should be 2px"
       },
       {
         "page": "https://carbondesignsystem.com/components/button/usage/",
@@ -41370,7 +41398,8 @@
         "rawValue": 59.2501,
         "nearestToken": "font-size:54",
         "distance": 5.250100000000003,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 59.2501px, should be 54px"
       },
       {
         "page": "https://carbondesignsystem.com/components/text-input/usage/",
@@ -41381,7 +41410,8 @@
         "rawValue": -1,
         "nearestToken": "spacing:2",
         "distance": 3,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "margin-top is -1px, should be 2px"
       },
       {
         "page": "https://carbondesignsystem.com/components/text-input/usage/",
@@ -41392,7 +41422,8 @@
         "rawValue": -1,
         "nearestToken": "spacing:2",
         "distance": 3,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "margin-right is -1px, should be 2px"
       },
       {
         "page": "https://carbondesignsystem.com/components/text-input/usage/",
@@ -41403,7 +41434,8 @@
         "rawValue": -1,
         "nearestToken": "spacing:2",
         "distance": 3,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "margin-bottom is -1px, should be 2px"
       },
       {
         "page": "https://carbondesignsystem.com/components/text-input/usage/",
@@ -41414,7 +41446,8 @@
         "rawValue": -1,
         "nearestToken": "spacing:2",
         "distance": 3,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "margin-left is -1px, should be 2px"
       },
       {
         "page": "https://carbondesignsystem.com/components/text-input/usage/",
@@ -41425,7 +41458,8 @@
         "rawValue": 6,
         "nearestToken": "spacing:4",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-top is 6px, should be 4px"
       },
       {
         "page": "https://carbondesignsystem.com/components/text-input/usage/",
@@ -41436,7 +41470,8 @@
         "rawValue": 6,
         "nearestToken": "spacing:4",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-bottom is 6px, should be 4px"
       },
       {
         "page": "https://carbondesignsystem.com/components/text-input/usage/",
@@ -41447,7 +41482,8 @@
         "rawValue": 77.6562,
         "nearestToken": "spacing:80",
         "distance": 2.3438000000000017,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-right is 77.6562px, should be 80px"
       },
       {
         "page": "https://carbondesignsystem.com/components/text-input/usage/",
@@ -41458,7 +41494,8 @@
         "rawValue": 16,
         "nearestToken": "border-radius:0",
         "distance": 16,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "top-left corner radius is 16px, should be 0px"
       },
       {
         "page": "https://carbondesignsystem.com/components/text-input/usage/",
@@ -41469,7 +41506,8 @@
         "rawValue": 16,
         "nearestToken": "border-radius:0",
         "distance": 16,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "top-left corner radius is 16px, should be 0px"
       },
       {
         "page": "https://carbondesignsystem.com/components/text-input/usage/",
@@ -41480,7 +41518,8 @@
         "rawValue": 16,
         "nearestToken": "border-radius:0",
         "distance": 16,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "top-left corner radius is 16px, should be 0px"
       },
       {
         "page": "https://carbondesignsystem.com/components/text-input/usage/",
@@ -41491,7 +41530,8 @@
         "rawValue": 16,
         "nearestToken": "border-radius:0",
         "distance": 16,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "top-left corner radius is 16px, should be 0px"
       },
       {
         "page": "https://carbondesignsystem.com/components/text-input/usage/",
@@ -41502,7 +41542,8 @@
         "rawValue": -1,
         "nearestToken": "spacing:2",
         "distance": 3,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "margin-top is -1px, should be 2px"
       },
       {
         "page": "https://carbondesignsystem.com/components/text-input/usage/",
@@ -41513,7 +41554,8 @@
         "rawValue": -1,
         "nearestToken": "spacing:2",
         "distance": 3,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "margin-right is -1px, should be 2px"
       },
       {
         "page": "https://carbondesignsystem.com/components/text-input/usage/",
@@ -41524,7 +41566,8 @@
         "rawValue": -1,
         "nearestToken": "spacing:2",
         "distance": 3,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "margin-bottom is -1px, should be 2px"
       },
       {
         "page": "https://carbondesignsystem.com/components/text-input/usage/",
@@ -41535,7 +41578,8 @@
         "rawValue": -1,
         "nearestToken": "spacing:2",
         "distance": 3,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "margin-left is -1px, should be 2px"
       },
       {
         "page": "https://carbondesignsystem.com/components/text-input/usage/",
@@ -41545,7 +41589,8 @@
         "rawValue": 59.2501,
         "nearestToken": "font-size:54",
         "distance": 5.250100000000003,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 59.2501px, should be 54px"
       },
       {
         "page": "https://carbondesignsystem.com/components/text-input/usage/",
@@ -41556,7 +41601,8 @@
         "rawValue": -16,
         "nearestToken": "spacing:2",
         "distance": 18,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "margin-right is -16px, should be 2px"
       },
       {
         "page": "https://carbondesignsystem.com/components/text-input/usage/",
@@ -41567,7 +41613,8 @@
         "rawValue": -16,
         "nearestToken": "spacing:2",
         "distance": 18,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "margin-left is -16px, should be 2px"
       },
       {
         "page": "https://carbondesignsystem.com/components/text-input/usage/",
@@ -41578,7 +41625,8 @@
         "rawValue": 6,
         "nearestToken": "spacing:4",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-right is 6px, should be 4px"
       },
       {
         "page": "https://carbondesignsystem.com/components/text-input/usage/",
@@ -41589,7 +41637,8 @@
         "rawValue": 6,
         "nearestToken": "spacing:4",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-left is 6px, should be 4px"
       },
       {
         "page": "https://carbondesignsystem.com/elements/color/overview/",
@@ -41600,7 +41649,8 @@
         "rawValue": -1,
         "nearestToken": "spacing:2",
         "distance": 3,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "margin-top is -1px, should be 2px"
       }
     ],
     "unstablePages": []

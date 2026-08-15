@@ -30601,7 +30601,8 @@
         "rawValue": 47.2501,
         "nearestToken": "font-size:42",
         "distance": 5.250100000000003,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 47.2501px, should be 42px"
       },
       {
         "page": "https://www.ibm.com/",
@@ -30612,7 +30613,8 @@
         "rawValue": 10,
         "nearestToken": "spacing:8",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-right is 10px, should be 8px"
       },
       {
         "page": "https://www.ibm.com/",
@@ -30623,7 +30625,8 @@
         "rawValue": 16,
         "nearestToken": "border-radius:0",
         "distance": 16,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "top-left corner radius is 16px, should be 0px"
       },
       {
         "page": "https://www.ibm.com/",
@@ -30634,7 +30637,8 @@
         "rawValue": 16,
         "nearestToken": "border-radius:0",
         "distance": 16,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "top-left corner radius is 16px, should be 0px"
       },
       {
         "page": "https://www.ibm.com/",
@@ -30644,7 +30648,8 @@
         "rawValue": "Helvetica, Arial, sans-serif",
         "nearestToken": "font-family:IBM Plex Sans Var",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "using \"Helvetica\" instead of \"IBM Plex Sans Var\""
       },
       {
         "page": "https://www.ibm.com/",
@@ -30654,7 +30659,8 @@
         "rawValue": "Helvetica, Arial, sans-serif",
         "nearestToken": "font-family:IBM Plex Sans Var",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "using \"Helvetica\" instead of \"IBM Plex Sans Var\""
       },
       {
         "page": "https://www.ibm.com/",
@@ -30665,7 +30671,8 @@
         "rawValue": 14,
         "nearestToken": "spacing:12",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-top is 14px, should be 12px"
       },
       {
         "page": "https://www.ibm.com/",
@@ -30676,7 +30683,8 @@
         "rawValue": 14,
         "nearestToken": "spacing:12",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-bottom is 14px, should be 12px"
       },
       {
         "page": "https://www.ibm.com/",
@@ -30687,7 +30695,8 @@
         "rawValue": 60.4764,
         "nearestToken": "spacing:64",
         "distance": 3.523600000000002,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "margin-top is 60.4764px, should be 64px"
       },
       {
         "page": "https://www.ibm.com/",
@@ -30698,7 +30707,8 @@
         "rawValue": 360,
         "nearestToken": "spacing:160",
         "distance": 200,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-top is 360px, should be 160px"
       },
       {
         "page": "https://www.ibm.com/",
@@ -30709,7 +30719,8 @@
         "rawValue": 192,
         "nearestToken": "spacing:160",
         "distance": 32,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-right is 192px, should be 160px"
       },
       {
         "page": "https://www.ibm.com/",
@@ -30720,7 +30731,8 @@
         "rawValue": 360,
         "nearestToken": "spacing:160",
         "distance": 200,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-bottom is 360px, should be 160px"
       },
       {
         "page": "https://www.ibm.com/",
@@ -30731,7 +30743,8 @@
         "rawValue": 192,
         "nearestToken": "spacing:160",
         "distance": 32,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-left is 192px, should be 160px"
       },
       {
         "page": "https://www.ibm.com/",
@@ -30741,7 +30754,8 @@
         "rawValue": 47.2501,
         "nearestToken": "font-size:42",
         "distance": 5.250100000000003,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 47.2501px, should be 42px"
       },
       {
         "page": "https://www.ibm.com/",
@@ -30751,7 +30765,8 @@
         "rawValue": "Helvetica, Arial, sans-serif",
         "nearestToken": "font-family:IBM Plex Sans Var",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "using \"Helvetica\" instead of \"IBM Plex Sans Var\""
       },
       {
         "page": "https://www.ibm.com/",
@@ -30761,7 +30776,8 @@
         "rawValue": 47.2501,
         "nearestToken": "font-size:42",
         "distance": 5.250100000000003,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 47.2501px, should be 42px"
       },
       {
         "page": "https://www.ibm.com/",
@@ -30771,7 +30787,8 @@
         "rawValue": "Helvetica, Arial, sans-serif",
         "nearestToken": "font-family:IBM Plex Sans Var",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "using \"Helvetica\" instead of \"IBM Plex Sans Var\""
       },
       {
         "page": "https://www.ibm.com/",
@@ -30781,7 +30798,8 @@
         "rawValue": "Helvetica, Arial, sans-serif",
         "nearestToken": "font-family:IBM Plex Sans Var",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "using \"Helvetica\" instead of \"IBM Plex Sans Var\""
       },
       {
         "page": "https://www.ibm.com/products",
@@ -30791,7 +30809,8 @@
         "rawValue": 59.2501,
         "nearestToken": "font-size:54",
         "distance": 5.250100000000003,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 59.2501px, should be 54px"
       },
       {
         "page": "https://www.ibm.com/products",
@@ -30802,7 +30821,8 @@
         "rawValue": -16,
         "nearestToken": "spacing:2",
         "distance": 18,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "margin-right is -16px, should be 2px"
       },
       {
         "page": "https://www.ibm.com/products",
@@ -30813,7 +30833,8 @@
         "rawValue": -16,
         "nearestToken": "spacing:2",
         "distance": 18,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "margin-left is -16px, should be 2px"
       },
       {
         "page": "https://www.ibm.com/products",
@@ -30824,7 +30845,8 @@
         "rawValue": 15,
         "nearestToken": "border-radius:0",
         "distance": 15,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "top-left corner radius is 15px, should be 0px"
       },
       {
         "page": "https://www.ibm.com/products",
@@ -30835,7 +30857,8 @@
         "rawValue": 15,
         "nearestToken": "border-radius:0",
         "distance": 15,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "top-left corner radius is 15px, should be 0px"
       },
       {
         "page": "https://www.ibm.com/products",
@@ -30846,7 +30869,8 @@
         "rawValue": -16,
         "nearestToken": "spacing:2",
         "distance": 18,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "margin-left is -16px, should be 2px"
       },
       {
         "page": "https://www.ibm.com/products",
@@ -30857,7 +30881,8 @@
         "rawValue": 360,
         "nearestToken": "spacing:160",
         "distance": 200,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-top is 360px, should be 160px"
       },
       {
         "page": "https://www.ibm.com/products",
@@ -30868,7 +30893,8 @@
         "rawValue": 192,
         "nearestToken": "spacing:160",
         "distance": 32,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-right is 192px, should be 160px"
       },
       {
         "page": "https://www.ibm.com/products",
@@ -30879,7 +30905,8 @@
         "rawValue": 360,
         "nearestToken": "spacing:160",
         "distance": 200,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-bottom is 360px, should be 160px"
       },
       {
         "page": "https://www.ibm.com/products",
@@ -30890,7 +30917,8 @@
         "rawValue": 192,
         "nearestToken": "spacing:160",
         "distance": 32,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-left is 192px, should be 160px"
       },
       {
         "page": "https://www.ibm.com/products",
@@ -30900,7 +30928,8 @@
         "rawValue": 47.2501,
         "nearestToken": "font-size:42",
         "distance": 5.250100000000003,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 47.2501px, should be 42px"
       },
       {
         "page": "https://www.ibm.com/consulting",
@@ -30910,7 +30939,8 @@
         "rawValue": 47.2501,
         "nearestToken": "font-size:42",
         "distance": 5.250100000000003,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 47.2501px, should be 42px"
       },
       {
         "page": "https://www.ibm.com/consulting",
@@ -30920,7 +30950,8 @@
         "rawValue": 47.2501,
         "nearestToken": "font-size:42",
         "distance": 5.250100000000003,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 47.2501px, should be 42px"
       },
       {
         "page": "https://www.ibm.com/consulting",
@@ -30930,7 +30961,8 @@
         "rawValue": 47.2501,
         "nearestToken": "font-size:42",
         "distance": 5.250100000000003,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 47.2501px, should be 42px"
       },
       {
         "page": "https://www.ibm.com/consulting",
@@ -30941,7 +30973,8 @@
         "rawValue": 360,
         "nearestToken": "spacing:160",
         "distance": 200,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-top is 360px, should be 160px"
       },
       {
         "page": "https://www.ibm.com/consulting",
@@ -30952,7 +30985,8 @@
         "rawValue": 192,
         "nearestToken": "spacing:160",
         "distance": 32,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-right is 192px, should be 160px"
       },
       {
         "page": "https://www.ibm.com/consulting",
@@ -30963,7 +30997,8 @@
         "rawValue": 360,
         "nearestToken": "spacing:160",
         "distance": 200,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-bottom is 360px, should be 160px"
       },
       {
         "page": "https://www.ibm.com/consulting",
@@ -30974,7 +31009,8 @@
         "rawValue": 192,
         "nearestToken": "spacing:160",
         "distance": 32,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-left is 192px, should be 160px"
       },
       {
         "page": "https://www.ibm.com/consulting",
@@ -30984,7 +31020,8 @@
         "rawValue": 47.2501,
         "nearestToken": "font-size:42",
         "distance": 5.250100000000003,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 47.2501px, should be 42px"
       },
       {
         "page": "https://www.ibm.com/consulting",
@@ -30994,7 +31031,8 @@
         "rawValue": 47.2501,
         "nearestToken": "font-size:42",
         "distance": 5.250100000000003,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 47.2501px, should be 42px"
       },
       {
         "page": "https://www.ibm.com/consulting",
@@ -31005,7 +31043,8 @@
         "rawValue": 14,
         "nearestToken": "spacing:12",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-top is 14px, should be 12px"
       },
       {
         "page": "https://www.ibm.com/consulting",
@@ -31016,7 +31055,8 @@
         "rawValue": 14,
         "nearestToken": "spacing:12",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-bottom is 14px, should be 12px"
       },
       {
         "page": "https://www.ibm.com/cloud",
@@ -31026,7 +31066,8 @@
         "rawValue": 47.2501,
         "nearestToken": "font-size:42",
         "distance": 5.250100000000003,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 47.2501px, should be 42px"
       },
       {
         "page": "https://www.ibm.com/cloud",
@@ -31036,7 +31077,8 @@
         "rawValue": 47.2501,
         "nearestToken": "font-size:42",
         "distance": 5.250100000000003,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 47.2501px, should be 42px"
       },
       {
         "page": "https://www.ibm.com/cloud",
@@ -31046,7 +31088,8 @@
         "rawValue": 47.2501,
         "nearestToken": "font-size:42",
         "distance": 5.250100000000003,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 47.2501px, should be 42px"
       },
       {
         "page": "https://www.ibm.com/cloud",
@@ -31056,7 +31099,8 @@
         "rawValue": 47.2501,
         "nearestToken": "font-size:42",
         "distance": 5.250100000000003,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 47.2501px, should be 42px"
       },
       {
         "page": "https://www.ibm.com/cloud",
@@ -31066,7 +31110,8 @@
         "rawValue": 47.2501,
         "nearestToken": "font-size:42",
         "distance": 5.250100000000003,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 47.2501px, should be 42px"
       },
       {
         "page": "https://www.ibm.com/cloud",
@@ -31077,7 +31122,8 @@
         "rawValue": 360,
         "nearestToken": "spacing:160",
         "distance": 200,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-top is 360px, should be 160px"
       },
       {
         "page": "https://www.ibm.com/cloud",
@@ -31088,7 +31134,8 @@
         "rawValue": 192,
         "nearestToken": "spacing:160",
         "distance": 32,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-right is 192px, should be 160px"
       },
       {
         "page": "https://www.ibm.com/cloud",
@@ -31099,7 +31146,8 @@
         "rawValue": 360,
         "nearestToken": "spacing:160",
         "distance": 200,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-bottom is 360px, should be 160px"
       },
       {
         "page": "https://www.ibm.com/cloud",
@@ -31110,7 +31158,8 @@
         "rawValue": 192,
         "nearestToken": "spacing:160",
         "distance": 32,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-left is 192px, should be 160px"
       },
       {
         "page": "https://www.ibm.com/cloud",
@@ -31121,7 +31170,8 @@
         "rawValue": -16,
         "nearestToken": "spacing:2",
         "distance": 18,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "margin-right is -16px, should be 2px"
       }
     ],
     "unstablePages": []

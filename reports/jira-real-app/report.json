@@ -11726,7 +11726,8 @@
         "rawValue": 10,
         "nearestToken": "spacing:8",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-top is 10px, should be 8px"
       },
       {
         "page": "https://jira.atlassian.com/",
@@ -11737,7 +11738,8 @@
         "rawValue": 10,
         "nearestToken": "spacing:8",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-bottom is 10px, should be 8px"
       },
       {
         "page": "https://jira.atlassian.com/",
@@ -11748,7 +11750,8 @@
         "rawValue": 3,
         "nearestToken": "border-radius:2",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "top-left corner radius is 3px, should be 2px"
       },
       {
         "page": "https://jira.atlassian.com/",
@@ -11759,7 +11762,8 @@
         "rawValue": 10000,
         "nearestToken": "border-radius:9999",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "top-left corner radius is 10000px, should be 9999px"
       },
       {
         "page": "https://jira.atlassian.com/",
@@ -11770,7 +11774,8 @@
         "rawValue": 22,
         "nearestToken": "spacing:20",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-right is 22px, should be 20px"
       },
       {
         "page": "https://jira.atlassian.com/",
@@ -11781,7 +11786,8 @@
         "rawValue": 22,
         "nearestToken": "spacing:20",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-left is 22px, should be 20px"
       },
       {
         "page": "https://jira.atlassian.com/",
@@ -11792,7 +11798,8 @@
         "rawValue": 10000,
         "nearestToken": "border-radius:9999",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "top-left corner radius is 10000px, should be 9999px"
       },
       {
         "page": "https://jira.atlassian.com/",
@@ -11803,7 +11810,8 @@
         "rawValue": 22,
         "nearestToken": "spacing:20",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-right is 22px, should be 20px"
       },
       {
         "page": "https://jira.atlassian.com/",
@@ -11814,7 +11822,8 @@
         "rawValue": 22,
         "nearestToken": "spacing:20",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-left is 22px, should be 20px"
       },
       {
         "page": "https://jira.atlassian.com/",
@@ -11825,7 +11834,8 @@
         "rawValue": 40,
         "nearestToken": "border-radius:16",
         "distance": 24,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "top-left corner radius is 40px, should be 16px"
       },
       {
         "page": "https://jira.atlassian.com/",
@@ -11836,7 +11846,8 @@
         "rawValue": 10,
         "nearestToken": "spacing:8",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-top is 10px, should be 8px"
       },
       {
         "page": "https://jira.atlassian.com/",
@@ -11847,7 +11858,8 @@
         "rawValue": 10,
         "nearestToken": "spacing:8",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-right is 10px, should be 8px"
       },
       {
         "page": "https://jira.atlassian.com/",
@@ -11858,7 +11870,8 @@
         "rawValue": 10,
         "nearestToken": "spacing:8",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-bottom is 10px, should be 8px"
       },
       {
         "page": "https://jira.atlassian.com/",
@@ -11869,7 +11882,8 @@
         "rawValue": 10,
         "nearestToken": "spacing:8",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-left is 10px, should be 8px"
       },
       {
         "page": "https://jira.atlassian.com/",
@@ -11880,7 +11894,8 @@
         "rawValue": 60,
         "nearestToken": "spacing:64",
         "distance": 4,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "margin-right is 60px, should be 64px"
       },
       {
         "page": "https://jira.atlassian.com/",
@@ -11891,7 +11906,8 @@
         "rawValue": 60,
         "nearestToken": "spacing:64",
         "distance": 4,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "margin-left is 60px, should be 64px"
       },
       {
         "page": "https://jira.atlassian.com/",
@@ -11901,7 +11917,8 @@
         "rawValue": 48,
         "nearestToken": "font-size:32",
         "distance": 16,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 48px, should be 32px"
       },
       {
         "page": "https://jira.atlassian.com/",
@@ -11911,7 +11928,8 @@
         "rawValue": 800,
         "nearestToken": "font-weight:653",
         "distance": 147,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font weight is 800, should be 653 (lighter than what's used)"
       },
       {
         "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
@@ -11921,7 +11939,8 @@
         "rawValue": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif",
         "nearestToken": "font-family:Atlassian Sans",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "using \"-apple-system\" instead of \"Atlassian Sans\""
       },
       {
         "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
@@ -11932,7 +11951,8 @@
         "rawValue": 10,
         "nearestToken": "spacing:8",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-right is 10px, should be 8px"
       },
       {
         "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
@@ -11943,7 +11963,8 @@
         "rawValue": 10,
         "nearestToken": "spacing:8",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-left is 10px, should be 8px"
       },
       {
         "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
@@ -11953,7 +11974,8 @@
         "rawValue": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif",
         "nearestToken": "font-family:Atlassian Sans",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "using \"-apple-system\" instead of \"Atlassian Sans\""
       },
       {
         "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
@@ -11963,7 +11985,8 @@
         "rawValue": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif",
         "nearestToken": "font-family:Atlassian Sans",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "using \"-apple-system\" instead of \"Atlassian Sans\""
       },
       {
         "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
@@ -11973,7 +11996,8 @@
         "rawValue": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif",
         "nearestToken": "font-family:Atlassian Sans",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "using \"-apple-system\" instead of \"Atlassian Sans\""
       },
       {
         "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
@@ -11983,7 +12007,8 @@
         "rawValue": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif",
         "nearestToken": "font-family:Atlassian Sans",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "using \"-apple-system\" instead of \"Atlassian Sans\""
       },
       {
         "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
@@ -11994,7 +12019,8 @@
         "rawValue": 10,
         "nearestToken": "spacing:8",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-left is 10px, should be 8px"
       },
       {
         "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
@@ -12004,7 +12030,8 @@
         "rawValue": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif",
         "nearestToken": "font-family:Atlassian Sans",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "using \"-apple-system\" instead of \"Atlassian Sans\""
       },
       {
         "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
@@ -12015,7 +12042,8 @@
         "rawValue": 10,
         "nearestToken": "spacing:8",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-right is 10px, should be 8px"
       },
       {
         "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
@@ -12026,7 +12054,8 @@
         "rawValue": 10,
         "nearestToken": "spacing:8",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-left is 10px, should be 8px"
       },
       {
         "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
@@ -12036,7 +12065,8 @@
         "rawValue": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif",
         "nearestToken": "font-family:Atlassian Sans",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "using \"-apple-system\" instead of \"Atlassian Sans\""
       },
       {
         "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
@@ -12046,7 +12076,8 @@
         "rawValue": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif",
         "nearestToken": "font-family:Atlassian Sans",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "using \"-apple-system\" instead of \"Atlassian Sans\""
       },
       {
         "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
@@ -12057,7 +12088,8 @@
         "rawValue": 29,
         "nearestToken": "spacing:32",
         "distance": 3,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-left is 29px, should be 32px"
       },
       {
         "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
@@ -12067,7 +12099,8 @@
         "rawValue": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif",
         "nearestToken": "font-family:Atlassian Sans",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "using \"-apple-system\" instead of \"Atlassian Sans\""
       },
       {
         "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
@@ -12077,7 +12110,8 @@
         "rawValue": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif",
         "nearestToken": "font-family:Atlassian Sans",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "using \"-apple-system\" instead of \"Atlassian Sans\""
       },
       {
         "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
@@ -12087,7 +12121,8 @@
         "rawValue": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif",
         "nearestToken": "font-family:Atlassian Sans",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "using \"-apple-system\" instead of \"Atlassian Sans\""
       },
       {
         "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
@@ -12098,7 +12133,8 @@
         "rawValue": 426.5,
         "nearestToken": "spacing:80",
         "distance": 346.5,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "margin-right is 426.5px, should be 80px"
       },
       {
         "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
@@ -12109,7 +12145,8 @@
         "rawValue": 426.5,
         "nearestToken": "spacing:80",
         "distance": 346.5,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "margin-left is 426.5px, should be 80px"
       },
       {
         "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
@@ -12120,7 +12157,8 @@
         "rawValue": 3,
         "nearestToken": "border-radius:2",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "top-left corner radius is 3px, should be 2px"
       },
       {
         "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
@@ -12130,7 +12168,8 @@
         "rawValue": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif",
         "nearestToken": "font-family:Atlassian Sans",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "using \"-apple-system\" instead of \"Atlassian Sans\""
       },
       {
         "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
@@ -12141,7 +12180,8 @@
         "rawValue": 10,
         "nearestToken": "spacing:8",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-right is 10px, should be 8px"
       },
       {
         "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
@@ -12152,7 +12192,8 @@
         "rawValue": 30,
         "nearestToken": "spacing:32",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-left is 30px, should be 32px"
       },
       {
         "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
@@ -12162,7 +12203,8 @@
         "rawValue": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif",
         "nearestToken": "font-family:Atlassian Sans",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "using \"-apple-system\" instead of \"Atlassian Sans\""
       },
       {
         "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
@@ -12172,7 +12214,8 @@
         "rawValue": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif",
         "nearestToken": "font-family:Atlassian Sans",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "using \"-apple-system\" instead of \"Atlassian Sans\""
       },
       {
         "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
@@ -12182,7 +12225,8 @@
         "rawValue": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif",
         "nearestToken": "font-family:Atlassian Sans",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "using \"-apple-system\" instead of \"Atlassian Sans\""
       },
       {
         "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
@@ -12193,7 +12237,8 @@
         "rawValue": 10,
         "nearestToken": "spacing:8",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-right is 10px, should be 8px"
       },
       {
         "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
@@ -12204,7 +12249,8 @@
         "rawValue": 10,
         "nearestToken": "spacing:8",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-left is 10px, should be 8px"
       },
       {
         "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
@@ -12214,7 +12260,8 @@
         "rawValue": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif",
         "nearestToken": "font-family:Atlassian Sans",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "using \"-apple-system\" instead of \"Atlassian Sans\""
       },
       {
         "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
@@ -12225,7 +12272,8 @@
         "rawValue": 280,
         "nearestToken": "spacing:80",
         "distance": 200,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-left is 280px, should be 80px"
       },
       {
         "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
@@ -12236,7 +12284,8 @@
         "rawValue": 11,
         "nearestToken": "border-radius:12",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "top-left corner radius is 11px, should be 12px"
       },
       {
         "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
@@ -12246,7 +12295,8 @@
         "rawValue": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif",
         "nearestToken": "font-family:Atlassian Sans",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "using \"-apple-system\" instead of \"Atlassian Sans\""
       }
     ],
     "unstablePages": []

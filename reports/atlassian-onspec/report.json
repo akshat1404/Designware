@@ -35400,7 +35400,8 @@
         "rawValue": 112,
         "nearestToken": "font-size:32",
         "distance": 80,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 112px, should be 32px"
       },
       {
         "page": "https://atlassian.design/",
@@ -35410,7 +35411,8 @@
         "rawValue": 112,
         "nearestToken": "font-size:32",
         "distance": 80,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 112px, should be 32px"
       },
       {
         "page": "https://atlassian.design/",
@@ -35421,7 +35423,8 @@
         "rawValue": 32,
         "nearestToken": "border-radius:16",
         "distance": 16,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "top-left corner radius is 32px, should be 16px"
       },
       {
         "page": "https://atlassian.design/",
@@ -35432,7 +35435,8 @@
         "rawValue": 28,
         "nearestToken": "border-radius:16",
         "distance": 12,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "top-left corner radius is 28px, should be 16px"
       },
       {
         "page": "https://atlassian.design/",
@@ -35443,7 +35447,8 @@
         "rawValue": 28,
         "nearestToken": "border-radius:16",
         "distance": 12,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "top-left corner radius is 28px, should be 16px"
       },
       {
         "page": "https://atlassian.design/",
@@ -35454,7 +35459,8 @@
         "rawValue": 27,
         "nearestToken": "border-radius:16",
         "distance": 11,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "top-left corner radius is 27px, should be 16px"
       },
       {
         "page": "https://atlassian.design/",
@@ -35464,7 +35470,8 @@
         "rawValue": 44,
         "nearestToken": "font-size:32",
         "distance": 12,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 44px, should be 32px"
       },
       {
         "page": "https://atlassian.design/",
@@ -35475,7 +35482,8 @@
         "rawValue": 89.5,
         "nearestToken": "spacing:80",
         "distance": 9.5,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "margin-right is 89.5px, should be 80px"
       },
       {
         "page": "https://atlassian.design/",
@@ -35486,7 +35494,8 @@
         "rawValue": 89.5,
         "nearestToken": "spacing:80",
         "distance": 9.5,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "margin-left is 89.5px, should be 80px"
       },
       {
         "page": "https://atlassian.design/",
@@ -35496,7 +35505,8 @@
         "rawValue": 40,
         "nearestToken": "font-size:32",
         "distance": 8,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 40px, should be 32px"
       },
       {
         "page": "https://atlassian.design/",
@@ -35506,7 +35516,8 @@
         "rawValue": 68,
         "nearestToken": "font-size:32",
         "distance": 36,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 68px, should be 32px"
       },
       {
         "page": "https://atlassian.design/components/button/examples",
@@ -35516,7 +35527,8 @@
         "rawValue": 40,
         "nearestToken": "font-size:32",
         "distance": 8,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 40px, should be 32px"
       },
       {
         "page": "https://atlassian.design/foundations/color",
@@ -35526,7 +35538,8 @@
         "rawValue": 48,
         "nearestToken": "font-size:32",
         "distance": 16,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 48px, should be 32px"
       },
       {
         "page": "https://atlassian.design/foundations/typography",
@@ -35536,7 +35549,8 @@
         "rawValue": 48,
         "nearestToken": "font-size:32",
         "distance": 16,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 48px, should be 32px"
       },
       {
         "page": "https://atlassian.design/components/badge/examples",
@@ -35546,7 +35560,8 @@
         "rawValue": 40,
         "nearestToken": "font-size:32",
         "distance": 8,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 40px, should be 32px"
       },
       {
         "page": "https://atlassian.design/components/button/examples",
@@ -35557,7 +35572,8 @@
         "rawValue": 1,
         "nearestToken": "spacing:0",
         "distance": 1,
-        "normalized": 0.5
+        "normalized": 0.5,
+        "humanReadable": "padding-top is 1px, should be 0px"
       },
       {
         "page": "https://atlassian.design/components/button/examples",
@@ -35568,7 +35584,8 @@
         "rawValue": 1,
         "nearestToken": "spacing:0",
         "distance": 1,
-        "normalized": 0.5
+        "normalized": 0.5,
+        "humanReadable": "padding-bottom is 1px, should be 0px"
       },
       {
         "page": "https://atlassian.design/components/badge/examples",
@@ -35579,7 +35596,8 @@
         "rawValue": 1,
         "nearestToken": "spacing:0",
         "distance": 1,
-        "normalized": 0.5
+        "normalized": 0.5,
+        "humanReadable": "padding-top is 1px, should be 0px"
       },
       {
         "page": "https://atlassian.design/components/badge/examples",
@@ -35590,7 +35608,8 @@
         "rawValue": 1,
         "nearestToken": "spacing:0",
         "distance": 1,
-        "normalized": 0.5
+        "normalized": 0.5,
+        "humanReadable": "padding-bottom is 1px, should be 0px"
       },
       {
         "page": "https://atlassian.design/",
@@ -35600,7 +35619,8 @@
         "rawValue": 700,
         "nearestToken": "font-weight:653",
         "distance": 47,
-        "normalized": 0.47
+        "normalized": 0.47,
+        "humanReadable": "font weight is 700, should be 653 (lighter than what's used)"
       },
       {
         "page": "https://atlassian.design/",
@@ -35610,7 +35630,8 @@
         "rawValue": 700,
         "nearestToken": "font-weight:653",
         "distance": 47,
-        "normalized": 0.47
+        "normalized": 0.47,
+        "humanReadable": "font weight is 700, should be 653 (lighter than what's used)"
       },
       {
         "page": "https://atlassian.design/",
@@ -35620,7 +35641,8 @@
         "rawValue": 700,
         "nearestToken": "font-weight:653",
         "distance": 47,
-        "normalized": 0.47
+        "normalized": 0.47,
+        "humanReadable": "font weight is 700, should be 653 (lighter than what's used)"
       },
       {
         "page": "https://atlassian.design/",
@@ -35630,7 +35652,8 @@
         "rawValue": 700,
         "nearestToken": "font-weight:653",
         "distance": 47,
-        "normalized": 0.47
+        "normalized": 0.47,
+        "humanReadable": "font weight is 700, should be 653 (lighter than what's used)"
       },
       {
         "page": "https://atlassian.design/components/button/examples",
@@ -35640,7 +35663,8 @@
         "rawValue": 700,
         "nearestToken": "font-weight:653",
         "distance": 47,
-        "normalized": 0.47
+        "normalized": 0.47,
+        "humanReadable": "font weight is 700, should be 653 (lighter than what's used)"
       },
       {
         "page": "https://atlassian.design/components/button/examples",
@@ -35650,7 +35674,8 @@
         "rawValue": 700,
         "nearestToken": "font-weight:653",
         "distance": 47,
-        "normalized": 0.47
+        "normalized": 0.47,
+        "humanReadable": "font weight is 700, should be 653 (lighter than what's used)"
       },
       {
         "page": "https://atlassian.design/foundations/color",
@@ -35660,7 +35685,8 @@
         "rawValue": 700,
         "nearestToken": "font-weight:653",
         "distance": 47,
-        "normalized": 0.47
+        "normalized": 0.47,
+        "humanReadable": "font weight is 700, should be 653 (lighter than what's used)"
       },
       {
         "page": "https://atlassian.design/foundations/color",
@@ -35670,7 +35696,8 @@
         "rawValue": 700,
         "nearestToken": "font-weight:653",
         "distance": 47,
-        "normalized": 0.47
+        "normalized": 0.47,
+        "humanReadable": "font weight is 700, should be 653 (lighter than what's used)"
       },
       {
         "page": "https://atlassian.design/foundations/color",
@@ -35680,7 +35707,8 @@
         "rawValue": 700,
         "nearestToken": "font-weight:653",
         "distance": 47,
-        "normalized": 0.47
+        "normalized": 0.47,
+        "humanReadable": "font weight is 700, should be 653 (lighter than what's used)"
       },
       {
         "page": "https://atlassian.design/foundations/color",
@@ -35690,7 +35718,8 @@
         "rawValue": 700,
         "nearestToken": "font-weight:653",
         "distance": 47,
-        "normalized": 0.47
+        "normalized": 0.47,
+        "humanReadable": "font weight is 700, should be 653 (lighter than what's used)"
       },
       {
         "page": "https://atlassian.design/foundations/color",
@@ -35700,7 +35729,8 @@
         "rawValue": 700,
         "nearestToken": "font-weight:653",
         "distance": 47,
-        "normalized": 0.47
+        "normalized": 0.47,
+        "humanReadable": "font weight is 700, should be 653 (lighter than what's used)"
       },
       {
         "page": "https://atlassian.design/foundations/color",
@@ -35710,7 +35740,8 @@
         "rawValue": 700,
         "nearestToken": "font-weight:653",
         "distance": 47,
-        "normalized": 0.47
+        "normalized": 0.47,
+        "humanReadable": "font weight is 700, should be 653 (lighter than what's used)"
       },
       {
         "page": "https://atlassian.design/foundations/typography",
@@ -35720,7 +35751,8 @@
         "rawValue": 700,
         "nearestToken": "font-weight:653",
         "distance": 47,
-        "normalized": 0.47
+        "normalized": 0.47,
+        "humanReadable": "font weight is 700, should be 653 (lighter than what's used)"
       },
       {
         "page": "https://atlassian.design/foundations/typography",
@@ -35730,7 +35762,8 @@
         "rawValue": 700,
         "nearestToken": "font-weight:653",
         "distance": 47,
-        "normalized": 0.47
+        "normalized": 0.47,
+        "humanReadable": "font weight is 700, should be 653 (lighter than what's used)"
       },
       {
         "page": "https://atlassian.design/foundations/typography",
@@ -35740,7 +35773,8 @@
         "rawValue": 700,
         "nearestToken": "font-weight:653",
         "distance": 47,
-        "normalized": 0.47
+        "normalized": 0.47,
+        "humanReadable": "font weight is 700, should be 653 (lighter than what's used)"
       },
       {
         "page": "https://atlassian.design/foundations/typography",
@@ -35750,7 +35784,8 @@
         "rawValue": 700,
         "nearestToken": "font-weight:653",
         "distance": 47,
-        "normalized": 0.47
+        "normalized": 0.47,
+        "humanReadable": "font weight is 700, should be 653 (lighter than what's used)"
       },
       {
         "page": "https://atlassian.design/foundations/typography",
@@ -35760,7 +35795,8 @@
         "rawValue": 700,
         "nearestToken": "font-weight:653",
         "distance": 47,
-        "normalized": 0.47
+        "normalized": 0.47,
+        "humanReadable": "font weight is 700, should be 653 (lighter than what's used)"
       },
       {
         "page": "https://atlassian.design/foundations/typography",
@@ -35770,7 +35806,8 @@
         "rawValue": 700,
         "nearestToken": "font-weight:653",
         "distance": 47,
-        "normalized": 0.47
+        "normalized": 0.47,
+        "humanReadable": "font weight is 700, should be 653 (lighter than what's used)"
       },
       {
         "page": "https://atlassian.design/components/badge/examples",
@@ -35780,7 +35817,8 @@
         "rawValue": 700,
         "nearestToken": "font-weight:653",
         "distance": 47,
-        "normalized": 0.47
+        "normalized": 0.47,
+        "humanReadable": "font weight is 700, should be 653 (lighter than what's used)"
       },
       {
         "page": "https://atlassian.design/components/badge/examples",
@@ -35790,7 +35828,8 @@
         "rawValue": 700,
         "nearestToken": "font-weight:653",
         "distance": 47,
-        "normalized": 0.47
+        "normalized": 0.47,
+        "humanReadable": "font weight is 700, should be 653 (lighter than what's used)"
       },
       {
         "page": "https://atlassian.design/components/badge/examples",
@@ -35800,7 +35839,8 @@
         "rawValue": 700,
         "nearestToken": "font-weight:653",
         "distance": 47,
-        "normalized": 0.47
+        "normalized": 0.47,
+        "humanReadable": "font weight is 700, should be 653 (lighter than what's used)"
       },
       {
         "page": "https://atlassian.design/components/button/examples",
@@ -35810,7 +35850,8 @@
         "rawValue": 13.3333,
         "nearestToken": "font-size:14",
         "distance": 0.6667000000000005,
-        "normalized": 0.33335000000000026
+        "normalized": 0.33335000000000026,
+        "humanReadable": "font size is 13.3333px, should be 14px"
       },
       {
         "page": "https://atlassian.design/components/button/examples",
@@ -35820,7 +35861,8 @@
         "rawValue": 13.3333,
         "nearestToken": "font-size:14",
         "distance": 0.6667000000000005,
-        "normalized": 0.33335000000000026
+        "normalized": 0.33335000000000026,
+        "humanReadable": "font size is 13.3333px, should be 14px"
       },
       {
         "page": "https://atlassian.design/components/badge/examples",
@@ -35830,7 +35872,8 @@
         "rawValue": 13.3333,
         "nearestToken": "font-size:14",
         "distance": 0.6667000000000005,
-        "normalized": 0.33335000000000026
+        "normalized": 0.33335000000000026,
+        "humanReadable": "font size is 13.3333px, should be 14px"
       },
       {
         "page": "https://atlassian.design/components/badge/examples",
@@ -35840,7 +35883,8 @@
         "rawValue": 13.3333,
         "nearestToken": "font-size:14",
         "distance": 0.6667000000000005,
-        "normalized": 0.33335000000000026
+        "normalized": 0.33335000000000026,
+        "humanReadable": "font size is 13.3333px, should be 14px"
       },
       {
         "page": "https://atlassian.design/components/button/examples",
@@ -35851,7 +35895,8 @@
         "rawValue": 3.675,
         "nearestToken": "spacing:4",
         "distance": 0.3250000000000002,
-        "normalized": 0.1625000000000001
+        "normalized": 0.1625000000000001,
+        "humanReadable": "padding-right is 3.675px, should be 4px"
       },
       {
         "page": "https://atlassian.design/components/button/examples",
@@ -35862,7 +35907,8 @@
         "rawValue": 3.675,
         "nearestToken": "spacing:4",
         "distance": 0.3250000000000002,
-        "normalized": 0.1625000000000001
+        "normalized": 0.1625000000000001,
+        "humanReadable": "padding-left is 3.675px, should be 4px"
       },
       {
         "page": "https://atlassian.design/foundations/color",
@@ -35873,7 +35919,8 @@
         "rawValue": 3.675,
         "nearestToken": "spacing:4",
         "distance": 0.3250000000000002,
-        "normalized": 0.1625000000000001
+        "normalized": 0.1625000000000001,
+        "humanReadable": "padding-right is 3.675px, should be 4px"
       },
       {
         "page": "https://atlassian.design/foundations/color",
@@ -35884,7 +35931,8 @@
         "rawValue": 3.675,
         "nearestToken": "spacing:4",
         "distance": 0.3250000000000002,
-        "normalized": 0.1625000000000001
+        "normalized": 0.1625000000000001,
+        "humanReadable": "padding-left is 3.675px, should be 4px"
       },
       {
         "page": "https://atlassian.design/foundations/typography",
@@ -35895,7 +35943,8 @@
         "rawValue": 3.675,
         "nearestToken": "spacing:4",
         "distance": 0.3250000000000002,
-        "normalized": 0.1625000000000001
+        "normalized": 0.1625000000000001,
+        "humanReadable": "padding-right is 3.675px, should be 4px"
       },
       {
         "page": "https://atlassian.design/foundations/typography",
@@ -35906,7 +35955,8 @@
         "rawValue": 3.675,
         "nearestToken": "spacing:4",
         "distance": 0.3250000000000002,
-        "normalized": 0.1625000000000001
+        "normalized": 0.1625000000000001,
+        "humanReadable": "padding-left is 3.675px, should be 4px"
       }
     ],
     "unstablePages": []

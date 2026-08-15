@@ -11398,7 +11398,8 @@
         "rawValue": 16,
         "nearestToken": "font-size:14",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 16px, should be 14px"
       },
       {
         "page": "https://shopify.dev/docs/api/polaris",
@@ -11408,7 +11409,8 @@
         "rawValue": 16,
         "nearestToken": "font-size:14",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 16px, should be 14px"
       },
       {
         "page": "https://shopify.dev/docs/api/polaris",
@@ -11418,7 +11420,8 @@
         "rawValue": 16,
         "nearestToken": "font-size:14",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 16px, should be 14px"
       },
       {
         "page": "https://shopify.dev/docs/api/polaris",
@@ -11428,7 +11431,8 @@
         "rawValue": 16,
         "nearestToken": "font-size:14",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 16px, should be 14px"
       },
       {
         "page": "https://shopify.dev/docs/api/polaris",
@@ -11438,7 +11442,8 @@
         "rawValue": 16,
         "nearestToken": "font-size:14",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 16px, should be 14px"
       },
       {
         "page": "https://shopify.dev/docs/api/polaris",
@@ -11449,7 +11454,8 @@
         "rawValue": -1,
         "nearestToken": "spacing:0",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "margin-top is -1px, should be 0px"
       },
       {
         "page": "https://shopify.dev/docs/api/polaris",
@@ -11460,7 +11466,8 @@
         "rawValue": -1,
         "nearestToken": "spacing:0",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "margin-right is -1px, should be 0px"
       },
       {
         "page": "https://shopify.dev/docs/api/polaris",
@@ -11471,7 +11478,8 @@
         "rawValue": -1,
         "nearestToken": "spacing:0",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "margin-bottom is -1px, should be 0px"
       },
       {
         "page": "https://shopify.dev/docs/api/polaris",
@@ -11482,7 +11490,8 @@
         "rawValue": -1,
         "nearestToken": "spacing:0",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "margin-left is -1px, should be 0px"
       },
       {
         "page": "https://shopify.dev/docs/api/polaris",
@@ -11492,7 +11501,8 @@
         "rawValue": 16,
         "nearestToken": "font-size:14",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 16px, should be 14px"
       },
       {
         "page": "https://shopify.dev/docs/api/polaris",
@@ -11502,7 +11512,8 @@
         "rawValue": 16,
         "nearestToken": "font-size:14",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 16px, should be 14px"
       },
       {
         "page": "https://shopify.dev/docs/api/polaris",
@@ -11512,7 +11523,8 @@
         "rawValue": "\"JetBrains Mono\", Monaco, Consolas, \"Lucida Console\", monospace",
         "nearestToken": "font-family:Inter",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "using \"JetBrains Mono\" instead of \"Inter\""
       },
       {
         "page": "https://shopify.dev/docs/api/polaris",
@@ -11522,7 +11534,8 @@
         "rawValue": 16,
         "nearestToken": "font-size:14",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 16px, should be 14px"
       },
       {
         "page": "https://shopify.dev/docs/api/polaris",
@@ -11532,7 +11545,8 @@
         "rawValue": 16,
         "nearestToken": "font-size:14",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 16px, should be 14px"
       },
       {
         "page": "https://shopify.dev/docs/api/polaris",
@@ -11542,7 +11556,8 @@
         "rawValue": 16,
         "nearestToken": "font-size:14",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 16px, should be 14px"
       },
       {
         "page": "https://shopify.dev/docs/api/polaris",
@@ -11552,7 +11567,8 @@
         "rawValue": 16,
         "nearestToken": "font-size:14",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 16px, should be 14px"
       },
       {
         "page": "https://shopify.dev/docs/api/polaris",
@@ -11562,7 +11578,8 @@
         "rawValue": 16,
         "nearestToken": "font-size:14",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 16px, should be 14px"
       },
       {
         "page": "https://shopify.dev/docs/api/polaris",
@@ -11572,7 +11589,8 @@
         "rawValue": 16,
         "nearestToken": "font-size:14",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 16px, should be 14px"
       },
       {
         "page": "https://shopify.dev/docs/api/polaris",
@@ -11582,7 +11600,8 @@
         "rawValue": 32,
         "nearestToken": "font-size:30",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 32px, should be 30px"
       },
       {
         "page": "https://shopify.dev/docs/api/polaris",
@@ -11592,7 +11611,8 @@
         "rawValue": 16,
         "nearestToken": "font-size:14",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 16px, should be 14px"
       },
       {
         "page": "https://shopify.dev/docs/api/polaris",
@@ -11602,7 +11622,8 @@
         "rawValue": 16,
         "nearestToken": "font-size:14",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 16px, should be 14px"
       },
       {
         "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
@@ -11612,7 +11633,8 @@
         "rawValue": 16,
         "nearestToken": "font-size:14",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 16px, should be 14px"
       },
       {
         "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
@@ -11622,7 +11644,8 @@
         "rawValue": 16,
         "nearestToken": "font-size:14",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 16px, should be 14px"
       },
       {
         "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
@@ -11632,7 +11655,8 @@
         "rawValue": 16,
         "nearestToken": "font-size:14",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 16px, should be 14px"
       },
       {
         "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
@@ -11643,7 +11667,8 @@
         "rawValue": 36,
         "nearestToken": "spacing:32",
         "distance": 4,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-right is 36px, should be 32px"
       },
       {
         "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
@@ -11654,7 +11679,8 @@
         "rawValue": 36,
         "nearestToken": "spacing:32",
         "distance": 4,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-left is 36px, should be 32px"
       },
       {
         "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
@@ -11664,7 +11690,8 @@
         "rawValue": 16,
         "nearestToken": "font-size:14",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 16px, should be 14px"
       },
       {
         "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
@@ -11675,7 +11702,8 @@
         "rawValue": 36,
         "nearestToken": "spacing:32",
         "distance": 4,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-right is 36px, should be 32px"
       },
       {
         "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
@@ -11686,7 +11714,8 @@
         "rawValue": 36,
         "nearestToken": "spacing:32",
         "distance": 4,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-left is 36px, should be 32px"
       },
       {
         "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
@@ -11696,7 +11725,8 @@
         "rawValue": 16,
         "nearestToken": "font-size:14",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 16px, should be 14px"
       },
       {
         "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
@@ -11706,7 +11736,8 @@
         "rawValue": 16,
         "nearestToken": "font-size:14",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 16px, should be 14px"
       },
       {
         "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
@@ -11716,7 +11747,8 @@
         "rawValue": "\"JetBrains Mono\", Monaco, Consolas, \"Lucida Console\", monospace",
         "nearestToken": "font-family:Inter",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "using \"JetBrains Mono\" instead of \"Inter\""
       },
       {
         "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
@@ -11726,7 +11758,8 @@
         "rawValue": "\"JetBrains Mono\", Monaco, Consolas, \"Lucida Console\", monospace",
         "nearestToken": "font-family:Inter",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "using \"JetBrains Mono\" instead of \"Inter\""
       },
       {
         "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
@@ -11736,7 +11769,8 @@
         "rawValue": 16,
         "nearestToken": "font-size:14",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 16px, should be 14px"
       },
       {
         "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
@@ -11747,7 +11781,8 @@
         "rawValue": 36,
         "nearestToken": "spacing:32",
         "distance": 4,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-right is 36px, should be 32px"
       },
       {
         "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
@@ -11758,7 +11793,8 @@
         "rawValue": 36,
         "nearestToken": "spacing:32",
         "distance": 4,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-left is 36px, should be 32px"
       },
       {
         "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
@@ -11768,7 +11804,8 @@
         "rawValue": 16,
         "nearestToken": "font-size:14",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 16px, should be 14px"
       },
       {
         "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
@@ -11779,7 +11816,8 @@
         "rawValue": 36,
         "nearestToken": "spacing:32",
         "distance": 4,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-right is 36px, should be 32px"
       },
       {
         "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
@@ -11790,7 +11828,8 @@
         "rawValue": 36,
         "nearestToken": "spacing:32",
         "distance": 4,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "padding-left is 36px, should be 32px"
       },
       {
         "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
@@ -11800,7 +11839,8 @@
         "rawValue": 16,
         "nearestToken": "font-size:14",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 16px, should be 14px"
       },
       {
         "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
@@ -11811,7 +11851,8 @@
         "rawValue": -1,
         "nearestToken": "spacing:0",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "margin-top is -1px, should be 0px"
       },
       {
         "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
@@ -11822,7 +11863,8 @@
         "rawValue": -1,
         "nearestToken": "spacing:0",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "margin-right is -1px, should be 0px"
       },
       {
         "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
@@ -11833,7 +11875,8 @@
         "rawValue": -1,
         "nearestToken": "spacing:0",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "margin-bottom is -1px, should be 0px"
       },
       {
         "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
@@ -11844,7 +11887,8 @@
         "rawValue": -1,
         "nearestToken": "spacing:0",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "margin-left is -1px, should be 0px"
       },
       {
         "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
@@ -11854,7 +11898,8 @@
         "rawValue": 16,
         "nearestToken": "font-size:14",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 16px, should be 14px"
       },
       {
         "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
@@ -11864,7 +11909,8 @@
         "rawValue": 16,
         "nearestToken": "font-size:14",
         "distance": 2,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "font size is 16px, should be 14px"
       },
       {
         "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
@@ -11875,7 +11921,8 @@
         "rawValue": -1,
         "nearestToken": "spacing:0",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "margin-top is -1px, should be 0px"
       },
       {
         "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
@@ -11886,7 +11933,8 @@
         "rawValue": -1,
         "nearestToken": "spacing:0",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "margin-right is -1px, should be 0px"
       },
       {
         "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
@@ -11897,7 +11945,8 @@
         "rawValue": -1,
         "nearestToken": "spacing:0",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "margin-bottom is -1px, should be 0px"
       },
       {
         "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
@@ -11908,7 +11957,8 @@
         "rawValue": -1,
         "nearestToken": "spacing:0",
         "distance": 1,
-        "normalized": 1
+        "normalized": 1,
+        "humanReadable": "margin-left is -1px, should be 0px"
       }
     ],
     "unstablePages": []
