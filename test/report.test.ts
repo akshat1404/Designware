@@ -46,6 +46,7 @@ const report: ProductReport = {
       nearestToken: "colors.brand-primary",
       distance: 40,
       normalized: 0.9,
+      humanReadable: "color is a different shade than the brand palette — closest match is colors.brand-primary",
     },
   ],
   unstablePages: ["https://example.com/broken"],
@@ -108,5 +109,44 @@ describe("writeReport", () => {
     expect(overlayHtml).toContain(`data:image/png;base64,${FAKE_PNG.toString("base64")}`);
     expect(overlayHtml).not.toContain("cache");
     expect(overlayHtml).not.toContain("fake.png");
+  });
+
+  it("links the standalone report.html from the top of summary.md", () => {
+    writeReport(target, report);
+    const mdPath = path.resolve(process.cwd(), "reports", TEST_KEY, "summary.md");
+    const summary = readFileSync(mdPath, "utf-8");
+    expect(summary).toContain("(./report.html)");
+  });
+
+  it("writes a self-contained report.html with the score and human-readable offenders, no external file dependencies", () => {
+    const cacheDir = path.resolve(process.cwd(), "cache", TEST_KEY);
+    mkdirSync(cacheDir, { recursive: true });
+    const screenshotAbsPath = path.join(cacheDir, "fake.png");
+    writeFileSync(screenshotAbsPath, FAKE_PNG);
+
+    const extractedPages: ExtractedPage[] = [
+      {
+        page: scoredPage.page,
+        elements: [],
+        screenshotPath: path.relative(process.cwd(), screenshotAbsPath),
+      },
+    ];
+
+    writeReport(target, report, extractedPages);
+
+    const htmlPath = path.resolve(process.cwd(), "reports", TEST_KEY, "report.html");
+    const html = readFileSync(htmlPath, "utf-8");
+
+    expect(html).toContain("42.5 / 100");
+    expect(html).toContain(report.worstOffenders[0].humanReadable);
+    expect(html).toContain(`data:image/png;base64,${FAKE_PNG.toString("base64")}`);
+
+    // No dependency on any other file: every src/href is either a data: URI, an
+    // in-page #anchor, or absent — nothing pointing at report.json, summary.md,
+    // the per-page overlay files, or cache/.
+    const externalRefs = [...html.matchAll(/(?:src|href)="([^"]*)"/g)].map((m) => m[1]).filter((ref) => !ref.startsWith("data:") && !ref.startsWith("#"));
+    expect(externalRefs).toEqual([]);
+    expect(html).not.toContain("cache");
+    expect(html).not.toContain("fake.png");
   });
 });

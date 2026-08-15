@@ -5,6 +5,8 @@ import { matchColor } from "../matchers/color.js";
 import { matchScale, parsePx, isPxValue } from "../matchers/scale.js";
 import { matchFontFamily, matchFontWeight } from "../matchers/font.js";
 import { parseCssColor } from "../color/convert.js";
+import { resolveToken } from "../matchers/resolve.js";
+import { humanizeDeviation } from "../report/humanize.js";
 
 export interface InstanceReport {
   component: string;
@@ -56,6 +58,8 @@ export interface Offender {
   nearestToken: string;
   distance: number;
   normalized: number;
+  /** plain-English rendering of this deviation, e.g. "padding-top is 10px, should be 8px" — see humanizeDeviation. */
+  humanReadable: string;
 }
 
 function mean(values: number[]): number {
@@ -207,7 +211,7 @@ export function scorePage(extracted: ExtractedPage, spec: TokenSpec): PageReport
  * flagged element and confirm it's a real deviation, not a false positive
  * from an unhandled edge case.
  */
-function worstOffenders(pages: PageReport[], limit: number): Offender[] {
+function worstOffenders(pages: PageReport[], limit: number, spec: TokenSpec): Offender[] {
   const offenders: Offender[] = [];
   for (const page of pages) {
     for (const component of page.components) {
@@ -223,6 +227,7 @@ function worstOffenders(pages: PageReport[], limit: number): Offender[] {
             nearestToken: d.nearestToken,
             distance: d.distance,
             normalized: d.normalized,
+            humanReadable: humanizeDeviation(d, resolveToken(d.nearestToken, spec)),
           });
         }
       }
@@ -239,7 +244,7 @@ export function scoreProduct(product: string, extractedPages: ExtractedPage[], s
     pages,
     score: mean(pages.map((p) => p.score)),
     breakdown: propertyBreakdown(pages.flatMap((p) => flattenDeviations(p.components))),
-    worstOffenders: worstOffenders(pages, worstOffendersLimit),
+    worstOffenders: worstOffenders(pages, worstOffendersLimit, spec),
     unstablePages,
   };
 }

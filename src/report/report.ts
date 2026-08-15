@@ -4,12 +4,15 @@ import type { PageReport, ProductReport } from "../aggregator/aggregate.js";
 import type { CrawlTarget } from "../targets/types.js";
 import type { ExtractedPage } from "../extractor/types.js";
 import { buildOverlayBoxes, overlayFilename, pageSlug, renderOverlayHtml } from "./overlay.js";
+import { writeStandaloneReport } from "./standalone.js";
 
 const REPORTS_ROOT = path.resolve(process.cwd(), "reports");
 
 function summaryMarkdown(target: CrawlTarget, report: ProductReport, overlayLinks: Map<string, string>, correctedLinks: Map<string, string>): string {
   const lines: string[] = [];
   lines.push(`# ${target.label} (${target.kind})`);
+  lines.push("");
+  lines.push("[**View the full report**](./report.html) — one self-contained file with the score, plain-English breakdown, and screenshots; opens directly in a browser from anywhere, no other files needed.");
   lines.push("");
   if (report.pages.length === 0) {
     lines.push(`**Score: N/A — every crawled page was excluded as unstable, there is no data to score.**`);
@@ -63,12 +66,13 @@ function summaryMarkdown(target: CrawlTarget, report: ProductReport, overlayLink
   lines.push("");
   lines.push("## Worst offenders");
   lines.push("");
-  lines.push("| page | component | instance | property | value | nearest token | normalized |");
+  lines.push("| what's wrong | page | component | instance | raw value | nearest token | normalized |");
   lines.push("|---|---|---|---|---|---|---|");
   for (const o of report.worstOffenders.slice(0, 30)) {
     const detail = o.detail ? ` (${o.detail})` : "";
     const value = String(o.rawValue).replace(/\|/g, "\\|");
-    lines.push(`| ${o.page} | ${o.component} | ${o.instanceId} | ${o.property}${detail} | ${value} | ${o.nearestToken} | ${o.normalized.toFixed(2)} |`);
+    const humanReadable = o.humanReadable.replace(/\|/g, "\\|");
+    lines.push(`| ${humanReadable} | ${o.page} | ${o.component} | ${o.instanceId} | ${o.property}${detail}: ${value} | ${o.nearestToken} | ${o.normalized.toFixed(2)} |`);
   }
   lines.push("");
 
@@ -143,4 +147,5 @@ export function writeReport(target: CrawlTarget, report: ProductReport, extracte
 
   writeFileSync(path.join(dir, "report.json"), JSON.stringify({ target, report }, null, 2), "utf-8");
   writeFileSync(path.join(dir, "summary.md"), summaryMarkdown(target, report, overlayLinks, correctedLinks), "utf-8");
+  writeStandaloneReport(dir, target, report, extractedByUrl);
 }

@@ -115,7 +115,7 @@ export function overlayFilename(url: string): string {
   return `${pageSlug(url)}-overlay.html`;
 }
 
-function escapeHtml(s: string): string {
+export function escapeHtml(s: string): string {
   return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 }
 
@@ -124,6 +124,46 @@ function boxLabel(box: OverlayBox): string {
     .filter((d) => categoryOf(d.property) === box.category)
     .map((d) => `${d.property}${d.detail ? ` (${d.detail})` : ""}: ${d.rawValue} -> ${d.nearestToken} (distance ${d.distance.toFixed(2)})`)
     .join("\n");
+}
+
+/** Shared `<style>` body for both the standalone per-page overlay and the aggregate standalone report — kept in one place so the two never drift apart. */
+export const OVERLAY_CSS = `
+  .legend { position: sticky; top: 0; z-index: 10; background: #222; color: #eee; padding: 8px 12px; display: flex; gap: 16px; align-items: center; font-size: 13px; }
+  .legend-item { display: flex; align-items: center; gap: 6px; }
+  .swatch { width: 12px; height: 12px; border-radius: 2px; display: inline-block; }
+  .count { margin-left: auto; color: #999; }
+  .stage { position: relative; display: inline-block; }
+  .stage img { display: block; max-width: none; }
+  .dev-box { position: absolute; border: 2px solid; background: rgba(255, 255, 255, 0.08); box-sizing: border-box; cursor: help; }
+`;
+
+/** The sticky legend bar: page URL, category color key, flagged-occurrence count. */
+export function renderOverlayLegend(pageUrl: string, boxes: OverlayBox[]): string {
+  const legend = (Object.entries(CATEGORY_COLORS) as [Category, string][])
+    .map(([category, color]) => `<span class="legend-item"><span class="swatch" style="background:${color}"></span>${category}</span>`)
+    .join("");
+
+  return `<div class="legend">
+  <strong>${escapeHtml(pageUrl)}</strong>
+  ${legend}
+  <span class="count">${boxes.length} flagged occurrence${boxes.length === 1 ? "" : "s"} (score &gt; ${OVERLAY_SCORE_THRESHOLD})</span>
+</div>`;
+}
+
+/** The screenshot + absolutely-positioned deviation boxes on top of it. `screenshotSrc` should be a `data:` URI so the markup has no outside file dependency wherever it's embedded. */
+export function renderOverlayStage(screenshotSrc: string, boxes: OverlayBox[]): string {
+  const boxDivs = boxes
+    .map((box) => {
+      const color = CATEGORY_COLORS[box.category];
+      const title = escapeHtml(`${box.component} #${box.instanceId} — score ${box.score.toFixed(1)}\n${boxLabel(box)}`);
+      return `<div class="dev-box" style="left:${box.position.x}px;top:${box.position.y}px;width:${box.position.width}px;height:${box.position.height}px;border-color:${color};" title="${title}"></div>`;
+    })
+    .join("\n  ");
+
+  return `<div class="stage">
+  <img src="${screenshotSrc}" alt="page screenshot">
+  ${boxDivs}
+</div>`;
 }
 
 /**
@@ -135,18 +175,6 @@ function boxLabel(box: OverlayBox): string {
  * path surviving outside the checkout that produced it.
  */
 export function renderOverlayHtml(pageUrl: string, screenshotSrc: string, boxes: OverlayBox[]): string {
-  const boxDivs = boxes
-    .map((box) => {
-      const color = CATEGORY_COLORS[box.category];
-      const title = escapeHtml(`${box.component} #${box.instanceId} — score ${box.score.toFixed(1)}\n${boxLabel(box)}`);
-      return `<div class="dev-box" style="left:${box.position.x}px;top:${box.position.y}px;width:${box.position.width}px;height:${box.position.height}px;border-color:${color};" title="${title}"></div>`;
-    })
-    .join("\n  ");
-
-  const legend = (Object.entries(CATEGORY_COLORS) as [Category, string][])
-    .map(([category, color]) => `<span class="legend-item"><span class="swatch" style="background:${color}"></span>${category}</span>`)
-    .join("");
-
   return `<!doctype html>
 <html>
 <head>
@@ -154,25 +182,12 @@ export function renderOverlayHtml(pageUrl: string, screenshotSrc: string, boxes:
 <title>Deviation overlay - ${escapeHtml(pageUrl)}</title>
 <style>
   body { margin: 0; font-family: system-ui, sans-serif; background: #1a1a1a; }
-  .legend { position: sticky; top: 0; z-index: 10; background: #222; color: #eee; padding: 8px 12px; display: flex; gap: 16px; align-items: center; font-size: 13px; }
-  .legend-item { display: flex; align-items: center; gap: 6px; }
-  .swatch { width: 12px; height: 12px; border-radius: 2px; display: inline-block; }
-  .count { margin-left: auto; color: #999; }
-  .stage { position: relative; display: inline-block; }
-  .stage img { display: block; max-width: none; }
-  .dev-box { position: absolute; border: 2px solid; background: rgba(255, 255, 255, 0.08); box-sizing: border-box; cursor: help; }
+${OVERLAY_CSS}
 </style>
 </head>
 <body>
-<div class="legend">
-  <strong>${escapeHtml(pageUrl)}</strong>
-  ${legend}
-  <span class="count">${boxes.length} flagged occurrence${boxes.length === 1 ? "" : "s"} (score &gt; ${OVERLAY_SCORE_THRESHOLD})</span>
-</div>
-<div class="stage">
-  <img src="${screenshotSrc}" alt="page screenshot">
-  ${boxDivs}
-</div>
+${renderOverlayLegend(pageUrl, boxes)}
+${renderOverlayStage(screenshotSrc, boxes)}
 </body>
 </html>
 `;
