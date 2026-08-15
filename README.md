@@ -70,14 +70,14 @@ target per company, validated against real, publicly reachable pages
 (URL lists checked against each site's robots.txt, cached locally, capped
 at a handful of pages per site):
 
-| Target | Kind | Score | Notable finding |
-|---|---|---|---|
-| GitHub (github.com) | real-app | 7.1/100 | Font-family is the largest contributor — resolves to `"Mona Sans"` in places, not the token's `"Mona Sans VF"` — a marketing-vs-app font naming inconsistency |
-| Carbon (carbondesignsystem.com) | on-spec | 1.8/100 | Residual noise is doc-site-shell CSS resets, not component drift |
-| IBM (ibm.com) | real-app | 2.0/100 | Helvetica fallback where Plex is expected; marketing-hero type/spacing/radius beyond the core component scale |
-| Atlassian Design (atlassian.design) | on-spec | 1.9/100 | Near-zero; residual noise is oversized marketing headings |
-| Jira (jira.atlassian.com) | real-app | 18.3/100 | Legacy `/projects/<KEY>/summary` pages resolve to a generic OS font stack, not `"Atlassian Sans"` — drift concentrates in older, unmigrated UI, not the homepage |
-| Shopify Polaris (shopify.dev) | on-spec, **unverified** | 15.5/100 | Not a matcher bug, but not a trustworthy baseline either: confirmed via DOM inspection that neither page (nor any other publicly reachable shopify.dev/polaris.shopify.com/storybook URL) renders actual Polaris components — no `Polaris-` classes, no Polaris custom elements. This is a generic docs-shell score, not comparable to the other three companies' on-spec numbers |
+| Target | Kind | Score | Notable finding | Report |
+|---|---|---|---|---|
+| GitHub (github.com) | real-app | 7.1/100 | Font-family is the largest contributor — resolves to `"Mona Sans"` in places, not the token's `"Mona Sans VF"` — a marketing-vs-app font naming inconsistency | [view](https://htmlpreview.github.io/?https://github.com/akshat1404/Specular/blob/main/reports/github/report.html) |
+| Carbon (carbondesignsystem.com) | on-spec | 1.8/100 | Residual noise is doc-site-shell CSS resets, not component drift | [view](https://htmlpreview.github.io/?https://github.com/akshat1404/Specular/blob/main/reports/carbon-onspec/report.html) |
+| IBM (ibm.com) | real-app | 2.0/100 | Helvetica fallback where Plex is expected; marketing-hero type/spacing/radius beyond the core component scale | [view](https://htmlpreview.github.io/?https://github.com/akshat1404/Specular/blob/main/reports/ibm-real-app/report.html) |
+| Atlassian Design (atlassian.design) | on-spec | 1.9/100 | Near-zero; residual noise is oversized marketing headings | [view](https://htmlpreview.github.io/?https://github.com/akshat1404/Specular/blob/main/reports/atlassian-onspec/report.html) |
+| Jira (jira.atlassian.com) | real-app | 18.3/100 | Legacy `/projects/<KEY>/summary` pages resolve to a generic OS font stack, not `"Atlassian Sans"` — drift concentrates in older, unmigrated UI, not the homepage | [view](https://htmlpreview.github.io/?https://github.com/akshat1404/Specular/blob/main/reports/jira-real-app/report.html) |
+| Shopify Polaris (shopify.dev) | on-spec, **unverified** | 15.5/100 | Not a matcher bug, but not a trustworthy baseline either: confirmed via DOM inspection that neither page (nor any other publicly reachable shopify.dev/polaris.shopify.com/storybook URL) renders actual Polaris components — no `Polaris-` classes, no Polaris custom elements. This is a generic docs-shell score, not comparable to the other three companies' on-spec numbers | [view](https://htmlpreview.github.io/?https://github.com/akshat1404/Specular/blob/main/reports/polaris-onspec/report.html) |
 
 Two real bugs were found and fixed during this validation (not synthetic
 fixtures — genuinely surfaced by messy real-world pages):
