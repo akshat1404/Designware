@@ -1,4 +1,4 @@
-# Brand Deviation Detection Engine
+# A Lint Check For Design
 
 Deviation-detection engine for software products: diffs a running app's
 *resolved* styles against a company's own brand token spec, and reports how
