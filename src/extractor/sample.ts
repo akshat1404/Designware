@@ -78,6 +78,26 @@ const SAMPLE_SCRIPT = (corrections?: CorrectionMap): RawSample[] => {
     return alpha > 0;
   }
 
+  /**
+   * An element's own `background-color` is very often `transparent` — its
+   * real visual background is whatever's behind it, inherited up the DOM
+   * tree. Walks from the element itself (so an opaque background set on the
+   * element directly still wins) up through `parentElement` until it finds
+   * one, reusing the same alpha-parsing `isVisibleBackground` already does
+   * for inclusion. Falls back to white (flagged via `resolved: false`)
+   * rather than silently assuming it when nothing in the chain has one —
+   * `<html>`/`<body>` normally do, so this is a rare edge case in practice.
+   */
+  function resolveEffectiveBackground(el: HTMLElement): { color: string; resolved: boolean } {
+    let node: HTMLElement | null = el;
+    while (node) {
+      const cs = getComputedStyle(node);
+      if (isVisibleBackground(cs)) return { color: cs.backgroundColor, resolved: true };
+      node = node.parentElement;
+    }
+    return { color: "rgb(255, 255, 255)", resolved: false };
+  }
+
   const results: RawSample[] = [];
   const nodes = Array.from(document.querySelectorAll<HTMLElement>("body *"));
 
@@ -88,6 +108,7 @@ const SAMPLE_SCRIPT = (corrections?: CorrectionMap): RawSample[] => {
     if (!isVisibleBackground(cs) && !isVisibleBorder(cs) && !isText) continue;
 
     const tag = el.tagName.toLowerCase();
+    const bg = isText ? resolveEffectiveBackground(el) : undefined;
     const styles = {
       color: cs.color,
       backgroundColor: cs.backgroundColor,
@@ -106,6 +127,7 @@ const SAMPLE_SCRIPT = (corrections?: CorrectionMap): RawSample[] => {
       marginRight: cs.marginRight,
       marginBottom: cs.marginBottom,
       marginLeft: cs.marginLeft,
+      ...(bg ? { effectiveBackgroundColor: bg.color, effectiveBackgroundResolved: bg.resolved } : {}),
     };
 
     if (corrections) {

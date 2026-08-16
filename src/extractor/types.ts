@@ -17,6 +17,18 @@ export interface CapturedStyles {
   marginRight: string;
   marginBottom: string;
   marginLeft: string;
+  /**
+   * Resolved CSS `background-color` this element actually renders against —
+   * the first non-transparent `background-color` found walking up from the
+   * element itself through its ancestors (an element's own `backgroundColor`
+   * is very often `transparent`, which isn't a real visual background). Only
+   * populated by real-page sampling (sample.ts) for text-containing
+   * elements; undefined for non-text elements and for tag-based fixture
+   * extraction (extract.ts), which has no accessibility pass.
+   */
+  effectiveBackgroundColor?: string;
+  /** true if effectiveBackgroundColor came from a real ancestor background; false if no ancestor had one and it fell back to white. Undefined whenever effectiveBackgroundColor is. */
+  effectiveBackgroundResolved?: boolean;
 }
 
 /** Page-relative bounding box (accounts for scroll offset at capture time), in CSS px. */
