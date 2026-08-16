@@ -1,12 +1,14 @@
 import type { TokenSpec } from "../schema/tokenSpec.js";
 import type { ExtractedElement, ExtractedPage } from "../extractor/types.js";
 import type { PropertyDeviation, PropertyKind } from "../matchers/types.js";
+import type { AccessibilityFinding, AccessibilitySummary } from "../accessibility/types.js";
 import { matchColor } from "../matchers/color.js";
 import { matchScale, parsePx, isPxValue } from "../matchers/scale.js";
 import { matchFontFamily, matchFontWeight } from "../matchers/font.js";
 import { parseCssColor } from "../color/convert.js";
 import { resolveToken } from "../matchers/resolve.js";
 import { humanizeDeviation } from "../report/humanize.js";
+import { checkElementAccessibility } from "../accessibility/contrast.js";
 
 export interface InstanceReport {
   component: string;
@@ -28,6 +30,15 @@ export interface PageReport {
   score: number;
   /** mean normalized deviation per property kind, for "which category is worst" reporting. */
   breakdown: PropertyBreakdown[];
+  /**
+   * WCAG contrast findings for this page's text-containing sampled elements
+   * — a separate finding category from `components`/`breakdown` (see
+   * accessibility/types.ts), never blended into the 0-100 deviation score.
+   * Optional: only real-page sampling (sample.ts) produces the effective
+   * background data this needs; tag-based fixture extraction leaves it
+   * unset rather than reporting a false "nothing to check".
+   */
+  accessibility?: AccessibilityFinding[];
 }
 
 export interface ProductReport {
@@ -39,6 +50,8 @@ export interface ProductReport {
   worstOffenders: Offender[];
   /** pages excluded from scoring because their capture looked incomplete/unstable, listed rather than silently blended in. */
   unstablePages: string[];
+  /** product-wide rollup of every page's `accessibility` findings — see PageReport.accessibility. */
+  accessibility?: AccessibilitySummary;
 }
 
 export interface PropertyBreakdown {
@@ -145,7 +158,8 @@ export function scoreElement(el: ExtractedElement, spec: TokenSpec): InstanceRep
   deviations.push(matchFontFamily(s.fontFamily, spec.fontFamily));
   deviations.push(matchFontWeight(s.fontWeight, spec.fontWeight));
 
-  const spacingSides: Array<[keyof typeof s, string]> = [
+  type SpacingKey = "paddingTop" | "paddingRight" | "paddingBottom" | "paddingLeft" | "marginTop" | "marginRight" | "marginBottom" | "marginLeft";
+  const spacingSides: Array<[SpacingKey, string]> = [
     ["paddingTop", "padding-top"],
     ["paddingRight", "padding-right"],
     ["paddingBottom", "padding-bottom"],
@@ -196,11 +210,17 @@ export function scorePage(extracted: ExtractedPage, spec: TokenSpec): PageReport
   }
 
   const components = Array.from(byComponent.entries()).map(([name, list]) => aggregateComponent(name, list));
+
+  const accessibility = extracted.elements
+    .map((el, i) => checkElementAccessibility(el, extracted.page, instances[i].deviations, spec))
+    .filter((f): f is AccessibilityFinding => f !== undefined);
+
   return {
     page: extracted.page,
     components,
     score: mean(components.map((c) => c.score)),
     breakdown: propertyBreakdown(flattenDeviations(components)),
+    accessibility,
   };
 }
 
@@ -236,6 +256,18 @@ function worstOffenders(pages: PageReport[], limit: number, spec: TokenSpec): Of
   return offenders.sort((a, b) => b.normalized - a.normalized).slice(0, limit);
 }
 
+/** Product-wide rollup of every page's accessibility findings — lowest ratio (worst) first, capped the same way worstOffenders() caps deviations. */
+function accessibilitySummary(pages: PageReport[], limit: number): AccessibilitySummary {
+  const all = pages.flatMap((p) => p.accessibility ?? []);
+  const failCount = all.filter((f) => f.level === "fail").length;
+  return {
+    totalChecked: all.length,
+    passCount: all.length - failCount,
+    failCount,
+    worstOffenders: [...all].sort((a, b) => a.ratio - b.ratio).slice(0, limit),
+  };
+}
+
 export function scoreProduct(product: string, extractedPages: ExtractedPage[], spec: TokenSpec, worstOffendersLimit = 50): ProductReport {
   const unstablePages = extractedPages.filter((p) => p.unstable).map((p) => p.page);
   const pages = extractedPages.filter((p) => !p.unstable).map((p) => scorePage(p, spec));
@@ -246,5 +278,6 @@ export function scoreProduct(product: string, extractedPages: ExtractedPage[], s
     breakdown: propertyBreakdown(pages.flatMap((p) => flattenDeviations(p.components))),
     worstOffenders: worstOffenders(pages, worstOffendersLimit, spec),
     unstablePages,
+    accessibility: accessibilitySummary(pages, worstOffendersLimit),
   };
 }
