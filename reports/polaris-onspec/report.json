@@ -20,7 +20,7 @@
             "instances": [
               {
                 "component": "a/text",
-                "instanceId": "e3b95ae0",
+                "instanceId": "4f16eaa0",
                 "deviations": [
                   {
                     "property": "color",
@@ -128,7 +128,7 @@
               },
               {
                 "component": "a/text",
-                "instanceId": "1f1f5c91",
+                "instanceId": "5cc41ad3",
                 "deviations": [
                   {
                     "property": "color",
@@ -236,7 +236,7 @@
               },
               {
                 "component": "a/text",
-                "instanceId": "d135a0b9",
+                "instanceId": "107cf6bf",
                 "deviations": [
                   {
                     "property": "color",
@@ -344,7 +344,7 @@
               },
               {
                 "component": "a/text",
-                "instanceId": "61c49c39",
+                "instanceId": "3a9d96b2",
                 "deviations": [
                   {
                     "property": "color",
@@ -702,7 +702,7 @@
             "instances": [
               {
                 "component": "button/text",
-                "instanceId": "3cb38d8b",
+                "instanceId": "800da9c6",
                 "deviations": [
                   {
                     "property": "color",
@@ -1072,7 +1072,7 @@
             "instances": [
               {
                 "component": "span/text",
-                "instanceId": "0dcc9dff",
+                "instanceId": "720ae7fe",
                 "deviations": [
                   {
                     "property": "color",
@@ -1180,7 +1180,7 @@
               },
               {
                 "component": "span/text",
-                "instanceId": "3f6bd8fb",
+                "instanceId": "e4c2d8fe",
                 "deviations": [
                   {
                     "property": "color",
@@ -1288,7 +1288,7 @@
               },
               {
                 "component": "span/text",
-                "instanceId": "3b9725ac",
+                "instanceId": "0c7c4bda",
                 "deviations": [
                   {
                     "property": "color",
@@ -1396,7 +1396,7 @@
               },
               {
                 "component": "span/text",
-                "instanceId": "604d0e92",
+                "instanceId": "95184ef3",
                 "deviations": [
                   {
                     "property": "color",
@@ -1504,7 +1504,7 @@
               },
               {
                 "component": "span/text",
-                "instanceId": "733cd291",
+                "instanceId": "a115b5fd",
                 "deviations": [
                   {
                     "property": "color",
@@ -1612,7 +1612,115 @@
               },
               {
                 "component": "span/text",
-                "instanceId": "c54d1ea1",
+                "instanceId": "29fea334",
+                "deviations": [
+                  {
+                    "property": "color",
+                    "rawValue": "rgb(71, 95, 145)",
+                    "nearestToken": "colors.color-bg-fill-emphasis",
+                    "distance": 8.764390056990402,
+                    "normalized": 0.4382195028495201,
+                    "variantMatch": false
+                  },
+                  {
+                    "property": "border-radius",
+                    "rawValue": 0,
+                    "nearestToken": "border-radius:0",
+                    "distance": 0,
+                    "normalized": 0,
+                    "detail": "border-top-left-radius"
+                  },
+                  {
+                    "property": "font-size",
+                    "rawValue": 14,
+                    "nearestToken": "font-size:14",
+                    "distance": 0,
+                    "normalized": 0
+                  },
+                  {
+                    "property": "font-family",
+                    "rawValue": "Inter, -apple-system, BlinkMacSystemFont, \"San Francisco\", \"Segoe UI\", Roboto, \"Helvetica Neue\", sans-serif",
+                    "nearestToken": "font-family:Inter",
+                    "distance": 0,
+                    "normalized": 0
+                  },
+                  {
+                    "property": "font-weight",
+                    "rawValue": 400,
+                    "nearestToken": "font-weight:450",
+                    "distance": 50,
+                    "normalized": 0.5
+                  },
+                  {
+                    "property": "spacing",
+                    "rawValue": 0,
+                    "nearestToken": "spacing:0",
+                    "distance": 0,
+                    "normalized": 0,
+                    "detail": "padding-top"
+                  },
+                  {
+                    "property": "spacing",
+                    "rawValue": 0,
+                    "nearestToken": "spacing:0",
+                    "distance": 0,
+                    "normalized": 0,
+                    "detail": "padding-right"
+                  },
+                  {
+                    "property": "spacing",
+                    "rawValue": 0,
+                    "nearestToken": "spacing:0",
+                    "distance": 0,
+                    "normalized": 0,
+                    "detail": "padding-bottom"
+                  },
+                  {
+                    "property": "spacing",
+                    "rawValue": 0,
+                    "nearestToken": "spacing:0",
+                    "distance": 0,
+                    "normalized": 0,
+                    "detail": "padding-left"
+                  },
+                  {
+                    "property": "spacing",
+                    "rawValue": 0,
+                    "nearestToken": "spacing:0",
+                    "distance": 0,
+                    "normalized": 0,
+                    "detail": "margin-top"
+                  },
+                  {
+                    "property": "spacing",
+                    "rawValue": 0,
+                    "nearestToken": "spacing:0",
+                    "distance": 0,
+                    "normalized": 0,
+                    "detail": "margin-right"
+                  },
+                  {
+                    "property": "spacing",
+                    "rawValue": 0,
+                    "nearestToken": "spacing:0",
+                    "distance": 0,
+                    "normalized": 0,
+                    "detail": "margin-bottom"
+                  },
+                  {
+                    "property": "spacing",
+                    "rawValue": 0,
+                    "nearestToken": "spacing:0",
+                    "distance": 0,
+                    "normalized": 0,
+                    "detail": "margin-left"
+                  }
+                ],
+                "score": 15.12215423790467
+              },
+              {
+                "component": "span/text",
+                "instanceId": "4fdb2281",
                 "deviations": [
                   {
                     "property": "color",
@@ -1719,14 +1827,14 @@
                 "score": 15.314953138363595
               }
             ],
-            "score": 15.578060735256402
+            "score": 15.512931235634726
           },
           {
             "component": "kbd/text",
             "instances": [
               {
                 "component": "kbd/text",
-                "instanceId": "bf6bd0af",
+                "instanceId": "cc1348ea",
                 "deviations": [
                   {
                     "property": "color",
@@ -1848,7 +1956,7 @@
             "instances": [
               {
                 "component": "li/text",
-                "instanceId": "f6a2b46b",
+                "instanceId": "ad1895b0",
                 "deviations": [
                   {
                     "property": "color",
@@ -2682,7 +2790,7 @@
             "instances": [
               {
                 "component": "h1/text",
-                "instanceId": "421a68f7",
+                "instanceId": "3f8254dd",
                 "deviations": [
                   {
                     "property": "color",
@@ -2796,7 +2904,7 @@
             "instances": [
               {
                 "component": "p/text",
-                "instanceId": "7ad329b1",
+                "instanceId": "b7a25426",
                 "deviations": [
                   {
                     "property": "color",
@@ -2904,7 +3012,7 @@
               },
               {
                 "component": "p/text",
-                "instanceId": "d61d75e7",
+                "instanceId": "468d1ffa",
                 "deviations": [
                   {
                     "property": "color",
@@ -3140,7 +3248,7 @@
             "instances": [
               {
                 "component": "h3/text",
-                "instanceId": "068e7a1f",
+                "instanceId": "20a8d243",
                 "deviations": [
                   {
                     "property": "color",
@@ -3250,17 +3358,17 @@
             "score": 7.621571537781008
           }
         ],
-        "score": 13.984189672780666,
+        "score": 13.979179711271307,
         "breakdown": [
           {
             "property": "font-size",
-            "meanNormalized": 0.5714285714285714,
-            "count": 28
+            "meanNormalized": 0.5517241379310345,
+            "count": 29
           },
           {
             "property": "font-weight",
             "meanNormalized": 0.5,
-            "count": 28
+            "count": 29
           },
           {
             "property": "border-color",
@@ -3269,8 +3377,8 @@
           },
           {
             "property": "color",
-            "meanNormalized": 0.17725366257436773,
-            "count": 28
+            "meanNormalized": 0.18625248465282124,
+            "count": 29
           },
           {
             "property": "background-color",
@@ -3279,18 +3387,272 @@
           },
           {
             "property": "font-family",
-            "meanNormalized": 0.03571428571428571,
-            "count": 28
+            "meanNormalized": 0.034482758620689655,
+            "count": 29
           },
           {
             "property": "border-radius",
-            "meanNormalized": 0.017857142857142856,
-            "count": 28
+            "meanNormalized": 0.017241379310344827,
+            "count": 29
           },
           {
             "property": "spacing",
-            "meanNormalized": 0.017857142857142856,
-            "count": 224
+            "meanNormalized": 0.017241379310344827,
+            "count": 232
+          }
+        ],
+        "accessibility": [
+          {
+            "page": "https://shopify.dev/docs/api/polaris",
+            "component": "a/text",
+            "instanceId": "4f16eaa0",
+            "ratio": 6.337386211944449,
+            "level": "AA",
+            "isLargeText": false,
+            "fontSize": 16,
+            "fontWeight": 400,
+            "color": "rgb(71, 95, 145)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AA at 6.3:1 but falls short of AAA (needs 7:1)"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris",
+            "component": "a/text",
+            "instanceId": "5cc41ad3",
+            "ratio": 9.350095107797735,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(68, 71, 74)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 9.4:1"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris",
+            "component": "button/text",
+            "instanceId": "800da9c6",
+            "ratio": 15.975704102241814,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 600,
+            "color": "rgb(32, 34, 35)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 16.0:1"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris",
+            "component": "span/text",
+            "instanceId": "720ae7fe",
+            "ratio": 8.370002768780184,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(68, 71, 74)",
+            "effectiveBackground": "rgb(238, 243, 247)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 8.4:1"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris",
+            "component": "kbd/text",
+            "instanceId": "cc1348ea",
+            "ratio": 8.370002768780184,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 12,
+            "fontWeight": 400,
+            "color": "rgb(68, 71, 74)",
+            "effectiveBackground": "rgb(238, 243, 247)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 8.4:1"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris",
+            "component": "li/text",
+            "instanceId": "ad1895b0",
+            "ratio": 1.4737254630985896,
+            "level": "fail",
+            "isLargeText": false,
+            "fontSize": 16,
+            "fontWeight": 400,
+            "color": "rgb(210, 213, 216)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here is barely readable against its background — 1.5:1, needs at least 4.5:1 for AA"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris",
+            "component": "span/text",
+            "instanceId": "e4c2d8fe",
+            "ratio": 8.657276660206252,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 16,
+            "fontWeight": 400,
+            "color": "rgb(68, 71, 74)",
+            "effectiveBackground": "rgb(246, 246, 247)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 8.7:1"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris",
+            "component": "h1/text",
+            "instanceId": "3f8254dd",
+            "ratio": 15.975704102241814,
+            "level": "AAA",
+            "isLargeText": true,
+            "fontSize": 32,
+            "fontWeight": 600,
+            "color": "rgb(32, 34, 35)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 16.0:1"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris",
+            "component": "span/text",
+            "instanceId": "0c7c4bda",
+            "ratio": 6.337386211944449,
+            "level": "AA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(71, 95, 145)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AA at 6.3:1 but falls short of AAA (needs 7:1)"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris",
+            "component": "p/text",
+            "instanceId": "b7a25426",
+            "ratio": 9.350095107797735,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 16,
+            "fontWeight": 400,
+            "color": "rgb(68, 71, 74)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 9.4:1"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris",
+            "component": "a/text",
+            "instanceId": "107cf6bf",
+            "ratio": 6.337386211944449,
+            "level": "AA",
+            "isLargeText": false,
+            "fontSize": 16,
+            "fontWeight": 400,
+            "color": "rgb(71, 95, 145)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AA at 6.3:1 but falls short of AAA (needs 7:1)"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris",
+            "component": "span/text",
+            "instanceId": "95184ef3",
+            "ratio": 15.41022330984204,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 16,
+            "fontWeight": 600,
+            "color": "rgb(32, 34, 35)",
+            "effectiveBackground": "rgb(250, 251, 251)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 15.4:1"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris",
+            "component": "p/text",
+            "instanceId": "468d1ffa",
+            "ratio": 9.019136349627649,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(68, 71, 74)",
+            "effectiveBackground": "rgb(250, 251, 251)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 9.0:1"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris",
+            "component": "span/text",
+            "instanceId": "a115b5fd",
+            "ratio": 4.7448818476916035,
+            "level": "AA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(109, 113, 117)",
+            "effectiveBackground": "rgb(250, 251, 251)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AA at 4.7:1 but falls short of AAA (needs 7:1)"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris",
+            "component": "span/text",
+            "instanceId": "29fea334",
+            "ratio": 6.113066197381156,
+            "level": "AA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(71, 95, 145)",
+            "effectiveBackground": "rgb(250, 251, 251)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AA at 6.1:1 but falls short of AAA (needs 7:1)"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris",
+            "component": "h3/text",
+            "instanceId": "20a8d243",
+            "ratio": 15.41022330984204,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 12,
+            "fontWeight": 600,
+            "color": "rgb(32, 34, 35)",
+            "effectiveBackground": "rgb(250, 251, 251)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 15.4:1"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris",
+            "component": "a/text",
+            "instanceId": "3a9d96b2",
+            "ratio": 9.019136349627649,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(68, 71, 74)",
+            "effectiveBackground": "rgb(250, 251, 251)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 9.0:1"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris",
+            "component": "span/text",
+            "instanceId": "4fdb2281",
+            "ratio": 8.370002768780184,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 16,
+            "fontWeight": 400,
+            "color": "rgb(68, 71, 74)",
+            "effectiveBackground": "rgb(238, 243, 247)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 8.4:1"
           }
         ]
       },
@@ -3302,7 +3664,7 @@
             "instances": [
               {
                 "component": "a/text",
-                "instanceId": "e3b95ae0",
+                "instanceId": "4f16eaa0",
                 "deviations": [
                   {
                     "property": "color",
@@ -3410,7 +3772,7 @@
               },
               {
                 "component": "a/text",
-                "instanceId": "1f1f5c91",
+                "instanceId": "5cc41ad3",
                 "deviations": [
                   {
                     "property": "color",
@@ -3518,7 +3880,7 @@
               },
               {
                 "component": "a/text",
-                "instanceId": "d135a0b9",
+                "instanceId": "107cf6bf",
                 "deviations": [
                   {
                     "property": "color",
@@ -3626,7 +3988,7 @@
               },
               {
                 "component": "a/text",
-                "instanceId": "c45141e9",
+                "instanceId": "9f5ce858",
                 "deviations": [
                   {
                     "property": "color",
@@ -3734,7 +4096,7 @@
               },
               {
                 "component": "a/text",
-                "instanceId": "61c49c39",
+                "instanceId": "3a9d96b2",
                 "deviations": [
                   {
                     "property": "color",
@@ -3842,7 +4204,7 @@
               },
               {
                 "component": "a/text",
-                "instanceId": "5fbc4146",
+                "instanceId": "753f0985",
                 "deviations": [
                   {
                     "property": "color",
@@ -3950,7 +4312,7 @@
               },
               {
                 "component": "a/text",
-                "instanceId": "863009fe",
+                "instanceId": "1ba78d67",
                 "deviations": [
                   {
                     "property": "color",
@@ -4308,7 +4670,7 @@
             "instances": [
               {
                 "component": "button/text",
-                "instanceId": "3cb38d8b",
+                "instanceId": "800da9c6",
                 "deviations": [
                   {
                     "property": "color",
@@ -4416,7 +4778,7 @@
               },
               {
                 "component": "button/text",
-                "instanceId": "81b4ee06",
+                "instanceId": "c93441cd",
                 "deviations": [
                   {
                     "property": "color",
@@ -4524,7 +4886,7 @@
               },
               {
                 "component": "button/text",
-                "instanceId": "58b4d964",
+                "instanceId": "db9ad474",
                 "deviations": [
                   {
                     "property": "color",
@@ -4632,7 +4994,7 @@
               },
               {
                 "component": "button/text",
-                "instanceId": "7ea4a104",
+                "instanceId": "289064c6",
                 "deviations": [
                   {
                     "property": "color",
@@ -4740,7 +5102,7 @@
               },
               {
                 "component": "button/text",
-                "instanceId": "c3c2fb75",
+                "instanceId": "0e2d8e55",
                 "deviations": [
                   {
                     "property": "color",
@@ -5226,7 +5588,7 @@
             "instances": [
               {
                 "component": "span/text",
-                "instanceId": "0dcc9dff",
+                "instanceId": "720ae7fe",
                 "deviations": [
                   {
                     "property": "color",
@@ -5334,7 +5696,7 @@
               },
               {
                 "component": "span/text",
-                "instanceId": "3f6bd8fb",
+                "instanceId": "e4c2d8fe",
                 "deviations": [
                   {
                     "property": "color",
@@ -5442,7 +5804,7 @@
               },
               {
                 "component": "span/text",
-                "instanceId": "3b9725ac",
+                "instanceId": "0c7c4bda",
                 "deviations": [
                   {
                     "property": "color",
@@ -5550,7 +5912,7 @@
               },
               {
                 "component": "span/text",
-                "instanceId": "8ce257b6",
+                "instanceId": "50260bcf",
                 "deviations": [
                   {
                     "property": "color",
@@ -5658,7 +6020,7 @@
               },
               {
                 "component": "span/text",
-                "instanceId": "8fa08c6f",
+                "instanceId": "36d571a5",
                 "deviations": [
                   {
                     "property": "color",
@@ -5766,7 +6128,7 @@
               },
               {
                 "component": "span/text",
-                "instanceId": "fccd81b7",
+                "instanceId": "0679dd94",
                 "deviations": [
                   {
                     "property": "color",
@@ -5874,7 +6236,7 @@
               },
               {
                 "component": "span/text",
-                "instanceId": "ac01e58e",
+                "instanceId": "888175ee",
                 "deviations": [
                   {
                     "property": "color",
@@ -5982,7 +6344,7 @@
               },
               {
                 "component": "span/text",
-                "instanceId": "4c74a3da",
+                "instanceId": "5bb19dc6",
                 "deviations": [
                   {
                     "property": "color",
@@ -6090,7 +6452,7 @@
               },
               {
                 "component": "span/text",
-                "instanceId": "fd5e362c",
+                "instanceId": "2b6690da",
                 "deviations": [
                   {
                     "property": "color",
@@ -6198,7 +6560,7 @@
               },
               {
                 "component": "span/text",
-                "instanceId": "a0c27d3e",
+                "instanceId": "30e2f88a",
                 "deviations": [
                   {
                     "property": "color",
@@ -6306,7 +6668,7 @@
               },
               {
                 "component": "span/text",
-                "instanceId": "c8777134",
+                "instanceId": "b126c9ca",
                 "deviations": [
                   {
                     "property": "color",
@@ -6414,7 +6776,7 @@
               },
               {
                 "component": "span/text",
-                "instanceId": "759141c8",
+                "instanceId": "b2d0b9e6",
                 "deviations": [
                   {
                     "property": "color",
@@ -6522,7 +6884,7 @@
               },
               {
                 "component": "span/text",
-                "instanceId": "6a4e47a4",
+                "instanceId": "df5d2a3a",
                 "deviations": [
                   {
                     "property": "color",
@@ -6630,7 +6992,7 @@
               },
               {
                 "component": "span/text",
-                "instanceId": "390ffb80",
+                "instanceId": "f39da27b",
                 "deviations": [
                   {
                     "property": "color",
@@ -6738,7 +7100,7 @@
               },
               {
                 "component": "span/text",
-                "instanceId": "acfa913c",
+                "instanceId": "520059b8",
                 "deviations": [
                   {
                     "property": "color",
@@ -6846,7 +7208,7 @@
               },
               {
                 "component": "span/text",
-                "instanceId": "ed9472cb",
+                "instanceId": "f333f0f0",
                 "deviations": [
                   {
                     "property": "color",
@@ -6954,7 +7316,7 @@
               },
               {
                 "component": "span/text",
-                "instanceId": "12c95e0f",
+                "instanceId": "ce5a64b1",
                 "deviations": [
                   {
                     "property": "color",
@@ -7062,7 +7424,7 @@
               },
               {
                 "component": "span/text",
-                "instanceId": "733cd291",
+                "instanceId": "a115b5fd",
                 "deviations": [
                   {
                     "property": "color",
@@ -7170,7 +7532,115 @@
               },
               {
                 "component": "span/text",
-                "instanceId": "c54d1ea1",
+                "instanceId": "29fea334",
+                "deviations": [
+                  {
+                    "property": "color",
+                    "rawValue": "rgb(71, 95, 145)",
+                    "nearestToken": "colors.color-bg-fill-emphasis",
+                    "distance": 8.764390056990402,
+                    "normalized": 0.4382195028495201,
+                    "variantMatch": false
+                  },
+                  {
+                    "property": "border-radius",
+                    "rawValue": 0,
+                    "nearestToken": "border-radius:0",
+                    "distance": 0,
+                    "normalized": 0,
+                    "detail": "border-top-left-radius"
+                  },
+                  {
+                    "property": "font-size",
+                    "rawValue": 14,
+                    "nearestToken": "font-size:14",
+                    "distance": 0,
+                    "normalized": 0
+                  },
+                  {
+                    "property": "font-family",
+                    "rawValue": "Inter, -apple-system, BlinkMacSystemFont, \"San Francisco\", \"Segoe UI\", Roboto, \"Helvetica Neue\", sans-serif",
+                    "nearestToken": "font-family:Inter",
+                    "distance": 0,
+                    "normalized": 0
+                  },
+                  {
+                    "property": "font-weight",
+                    "rawValue": 400,
+                    "nearestToken": "font-weight:450",
+                    "distance": 50,
+                    "normalized": 0.5
+                  },
+                  {
+                    "property": "spacing",
+                    "rawValue": 0,
+                    "nearestToken": "spacing:0",
+                    "distance": 0,
+                    "normalized": 0,
+                    "detail": "padding-top"
+                  },
+                  {
+                    "property": "spacing",
+                    "rawValue": 0,
+                    "nearestToken": "spacing:0",
+                    "distance": 0,
+                    "normalized": 0,
+                    "detail": "padding-right"
+                  },
+                  {
+                    "property": "spacing",
+                    "rawValue": 0,
+                    "nearestToken": "spacing:0",
+                    "distance": 0,
+                    "normalized": 0,
+                    "detail": "padding-bottom"
+                  },
+                  {
+                    "property": "spacing",
+                    "rawValue": 0,
+                    "nearestToken": "spacing:0",
+                    "distance": 0,
+                    "normalized": 0,
+                    "detail": "padding-left"
+                  },
+                  {
+                    "property": "spacing",
+                    "rawValue": 0,
+                    "nearestToken": "spacing:0",
+                    "distance": 0,
+                    "normalized": 0,
+                    "detail": "margin-top"
+                  },
+                  {
+                    "property": "spacing",
+                    "rawValue": 0,
+                    "nearestToken": "spacing:0",
+                    "distance": 0,
+                    "normalized": 0,
+                    "detail": "margin-right"
+                  },
+                  {
+                    "property": "spacing",
+                    "rawValue": 0,
+                    "nearestToken": "spacing:0",
+                    "distance": 0,
+                    "normalized": 0,
+                    "detail": "margin-bottom"
+                  },
+                  {
+                    "property": "spacing",
+                    "rawValue": 0,
+                    "nearestToken": "spacing:0",
+                    "distance": 0,
+                    "normalized": 0,
+                    "detail": "margin-left"
+                  }
+                ],
+                "score": 15.12215423790467
+              },
+              {
+                "component": "span/text",
+                "instanceId": "4fdb2281",
                 "deviations": [
                   {
                     "property": "color",
@@ -7277,14 +7747,14 @@
                 "score": 15.314953138363595
               }
             ],
-            "score": 19.400686656042836
+            "score": 19.18676003513593
           },
           {
             "component": "kbd/text",
             "instances": [
               {
                 "component": "kbd/text",
-                "instanceId": "bf6bd0af",
+                "instanceId": "cc1348ea",
                 "deviations": [
                   {
                     "property": "color",
@@ -7406,7 +7876,7 @@
             "instances": [
               {
                 "component": "li/text",
-                "instanceId": "f6a2b46b",
+                "instanceId": "ad1895b0",
                 "deviations": [
                   {
                     "property": "color",
@@ -7514,7 +7984,7 @@
               },
               {
                 "component": "li/text",
-                "instanceId": "e86c4cc9",
+                "instanceId": "437e7e6b",
                 "deviations": [
                   {
                     "property": "color",
@@ -7622,7 +8092,7 @@
               },
               {
                 "component": "li/text",
-                "instanceId": "cb585e54",
+                "instanceId": "5d45c513",
                 "deviations": [
                   {
                     "property": "color",
@@ -7730,7 +8200,7 @@
               },
               {
                 "component": "li/text",
-                "instanceId": "8860ba6e",
+                "instanceId": "10c14c28",
                 "deviations": [
                   {
                     "property": "color",
@@ -9144,7 +9614,7 @@
             "instances": [
               {
                 "component": "h1/text",
-                "instanceId": "421a68f7",
+                "instanceId": "3f8254dd",
                 "deviations": [
                   {
                     "property": "color",
@@ -9258,7 +9728,7 @@
             "instances": [
               {
                 "component": "p/text",
-                "instanceId": "7ad329b1",
+                "instanceId": "b7a25426",
                 "deviations": [
                   {
                     "property": "color",
@@ -9366,7 +9836,7 @@
               },
               {
                 "component": "p/text",
-                "instanceId": "d61d75e7",
+                "instanceId": "468d1ffa",
                 "deviations": [
                   {
                     "property": "color",
@@ -9602,7 +10072,7 @@
             "instances": [
               {
                 "component": "div/text",
-                "instanceId": "f363a3a4",
+                "instanceId": "44232d3a",
                 "deviations": [
                   {
                     "property": "color",
@@ -9710,7 +10180,7 @@
               },
               {
                 "component": "div/text",
-                "instanceId": "f19821cd",
+                "instanceId": "7f740780",
                 "deviations": [
                   {
                     "property": "color",
@@ -9818,7 +10288,7 @@
               },
               {
                 "component": "div/text",
-                "instanceId": "826069db",
+                "instanceId": "8afd5777",
                 "deviations": [
                   {
                     "property": "color",
@@ -9926,7 +10396,7 @@
               },
               {
                 "component": "div/text",
-                "instanceId": "a13e0c97",
+                "instanceId": "8bcde788",
                 "deviations": [
                   {
                     "property": "color",
@@ -10034,7 +10504,7 @@
               },
               {
                 "component": "div/text",
-                "instanceId": "754b5689",
+                "instanceId": "55a8d5bd",
                 "deviations": [
                   {
                     "property": "color",
@@ -10142,7 +10612,7 @@
               },
               {
                 "component": "div/text",
-                "instanceId": "045ef99b",
+                "instanceId": "7a044fa9",
                 "deviations": [
                   {
                     "property": "color",
@@ -10250,7 +10720,7 @@
               },
               {
                 "component": "div/text",
-                "instanceId": "bd303dc8",
+                "instanceId": "7c8c6849",
                 "deviations": [
                   {
                     "property": "color",
@@ -10358,7 +10828,7 @@
               },
               {
                 "component": "div/text",
-                "instanceId": "079df89b",
+                "instanceId": "dab5293d",
                 "deviations": [
                   {
                     "property": "color",
@@ -10466,7 +10936,7 @@
               },
               {
                 "component": "div/text",
-                "instanceId": "7beea429",
+                "instanceId": "dc5d7bde",
                 "deviations": [
                   {
                     "property": "color",
@@ -10588,7 +11058,7 @@
             "instances": [
               {
                 "component": "code/text",
-                "instanceId": "8bd7087a",
+                "instanceId": "53d2ca93",
                 "deviations": [
                   {
                     "property": "color",
@@ -10719,7 +11189,7 @@
             "instances": [
               {
                 "component": "h2/text",
-                "instanceId": "aa710f26",
+                "instanceId": "dd5293a2",
                 "deviations": [
                   {
                     "property": "color",
@@ -10833,7 +11303,7 @@
             "instances": [
               {
                 "component": "strong/text",
-                "instanceId": "7d363bfa",
+                "instanceId": "7de66506",
                 "deviations": [
                   {
                     "property": "color",
@@ -11069,7 +11539,7 @@
             "instances": [
               {
                 "component": "h3/text",
-                "instanceId": "068e7a1f",
+                "instanceId": "20a8d243",
                 "deviations": [
                   {
                     "property": "color",
@@ -11301,17 +11771,17 @@
             "score": 13.907476569181798
           }
         ],
-        "score": 17.032191480651555,
+        "score": 17.020932184814352,
         "breakdown": [
           {
             "property": "font-weight",
             "meanNormalized": 0.5,
-            "count": 71
+            "count": 72
           },
           {
             "property": "font-size",
-            "meanNormalized": 0.4225352112676056,
-            "count": 71
+            "meanNormalized": 0.4166666666666667,
+            "count": 72
           },
           {
             "property": "border-color",
@@ -11320,13 +11790,13 @@
           },
           {
             "property": "font-family",
-            "meanNormalized": 0.28169014084507044,
-            "count": 71
+            "meanNormalized": 0.2777777777777778,
+            "count": 72
           },
           {
             "property": "color",
-            "meanNormalized": 0.26682239456556944,
-            "count": 71
+            "meanNormalized": 0.2692029099584021,
+            "count": 72
           },
           {
             "property": "background-color",
@@ -11335,28 +11805,787 @@
           },
           {
             "property": "spacing",
-            "meanNormalized": 0.040492957746478875,
-            "count": 568
+            "meanNormalized": 0.03993055555555555,
+            "count": 576
           },
           {
             "property": "border-radius",
-            "meanNormalized": 0.007042253521126761,
-            "count": 71
+            "meanNormalized": 0.006944444444444444,
+            "count": 72
+          }
+        ],
+        "accessibility": [
+          {
+            "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+            "component": "a/text",
+            "instanceId": "4f16eaa0",
+            "ratio": 6.337386211944449,
+            "level": "AA",
+            "isLargeText": false,
+            "fontSize": 16,
+            "fontWeight": 400,
+            "color": "rgb(71, 95, 145)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AA at 6.3:1 but falls short of AAA (needs 7:1)"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+            "component": "a/text",
+            "instanceId": "5cc41ad3",
+            "ratio": 9.350095107797735,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(68, 71, 74)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 9.4:1"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+            "component": "button/text",
+            "instanceId": "800da9c6",
+            "ratio": 15.975704102241814,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 600,
+            "color": "rgb(32, 34, 35)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 16.0:1"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+            "component": "span/text",
+            "instanceId": "720ae7fe",
+            "ratio": 8.370002768780184,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(68, 71, 74)",
+            "effectiveBackground": "rgb(238, 243, 247)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 8.4:1"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+            "component": "kbd/text",
+            "instanceId": "cc1348ea",
+            "ratio": 8.370002768780184,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 12,
+            "fontWeight": 400,
+            "color": "rgb(68, 71, 74)",
+            "effectiveBackground": "rgb(238, 243, 247)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 8.4:1"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+            "component": "li/text",
+            "instanceId": "ad1895b0",
+            "ratio": 1.4737254630985896,
+            "level": "fail",
+            "isLargeText": false,
+            "fontSize": 16,
+            "fontWeight": 400,
+            "color": "rgb(210, 213, 216)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here is barely readable against its background — 1.5:1, needs at least 4.5:1 for AA"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+            "component": "span/text",
+            "instanceId": "e4c2d8fe",
+            "ratio": 8.657276660206252,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 16,
+            "fontWeight": 400,
+            "color": "rgb(68, 71, 74)",
+            "effectiveBackground": "rgb(246, 246, 247)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 8.7:1"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+            "component": "h1/text",
+            "instanceId": "3f8254dd",
+            "ratio": 15.975704102241814,
+            "level": "AAA",
+            "isLargeText": true,
+            "fontSize": 32,
+            "fontWeight": 600,
+            "color": "rgb(32, 34, 35)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 16.0:1"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+            "component": "span/text",
+            "instanceId": "0c7c4bda",
+            "ratio": 6.337386211944449,
+            "level": "AA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(71, 95, 145)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AA at 6.3:1 but falls short of AAA (needs 7:1)"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+            "component": "p/text",
+            "instanceId": "b7a25426",
+            "ratio": 9.350095107797735,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 16,
+            "fontWeight": 400,
+            "color": "rgb(68, 71, 74)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 9.4:1"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+            "component": "a/text",
+            "instanceId": "107cf6bf",
+            "ratio": 6.337386211944449,
+            "level": "AA",
+            "isLargeText": false,
+            "fontSize": 16,
+            "fontWeight": 400,
+            "color": "rgb(71, 95, 145)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AA at 6.3:1 but falls short of AAA (needs 7:1)"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+            "component": "span/text",
+            "instanceId": "50260bcf",
+            "ratio": 6.337386211944449,
+            "level": "AA",
+            "isLargeText": false,
+            "fontSize": 16,
+            "fontWeight": 400,
+            "color": "rgb(71, 95, 145)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AA at 6.3:1 but falls short of AAA (needs 7:1)"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+            "component": "div/text",
+            "instanceId": "44232d3a",
+            "ratio": 15.975704102241814,
+            "level": "AAA",
+            "isLargeText": true,
+            "fontSize": 24,
+            "fontWeight": 600,
+            "color": "rgb(32, 34, 35)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 16.0:1"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+            "component": "span/text",
+            "instanceId": "36d571a5",
+            "ratio": 4.918996102438471,
+            "level": "AAA",
+            "isLargeText": true,
+            "fontSize": 24,
+            "fontWeight": 600,
+            "color": "rgb(109, 113, 117)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 4.9:1"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+            "component": "code/text",
+            "instanceId": "53d2ca93",
+            "ratio": 15.41022330984204,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(32, 34, 35)",
+            "effectiveBackground": "rgb(250, 251, 251)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 15.4:1"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+            "component": "span/text",
+            "instanceId": "0679dd94",
+            "ratio": 6.337386211944449,
+            "level": "AA",
+            "isLargeText": false,
+            "fontSize": 16,
+            "fontWeight": 400,
+            "color": "rgb(71, 95, 145)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AA at 6.3:1 but falls short of AAA (needs 7:1)"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+            "component": "h2/text",
+            "instanceId": "dd5293a2",
+            "ratio": 8.464193063657666,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(168, 225, 234)",
+            "effectiveBackground": "rgb(36, 57, 61)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 8.5:1"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+            "component": "span/text",
+            "instanceId": "888175ee",
+            "ratio": 8.464193063657666,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(168, 225, 234)",
+            "effectiveBackground": "rgb(36, 57, 61)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 8.5:1"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+            "component": "div/text",
+            "instanceId": "7f740780",
+            "ratio": 4.731184162054891,
+            "level": "AA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(142, 193, 201)",
+            "effectiveBackground": "rgb(48, 75, 79)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AA at 4.7:1 but falls short of AAA (needs 7:1)"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+            "component": "div/text",
+            "instanceId": "8afd5777",
+            "ratio": 4.731184162054891,
+            "level": "AA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(142, 193, 201)",
+            "effectiveBackground": "rgb(48, 75, 79)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AA at 4.7:1 but falls short of AAA (needs 7:1)"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+            "component": "span/text",
+            "instanceId": "5bb19dc6",
+            "ratio": 3.9193612233316677,
+            "level": "fail",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(122, 167, 255)",
+            "effectiveBackground": "rgb(48, 75, 79)",
+            "backgroundResolved": true,
+            "humanReadable": "text here is barely readable against its background — 3.9:1, needs at least 4.5:1 for AA",
+            "tieIn": {
+              "correctedRatio": 5.643762641748204,
+              "correctedLevel": "AA",
+              "humanReadable": "currently 3.9:1 (fails AA) — the spec token would give you 5.6:1 (passes AA)"
+            }
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+            "component": "span/text",
+            "instanceId": "2b6690da",
+            "ratio": 4.742400591764899,
+            "level": "AA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(254, 159, 155)",
+            "effectiveBackground": "rgb(48, 75, 79)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AA at 4.7:1 but falls short of AAA (needs 7:1)"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+            "component": "span/text",
+            "instanceId": "30e2f88a",
+            "ratio": 8.23503211049348,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(238, 241, 241)",
+            "effectiveBackground": "rgb(48, 75, 79)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 8.2:1"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+            "component": "span/text",
+            "instanceId": "b126c9ca",
+            "ratio": 6.521501366324742,
+            "level": "AA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(0, 244, 185)",
+            "effectiveBackground": "rgb(48, 75, 79)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AA at 6.5:1 but falls short of AAA (needs 7:1)"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+            "component": "span/text",
+            "instanceId": "b2d0b9e6",
+            "ratio": 4.725814695769604,
+            "level": "AA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(170, 184, 221)",
+            "effectiveBackground": "rgb(48, 75, 79)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AA at 4.7:1 but falls short of AAA (needs 7:1)"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+            "component": "span/text",
+            "instanceId": "df5d2a3a",
+            "ratio": 6.47246653907737,
+            "level": "AA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(163, 223, 253)",
+            "effectiveBackground": "rgb(48, 75, 79)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AA at 6.5:1 but falls short of AAA (needs 7:1)"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+            "component": "span/text",
+            "instanceId": "f39da27b",
+            "ratio": 6.492251510450127,
+            "level": "AA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(99, 244, 76)",
+            "effectiveBackground": "rgb(48, 75, 79)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AA at 6.5:1 but falls short of AAA (needs 7:1)"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+            "component": "div/text",
+            "instanceId": "8bcde788",
+            "ratio": 6.47246653907737,
+            "level": "AA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(163, 223, 253)",
+            "effectiveBackground": "rgb(48, 75, 79)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AA at 6.5:1 but falls short of AAA (needs 7:1)"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+            "component": "li/text",
+            "instanceId": "437e7e6b",
+            "ratio": 9.350095107797735,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 16,
+            "fontWeight": 400,
+            "color": "rgb(68, 71, 74)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 9.4:1"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+            "component": "li/text",
+            "instanceId": "5d45c513",
+            "ratio": 9.350095107797735,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 16,
+            "fontWeight": 400,
+            "color": "rgb(68, 71, 74)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 9.4:1"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+            "component": "div/text",
+            "instanceId": "55a8d5bd",
+            "ratio": 4.731184162054891,
+            "level": "AA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(142, 193, 201)",
+            "effectiveBackground": "rgb(48, 75, 79)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AA at 4.7:1 but falls short of AAA (needs 7:1)"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+            "component": "div/text",
+            "instanceId": "7a044fa9",
+            "ratio": 4.731184162054891,
+            "level": "AA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(142, 193, 201)",
+            "effectiveBackground": "rgb(48, 75, 79)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AA at 4.7:1 but falls short of AAA (needs 7:1)"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+            "component": "span/text",
+            "instanceId": "520059b8",
+            "ratio": 6.517784116699994,
+            "level": "AA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(215, 215, 219)",
+            "effectiveBackground": "rgb(48, 75, 79)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AA at 6.5:1 but falls short of AAA (needs 7:1)"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+            "component": "strong/text",
+            "instanceId": "7de66506",
+            "ratio": 9.350095107797735,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 16,
+            "fontWeight": 600,
+            "color": "rgb(68, 71, 74)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 9.4:1"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+            "component": "div/text",
+            "instanceId": "7c8c6849",
+            "ratio": 9.019136349627649,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 600,
+            "color": "rgb(68, 71, 74)",
+            "effectiveBackground": "rgb(250, 251, 251)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 9.0:1"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+            "component": "p/text",
+            "instanceId": "468d1ffa",
+            "ratio": 9.019136349627649,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(68, 71, 74)",
+            "effectiveBackground": "rgb(250, 251, 251)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 9.0:1"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+            "component": "button/text",
+            "instanceId": "c93441cd",
+            "ratio": 11.274009476447217,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(239, 248, 250)",
+            "effectiveBackground": "rgb(36, 57, 61)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 11.3:1"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+            "component": "button/text",
+            "instanceId": "db9ad474",
+            "ratio": 6.1479801873357225,
+            "level": "AA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(142, 193, 201)",
+            "effectiveBackground": "rgb(36, 57, 61)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AA at 6.1:1 but falls short of AAA (needs 7:1)",
+            "tieIn": {
+              "correctedRatio": 7.333838572968006,
+              "correctedLevel": "AAA",
+              "humanReadable": "currently 6.1:1 (passes AA) — the spec token would give you 7.3:1 (passes AAA)"
+            }
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+            "component": "div/text",
+            "instanceId": "dab5293d",
+            "ratio": 15.975704102241814,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 20,
+            "fontWeight": 600,
+            "color": "rgb(32, 34, 35)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 16.0:1"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+            "component": "span/text",
+            "instanceId": "f333f0f0",
+            "ratio": 4.918996102438471,
+            "level": "AA",
+            "isLargeText": false,
+            "fontSize": 20,
+            "fontWeight": 600,
+            "color": "rgb(109, 113, 117)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AA at 4.9:1 but falls short of AAA (needs 7:1)"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+            "component": "span/text",
+            "instanceId": "ce5a64b1",
+            "ratio": 6.513628044840224,
+            "level": "AA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(168, 225, 234)",
+            "effectiveBackground": "rgb(48, 75, 79)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AA at 6.5:1 but falls short of AAA (needs 7:1)",
+            "tieIn": {
+              "correctedRatio": 7.248984873558157,
+              "correctedLevel": "AAA",
+              "humanReadable": "currently 6.5:1 (passes AA) — the spec token would give you 7.2:1 (passes AAA)"
+            }
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+            "component": "li/text",
+            "instanceId": "10c14c28",
+            "ratio": 9.350095107797735,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 16,
+            "fontWeight": 400,
+            "color": "rgb(68, 71, 74)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 9.4:1"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+            "component": "span/text",
+            "instanceId": "a115b5fd",
+            "ratio": 4.7448818476916035,
+            "level": "AA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(109, 113, 117)",
+            "effectiveBackground": "rgb(250, 251, 251)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AA at 4.7:1 but falls short of AAA (needs 7:1)"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+            "component": "span/text",
+            "instanceId": "29fea334",
+            "ratio": 6.113066197381156,
+            "level": "AA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(71, 95, 145)",
+            "effectiveBackground": "rgb(250, 251, 251)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AA at 6.1:1 but falls short of AAA (needs 7:1)"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+            "component": "a/text",
+            "instanceId": "9f5ce858",
+            "ratio": 4.918996102438471,
+            "level": "AA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(109, 113, 117)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AA at 4.9:1 but falls short of AAA (needs 7:1)"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+            "component": "h3/text",
+            "instanceId": "20a8d243",
+            "ratio": 15.41022330984204,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 12,
+            "fontWeight": 600,
+            "color": "rgb(32, 34, 35)",
+            "effectiveBackground": "rgb(250, 251, 251)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 15.4:1"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+            "component": "a/text",
+            "instanceId": "3a9d96b2",
+            "ratio": 9.019136349627649,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(68, 71, 74)",
+            "effectiveBackground": "rgb(250, 251, 251)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 9.0:1"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+            "component": "span/text",
+            "instanceId": "4fdb2281",
+            "ratio": 8.370002768780184,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 16,
+            "fontWeight": 400,
+            "color": "rgb(68, 71, 74)",
+            "effectiveBackground": "rgb(238, 243, 247)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 8.4:1"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+            "component": "button/text",
+            "instanceId": "289064c6",
+            "ratio": 14.791944751380727,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 16,
+            "fontWeight": 600,
+            "color": "rgb(32, 34, 35)",
+            "effectiveBackground": "rgb(246, 246, 247)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 14.8:1"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+            "component": "div/text",
+            "instanceId": "dc5d7bde",
+            "ratio": 8.657276660206252,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 600,
+            "color": "rgb(68, 71, 74)",
+            "effectiveBackground": "rgb(246, 246, 247)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 8.7:1"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+            "component": "a/text",
+            "instanceId": "753f0985",
+            "ratio": 4.554510906928768,
+            "level": "AA",
+            "isLargeText": false,
+            "fontSize": 16,
+            "fontWeight": 400,
+            "color": "rgb(109, 113, 117)",
+            "effectiveBackground": "rgb(246, 246, 247)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AA at 4.6:1 but falls short of AAA (needs 7:1)"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+            "component": "button/text",
+            "instanceId": "0e2d8e55",
+            "ratio": 4.554510906928768,
+            "level": "AA",
+            "isLargeText": false,
+            "fontSize": 16,
+            "fontWeight": 400,
+            "color": "rgb(109, 113, 117)",
+            "effectiveBackground": "rgb(246, 246, 247)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AA at 4.6:1 but falls short of AAA (needs 7:1)"
+          },
+          {
+            "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+            "component": "a/text",
+            "instanceId": "1ba78d67",
+            "ratio": 15.975704102241814,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 16,
+            "fontWeight": 600,
+            "color": "rgb(32, 34, 35)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 16.0:1"
           }
         ]
       }
     ],
-    "score": 15.50819057671611,
+    "score": 15.50005594804283,
     "breakdown": [
       {
         "property": "font-weight",
         "meanNormalized": 0.5,
-        "count": 99
+        "count": 101
       },
       {
         "property": "font-size",
-        "meanNormalized": 0.46464646464646464,
-        "count": 99
+        "meanNormalized": 0.45544554455445546,
+        "count": 101
       },
       {
         "property": "border-color",
@@ -11365,13 +12594,13 @@
       },
       {
         "property": "color",
-        "meanNormalized": 0.24148982390139112,
-        "count": 99
+        "meanNormalized": 0.2453854611082847,
+        "count": 101
       },
       {
         "property": "font-family",
-        "meanNormalized": 0.21212121212121213,
-        "count": 99
+        "meanNormalized": 0.2079207920792079,
+        "count": 101
       },
       {
         "property": "background-color",
@@ -11380,20 +12609,20 @@
       },
       {
         "property": "spacing",
-        "meanNormalized": 0.03409090909090909,
-        "count": 792
+        "meanNormalized": 0.03341584158415842,
+        "count": 808
       },
       {
         "property": "border-radius",
-        "meanNormalized": 0.010101010101010102,
-        "count": 99
+        "meanNormalized": 0.009900990099009901,
+        "count": 101
       }
     ],
     "worstOffenders": [
       {
         "page": "https://shopify.dev/docs/api/polaris",
         "component": "a/text",
-        "instanceId": "e3b95ae0",
+        "instanceId": "4f16eaa0",
         "property": "font-size",
         "rawValue": 16,
         "nearestToken": "font-size:14",
@@ -11404,7 +12633,7 @@
       {
         "page": "https://shopify.dev/docs/api/polaris",
         "component": "a/text",
-        "instanceId": "d135a0b9",
+        "instanceId": "107cf6bf",
         "property": "font-size",
         "rawValue": 16,
         "nearestToken": "font-size:14",
@@ -11437,7 +12666,7 @@
       {
         "page": "https://shopify.dev/docs/api/polaris",
         "component": "span/text",
-        "instanceId": "3f6bd8fb",
+        "instanceId": "e4c2d8fe",
         "property": "font-size",
         "rawValue": 16,
         "nearestToken": "font-size:14",
@@ -11448,7 +12677,7 @@
       {
         "page": "https://shopify.dev/docs/api/polaris",
         "component": "span/text",
-        "instanceId": "3f6bd8fb",
+        "instanceId": "e4c2d8fe",
         "property": "spacing",
         "detail": "margin-top",
         "rawValue": -1,
@@ -11460,7 +12689,7 @@
       {
         "page": "https://shopify.dev/docs/api/polaris",
         "component": "span/text",
-        "instanceId": "3f6bd8fb",
+        "instanceId": "e4c2d8fe",
         "property": "spacing",
         "detail": "margin-right",
         "rawValue": -1,
@@ -11472,7 +12701,7 @@
       {
         "page": "https://shopify.dev/docs/api/polaris",
         "component": "span/text",
-        "instanceId": "3f6bd8fb",
+        "instanceId": "e4c2d8fe",
         "property": "spacing",
         "detail": "margin-bottom",
         "rawValue": -1,
@@ -11484,7 +12713,7 @@
       {
         "page": "https://shopify.dev/docs/api/polaris",
         "component": "span/text",
-        "instanceId": "3f6bd8fb",
+        "instanceId": "e4c2d8fe",
         "property": "spacing",
         "detail": "margin-left",
         "rawValue": -1,
@@ -11496,7 +12725,7 @@
       {
         "page": "https://shopify.dev/docs/api/polaris",
         "component": "span/text",
-        "instanceId": "604d0e92",
+        "instanceId": "95184ef3",
         "property": "font-size",
         "rawValue": 16,
         "nearestToken": "font-size:14",
@@ -11507,7 +12736,7 @@
       {
         "page": "https://shopify.dev/docs/api/polaris",
         "component": "span/text",
-        "instanceId": "c54d1ea1",
+        "instanceId": "4fdb2281",
         "property": "font-size",
         "rawValue": 16,
         "nearestToken": "font-size:14",
@@ -11518,7 +12747,7 @@
       {
         "page": "https://shopify.dev/docs/api/polaris",
         "component": "kbd/text",
-        "instanceId": "bf6bd0af",
+        "instanceId": "cc1348ea",
         "property": "font-family",
         "rawValue": "\"JetBrains Mono\", Monaco, Consolas, \"Lucida Console\", monospace",
         "nearestToken": "font-family:Inter",
@@ -11529,7 +12758,7 @@
       {
         "page": "https://shopify.dev/docs/api/polaris",
         "component": "li/text",
-        "instanceId": "f6a2b46b",
+        "instanceId": "ad1895b0",
         "property": "font-size",
         "rawValue": 16,
         "nearestToken": "font-size:14",
@@ -11595,7 +12824,7 @@
       {
         "page": "https://shopify.dev/docs/api/polaris",
         "component": "h1/text",
-        "instanceId": "421a68f7",
+        "instanceId": "3f8254dd",
         "property": "font-size",
         "rawValue": 32,
         "nearestToken": "font-size:30",
@@ -11606,7 +12835,7 @@
       {
         "page": "https://shopify.dev/docs/api/polaris",
         "component": "p/text",
-        "instanceId": "7ad329b1",
+        "instanceId": "b7a25426",
         "property": "font-size",
         "rawValue": 16,
         "nearestToken": "font-size:14",
@@ -11628,7 +12857,7 @@
       {
         "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
         "component": "a/text",
-        "instanceId": "e3b95ae0",
+        "instanceId": "4f16eaa0",
         "property": "font-size",
         "rawValue": 16,
         "nearestToken": "font-size:14",
@@ -11639,7 +12868,7 @@
       {
         "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
         "component": "a/text",
-        "instanceId": "d135a0b9",
+        "instanceId": "107cf6bf",
         "property": "font-size",
         "rawValue": 16,
         "nearestToken": "font-size:14",
@@ -11650,7 +12879,7 @@
       {
         "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
         "component": "a/text",
-        "instanceId": "5fbc4146",
+        "instanceId": "753f0985",
         "property": "font-size",
         "rawValue": 16,
         "nearestToken": "font-size:14",
@@ -11661,7 +12890,7 @@
       {
         "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
         "component": "a/text",
-        "instanceId": "5fbc4146",
+        "instanceId": "753f0985",
         "property": "spacing",
         "detail": "padding-right",
         "rawValue": 36,
@@ -11673,7 +12902,7 @@
       {
         "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
         "component": "a/text",
-        "instanceId": "5fbc4146",
+        "instanceId": "753f0985",
         "property": "spacing",
         "detail": "padding-left",
         "rawValue": 36,
@@ -11685,7 +12914,7 @@
       {
         "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
         "component": "a/text",
-        "instanceId": "863009fe",
+        "instanceId": "1ba78d67",
         "property": "font-size",
         "rawValue": 16,
         "nearestToken": "font-size:14",
@@ -11696,7 +12925,7 @@
       {
         "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
         "component": "a/text",
-        "instanceId": "863009fe",
+        "instanceId": "1ba78d67",
         "property": "spacing",
         "detail": "padding-right",
         "rawValue": 36,
@@ -11708,7 +12937,7 @@
       {
         "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
         "component": "a/text",
-        "instanceId": "863009fe",
+        "instanceId": "1ba78d67",
         "property": "spacing",
         "detail": "padding-left",
         "rawValue": 36,
@@ -11742,7 +12971,7 @@
       {
         "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
         "component": "button/text",
-        "instanceId": "81b4ee06",
+        "instanceId": "c93441cd",
         "property": "font-family",
         "rawValue": "\"JetBrains Mono\", Monaco, Consolas, \"Lucida Console\", monospace",
         "nearestToken": "font-family:Inter",
@@ -11753,7 +12982,7 @@
       {
         "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
         "component": "button/text",
-        "instanceId": "58b4d964",
+        "instanceId": "db9ad474",
         "property": "font-family",
         "rawValue": "\"JetBrains Mono\", Monaco, Consolas, \"Lucida Console\", monospace",
         "nearestToken": "font-family:Inter",
@@ -11764,7 +12993,7 @@
       {
         "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
         "component": "button/text",
-        "instanceId": "7ea4a104",
+        "instanceId": "289064c6",
         "property": "font-size",
         "rawValue": 16,
         "nearestToken": "font-size:14",
@@ -11775,7 +13004,7 @@
       {
         "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
         "component": "button/text",
-        "instanceId": "7ea4a104",
+        "instanceId": "289064c6",
         "property": "spacing",
         "detail": "padding-right",
         "rawValue": 36,
@@ -11787,7 +13016,7 @@
       {
         "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
         "component": "button/text",
-        "instanceId": "7ea4a104",
+        "instanceId": "289064c6",
         "property": "spacing",
         "detail": "padding-left",
         "rawValue": 36,
@@ -11799,7 +13028,7 @@
       {
         "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
         "component": "button/text",
-        "instanceId": "c3c2fb75",
+        "instanceId": "0e2d8e55",
         "property": "font-size",
         "rawValue": 16,
         "nearestToken": "font-size:14",
@@ -11810,7 +13039,7 @@
       {
         "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
         "component": "button/text",
-        "instanceId": "c3c2fb75",
+        "instanceId": "0e2d8e55",
         "property": "spacing",
         "detail": "padding-right",
         "rawValue": 36,
@@ -11822,7 +13051,7 @@
       {
         "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
         "component": "button/text",
-        "instanceId": "c3c2fb75",
+        "instanceId": "0e2d8e55",
         "property": "spacing",
         "detail": "padding-left",
         "rawValue": 36,
@@ -11834,7 +13063,7 @@
       {
         "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
         "component": "span/text",
-        "instanceId": "3f6bd8fb",
+        "instanceId": "e4c2d8fe",
         "property": "font-size",
         "rawValue": 16,
         "nearestToken": "font-size:14",
@@ -11845,7 +13074,7 @@
       {
         "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
         "component": "span/text",
-        "instanceId": "3f6bd8fb",
+        "instanceId": "e4c2d8fe",
         "property": "spacing",
         "detail": "margin-top",
         "rawValue": -1,
@@ -11857,7 +13086,7 @@
       {
         "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
         "component": "span/text",
-        "instanceId": "3f6bd8fb",
+        "instanceId": "e4c2d8fe",
         "property": "spacing",
         "detail": "margin-right",
         "rawValue": -1,
@@ -11869,7 +13098,7 @@
       {
         "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
         "component": "span/text",
-        "instanceId": "3f6bd8fb",
+        "instanceId": "e4c2d8fe",
         "property": "spacing",
         "detail": "margin-bottom",
         "rawValue": -1,
@@ -11881,7 +13110,7 @@
       {
         "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
         "component": "span/text",
-        "instanceId": "3f6bd8fb",
+        "instanceId": "e4c2d8fe",
         "property": "spacing",
         "detail": "margin-left",
         "rawValue": -1,
@@ -11893,7 +13122,7 @@
       {
         "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
         "component": "span/text",
-        "instanceId": "8ce257b6",
+        "instanceId": "50260bcf",
         "property": "font-size",
         "rawValue": 16,
         "nearestToken": "font-size:14",
@@ -11904,7 +13133,7 @@
       {
         "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
         "component": "span/text",
-        "instanceId": "fccd81b7",
+        "instanceId": "0679dd94",
         "property": "font-size",
         "rawValue": 16,
         "nearestToken": "font-size:14",
@@ -11915,7 +13144,7 @@
       {
         "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
         "component": "span/text",
-        "instanceId": "ac01e58e",
+        "instanceId": "888175ee",
         "property": "spacing",
         "detail": "margin-top",
         "rawValue": -1,
@@ -11927,7 +13156,7 @@
       {
         "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
         "component": "span/text",
-        "instanceId": "ac01e58e",
+        "instanceId": "888175ee",
         "property": "spacing",
         "detail": "margin-right",
         "rawValue": -1,
@@ -11939,7 +13168,7 @@
       {
         "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
         "component": "span/text",
-        "instanceId": "ac01e58e",
+        "instanceId": "888175ee",
         "property": "spacing",
         "detail": "margin-bottom",
         "rawValue": -1,
@@ -11951,7 +13180,7 @@
       {
         "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
         "component": "span/text",
-        "instanceId": "ac01e58e",
+        "instanceId": "888175ee",
         "property": "spacing",
         "detail": "margin-left",
         "rawValue": -1,
@@ -11961,6 +13190,728 @@
         "humanReadable": "margin-left is -1px, should be 0px"
       }
     ],
-    "unstablePages": []
+    "unstablePages": [],
+    "accessibility": {
+      "totalChecked": 71,
+      "passCount": 68,
+      "failCount": 3,
+      "worstOffenders": [
+        {
+          "page": "https://shopify.dev/docs/api/polaris",
+          "component": "li/text",
+          "instanceId": "ad1895b0",
+          "ratio": 1.4737254630985896,
+          "level": "fail",
+          "isLargeText": false,
+          "fontSize": 16,
+          "fontWeight": 400,
+          "color": "rgb(210, 213, 216)",
+          "effectiveBackground": "rgb(255, 255, 255)",
+          "backgroundResolved": true,
+          "humanReadable": "text here is barely readable against its background — 1.5:1, needs at least 4.5:1 for AA"
+        },
+        {
+          "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+          "component": "li/text",
+          "instanceId": "ad1895b0",
+          "ratio": 1.4737254630985896,
+          "level": "fail",
+          "isLargeText": false,
+          "fontSize": 16,
+          "fontWeight": 400,
+          "color": "rgb(210, 213, 216)",
+          "effectiveBackground": "rgb(255, 255, 255)",
+          "backgroundResolved": true,
+          "humanReadable": "text here is barely readable against its background — 1.5:1, needs at least 4.5:1 for AA"
+        },
+        {
+          "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+          "component": "span/text",
+          "instanceId": "5bb19dc6",
+          "ratio": 3.9193612233316677,
+          "level": "fail",
+          "isLargeText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "color": "rgb(122, 167, 255)",
+          "effectiveBackground": "rgb(48, 75, 79)",
+          "backgroundResolved": true,
+          "humanReadable": "text here is barely readable against its background — 3.9:1, needs at least 4.5:1 for AA",
+          "tieIn": {
+            "correctedRatio": 5.643762641748204,
+            "correctedLevel": "AA",
+            "humanReadable": "currently 3.9:1 (fails AA) — the spec token would give you 5.6:1 (passes AA)"
+          }
+        },
+        {
+          "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+          "component": "a/text",
+          "instanceId": "753f0985",
+          "ratio": 4.554510906928768,
+          "level": "AA",
+          "isLargeText": false,
+          "fontSize": 16,
+          "fontWeight": 400,
+          "color": "rgb(109, 113, 117)",
+          "effectiveBackground": "rgb(246, 246, 247)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AA at 4.6:1 but falls short of AAA (needs 7:1)"
+        },
+        {
+          "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+          "component": "button/text",
+          "instanceId": "0e2d8e55",
+          "ratio": 4.554510906928768,
+          "level": "AA",
+          "isLargeText": false,
+          "fontSize": 16,
+          "fontWeight": 400,
+          "color": "rgb(109, 113, 117)",
+          "effectiveBackground": "rgb(246, 246, 247)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AA at 4.6:1 but falls short of AAA (needs 7:1)"
+        },
+        {
+          "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+          "component": "span/text",
+          "instanceId": "b2d0b9e6",
+          "ratio": 4.725814695769604,
+          "level": "AA",
+          "isLargeText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "color": "rgb(170, 184, 221)",
+          "effectiveBackground": "rgb(48, 75, 79)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AA at 4.7:1 but falls short of AAA (needs 7:1)"
+        },
+        {
+          "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+          "component": "div/text",
+          "instanceId": "7f740780",
+          "ratio": 4.731184162054891,
+          "level": "AA",
+          "isLargeText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "color": "rgb(142, 193, 201)",
+          "effectiveBackground": "rgb(48, 75, 79)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AA at 4.7:1 but falls short of AAA (needs 7:1)"
+        },
+        {
+          "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+          "component": "div/text",
+          "instanceId": "8afd5777",
+          "ratio": 4.731184162054891,
+          "level": "AA",
+          "isLargeText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "color": "rgb(142, 193, 201)",
+          "effectiveBackground": "rgb(48, 75, 79)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AA at 4.7:1 but falls short of AAA (needs 7:1)"
+        },
+        {
+          "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+          "component": "div/text",
+          "instanceId": "55a8d5bd",
+          "ratio": 4.731184162054891,
+          "level": "AA",
+          "isLargeText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "color": "rgb(142, 193, 201)",
+          "effectiveBackground": "rgb(48, 75, 79)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AA at 4.7:1 but falls short of AAA (needs 7:1)"
+        },
+        {
+          "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+          "component": "div/text",
+          "instanceId": "7a044fa9",
+          "ratio": 4.731184162054891,
+          "level": "AA",
+          "isLargeText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "color": "rgb(142, 193, 201)",
+          "effectiveBackground": "rgb(48, 75, 79)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AA at 4.7:1 but falls short of AAA (needs 7:1)"
+        },
+        {
+          "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+          "component": "span/text",
+          "instanceId": "2b6690da",
+          "ratio": 4.742400591764899,
+          "level": "AA",
+          "isLargeText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "color": "rgb(254, 159, 155)",
+          "effectiveBackground": "rgb(48, 75, 79)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AA at 4.7:1 but falls short of AAA (needs 7:1)"
+        },
+        {
+          "page": "https://shopify.dev/docs/api/polaris",
+          "component": "span/text",
+          "instanceId": "a115b5fd",
+          "ratio": 4.7448818476916035,
+          "level": "AA",
+          "isLargeText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "color": "rgb(109, 113, 117)",
+          "effectiveBackground": "rgb(250, 251, 251)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AA at 4.7:1 but falls short of AAA (needs 7:1)"
+        },
+        {
+          "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+          "component": "span/text",
+          "instanceId": "a115b5fd",
+          "ratio": 4.7448818476916035,
+          "level": "AA",
+          "isLargeText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "color": "rgb(109, 113, 117)",
+          "effectiveBackground": "rgb(250, 251, 251)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AA at 4.7:1 but falls short of AAA (needs 7:1)"
+        },
+        {
+          "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+          "component": "span/text",
+          "instanceId": "36d571a5",
+          "ratio": 4.918996102438471,
+          "level": "AAA",
+          "isLargeText": true,
+          "fontSize": 24,
+          "fontWeight": 600,
+          "color": "rgb(109, 113, 117)",
+          "effectiveBackground": "rgb(255, 255, 255)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AAA at 4.9:1"
+        },
+        {
+          "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+          "component": "span/text",
+          "instanceId": "f333f0f0",
+          "ratio": 4.918996102438471,
+          "level": "AA",
+          "isLargeText": false,
+          "fontSize": 20,
+          "fontWeight": 600,
+          "color": "rgb(109, 113, 117)",
+          "effectiveBackground": "rgb(255, 255, 255)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AA at 4.9:1 but falls short of AAA (needs 7:1)"
+        },
+        {
+          "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+          "component": "a/text",
+          "instanceId": "9f5ce858",
+          "ratio": 4.918996102438471,
+          "level": "AA",
+          "isLargeText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "color": "rgb(109, 113, 117)",
+          "effectiveBackground": "rgb(255, 255, 255)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AA at 4.9:1 but falls short of AAA (needs 7:1)"
+        },
+        {
+          "page": "https://shopify.dev/docs/api/polaris",
+          "component": "span/text",
+          "instanceId": "29fea334",
+          "ratio": 6.113066197381156,
+          "level": "AA",
+          "isLargeText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "color": "rgb(71, 95, 145)",
+          "effectiveBackground": "rgb(250, 251, 251)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AA at 6.1:1 but falls short of AAA (needs 7:1)"
+        },
+        {
+          "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+          "component": "span/text",
+          "instanceId": "29fea334",
+          "ratio": 6.113066197381156,
+          "level": "AA",
+          "isLargeText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "color": "rgb(71, 95, 145)",
+          "effectiveBackground": "rgb(250, 251, 251)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AA at 6.1:1 but falls short of AAA (needs 7:1)"
+        },
+        {
+          "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+          "component": "button/text",
+          "instanceId": "db9ad474",
+          "ratio": 6.1479801873357225,
+          "level": "AA",
+          "isLargeText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "color": "rgb(142, 193, 201)",
+          "effectiveBackground": "rgb(36, 57, 61)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AA at 6.1:1 but falls short of AAA (needs 7:1)",
+          "tieIn": {
+            "correctedRatio": 7.333838572968006,
+            "correctedLevel": "AAA",
+            "humanReadable": "currently 6.1:1 (passes AA) — the spec token would give you 7.3:1 (passes AAA)"
+          }
+        },
+        {
+          "page": "https://shopify.dev/docs/api/polaris",
+          "component": "a/text",
+          "instanceId": "4f16eaa0",
+          "ratio": 6.337386211944449,
+          "level": "AA",
+          "isLargeText": false,
+          "fontSize": 16,
+          "fontWeight": 400,
+          "color": "rgb(71, 95, 145)",
+          "effectiveBackground": "rgb(255, 255, 255)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AA at 6.3:1 but falls short of AAA (needs 7:1)"
+        },
+        {
+          "page": "https://shopify.dev/docs/api/polaris",
+          "component": "span/text",
+          "instanceId": "0c7c4bda",
+          "ratio": 6.337386211944449,
+          "level": "AA",
+          "isLargeText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "color": "rgb(71, 95, 145)",
+          "effectiveBackground": "rgb(255, 255, 255)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AA at 6.3:1 but falls short of AAA (needs 7:1)"
+        },
+        {
+          "page": "https://shopify.dev/docs/api/polaris",
+          "component": "a/text",
+          "instanceId": "107cf6bf",
+          "ratio": 6.337386211944449,
+          "level": "AA",
+          "isLargeText": false,
+          "fontSize": 16,
+          "fontWeight": 400,
+          "color": "rgb(71, 95, 145)",
+          "effectiveBackground": "rgb(255, 255, 255)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AA at 6.3:1 but falls short of AAA (needs 7:1)"
+        },
+        {
+          "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+          "component": "a/text",
+          "instanceId": "4f16eaa0",
+          "ratio": 6.337386211944449,
+          "level": "AA",
+          "isLargeText": false,
+          "fontSize": 16,
+          "fontWeight": 400,
+          "color": "rgb(71, 95, 145)",
+          "effectiveBackground": "rgb(255, 255, 255)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AA at 6.3:1 but falls short of AAA (needs 7:1)"
+        },
+        {
+          "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+          "component": "span/text",
+          "instanceId": "0c7c4bda",
+          "ratio": 6.337386211944449,
+          "level": "AA",
+          "isLargeText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "color": "rgb(71, 95, 145)",
+          "effectiveBackground": "rgb(255, 255, 255)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AA at 6.3:1 but falls short of AAA (needs 7:1)"
+        },
+        {
+          "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+          "component": "a/text",
+          "instanceId": "107cf6bf",
+          "ratio": 6.337386211944449,
+          "level": "AA",
+          "isLargeText": false,
+          "fontSize": 16,
+          "fontWeight": 400,
+          "color": "rgb(71, 95, 145)",
+          "effectiveBackground": "rgb(255, 255, 255)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AA at 6.3:1 but falls short of AAA (needs 7:1)"
+        },
+        {
+          "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+          "component": "span/text",
+          "instanceId": "50260bcf",
+          "ratio": 6.337386211944449,
+          "level": "AA",
+          "isLargeText": false,
+          "fontSize": 16,
+          "fontWeight": 400,
+          "color": "rgb(71, 95, 145)",
+          "effectiveBackground": "rgb(255, 255, 255)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AA at 6.3:1 but falls short of AAA (needs 7:1)"
+        },
+        {
+          "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+          "component": "span/text",
+          "instanceId": "0679dd94",
+          "ratio": 6.337386211944449,
+          "level": "AA",
+          "isLargeText": false,
+          "fontSize": 16,
+          "fontWeight": 400,
+          "color": "rgb(71, 95, 145)",
+          "effectiveBackground": "rgb(255, 255, 255)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AA at 6.3:1 but falls short of AAA (needs 7:1)"
+        },
+        {
+          "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+          "component": "span/text",
+          "instanceId": "df5d2a3a",
+          "ratio": 6.47246653907737,
+          "level": "AA",
+          "isLargeText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "color": "rgb(163, 223, 253)",
+          "effectiveBackground": "rgb(48, 75, 79)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AA at 6.5:1 but falls short of AAA (needs 7:1)"
+        },
+        {
+          "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+          "component": "div/text",
+          "instanceId": "8bcde788",
+          "ratio": 6.47246653907737,
+          "level": "AA",
+          "isLargeText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "color": "rgb(163, 223, 253)",
+          "effectiveBackground": "rgb(48, 75, 79)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AA at 6.5:1 but falls short of AAA (needs 7:1)"
+        },
+        {
+          "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+          "component": "span/text",
+          "instanceId": "f39da27b",
+          "ratio": 6.492251510450127,
+          "level": "AA",
+          "isLargeText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "color": "rgb(99, 244, 76)",
+          "effectiveBackground": "rgb(48, 75, 79)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AA at 6.5:1 but falls short of AAA (needs 7:1)"
+        },
+        {
+          "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+          "component": "span/text",
+          "instanceId": "ce5a64b1",
+          "ratio": 6.513628044840224,
+          "level": "AA",
+          "isLargeText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "color": "rgb(168, 225, 234)",
+          "effectiveBackground": "rgb(48, 75, 79)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AA at 6.5:1 but falls short of AAA (needs 7:1)",
+          "tieIn": {
+            "correctedRatio": 7.248984873558157,
+            "correctedLevel": "AAA",
+            "humanReadable": "currently 6.5:1 (passes AA) — the spec token would give you 7.2:1 (passes AAA)"
+          }
+        },
+        {
+          "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+          "component": "span/text",
+          "instanceId": "520059b8",
+          "ratio": 6.517784116699994,
+          "level": "AA",
+          "isLargeText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "color": "rgb(215, 215, 219)",
+          "effectiveBackground": "rgb(48, 75, 79)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AA at 6.5:1 but falls short of AAA (needs 7:1)"
+        },
+        {
+          "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+          "component": "span/text",
+          "instanceId": "b126c9ca",
+          "ratio": 6.521501366324742,
+          "level": "AA",
+          "isLargeText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "color": "rgb(0, 244, 185)",
+          "effectiveBackground": "rgb(48, 75, 79)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AA at 6.5:1 but falls short of AAA (needs 7:1)"
+        },
+        {
+          "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+          "component": "span/text",
+          "instanceId": "30e2f88a",
+          "ratio": 8.23503211049348,
+          "level": "AAA",
+          "isLargeText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "color": "rgb(238, 241, 241)",
+          "effectiveBackground": "rgb(48, 75, 79)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AAA at 8.2:1"
+        },
+        {
+          "page": "https://shopify.dev/docs/api/polaris",
+          "component": "span/text",
+          "instanceId": "720ae7fe",
+          "ratio": 8.370002768780184,
+          "level": "AAA",
+          "isLargeText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "color": "rgb(68, 71, 74)",
+          "effectiveBackground": "rgb(238, 243, 247)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AAA at 8.4:1"
+        },
+        {
+          "page": "https://shopify.dev/docs/api/polaris",
+          "component": "kbd/text",
+          "instanceId": "cc1348ea",
+          "ratio": 8.370002768780184,
+          "level": "AAA",
+          "isLargeText": false,
+          "fontSize": 12,
+          "fontWeight": 400,
+          "color": "rgb(68, 71, 74)",
+          "effectiveBackground": "rgb(238, 243, 247)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AAA at 8.4:1"
+        },
+        {
+          "page": "https://shopify.dev/docs/api/polaris",
+          "component": "span/text",
+          "instanceId": "4fdb2281",
+          "ratio": 8.370002768780184,
+          "level": "AAA",
+          "isLargeText": false,
+          "fontSize": 16,
+          "fontWeight": 400,
+          "color": "rgb(68, 71, 74)",
+          "effectiveBackground": "rgb(238, 243, 247)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AAA at 8.4:1"
+        },
+        {
+          "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+          "component": "span/text",
+          "instanceId": "720ae7fe",
+          "ratio": 8.370002768780184,
+          "level": "AAA",
+          "isLargeText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "color": "rgb(68, 71, 74)",
+          "effectiveBackground": "rgb(238, 243, 247)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AAA at 8.4:1"
+        },
+        {
+          "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+          "component": "kbd/text",
+          "instanceId": "cc1348ea",
+          "ratio": 8.370002768780184,
+          "level": "AAA",
+          "isLargeText": false,
+          "fontSize": 12,
+          "fontWeight": 400,
+          "color": "rgb(68, 71, 74)",
+          "effectiveBackground": "rgb(238, 243, 247)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AAA at 8.4:1"
+        },
+        {
+          "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+          "component": "span/text",
+          "instanceId": "4fdb2281",
+          "ratio": 8.370002768780184,
+          "level": "AAA",
+          "isLargeText": false,
+          "fontSize": 16,
+          "fontWeight": 400,
+          "color": "rgb(68, 71, 74)",
+          "effectiveBackground": "rgb(238, 243, 247)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AAA at 8.4:1"
+        },
+        {
+          "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+          "component": "h2/text",
+          "instanceId": "dd5293a2",
+          "ratio": 8.464193063657666,
+          "level": "AAA",
+          "isLargeText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "color": "rgb(168, 225, 234)",
+          "effectiveBackground": "rgb(36, 57, 61)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AAA at 8.5:1"
+        },
+        {
+          "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+          "component": "span/text",
+          "instanceId": "888175ee",
+          "ratio": 8.464193063657666,
+          "level": "AAA",
+          "isLargeText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "color": "rgb(168, 225, 234)",
+          "effectiveBackground": "rgb(36, 57, 61)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AAA at 8.5:1"
+        },
+        {
+          "page": "https://shopify.dev/docs/api/polaris",
+          "component": "span/text",
+          "instanceId": "e4c2d8fe",
+          "ratio": 8.657276660206252,
+          "level": "AAA",
+          "isLargeText": false,
+          "fontSize": 16,
+          "fontWeight": 400,
+          "color": "rgb(68, 71, 74)",
+          "effectiveBackground": "rgb(246, 246, 247)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AAA at 8.7:1"
+        },
+        {
+          "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+          "component": "span/text",
+          "instanceId": "e4c2d8fe",
+          "ratio": 8.657276660206252,
+          "level": "AAA",
+          "isLargeText": false,
+          "fontSize": 16,
+          "fontWeight": 400,
+          "color": "rgb(68, 71, 74)",
+          "effectiveBackground": "rgb(246, 246, 247)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AAA at 8.7:1"
+        },
+        {
+          "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+          "component": "div/text",
+          "instanceId": "dc5d7bde",
+          "ratio": 8.657276660206252,
+          "level": "AAA",
+          "isLargeText": false,
+          "fontSize": 14,
+          "fontWeight": 600,
+          "color": "rgb(68, 71, 74)",
+          "effectiveBackground": "rgb(246, 246, 247)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AAA at 8.7:1"
+        },
+        {
+          "page": "https://shopify.dev/docs/api/polaris",
+          "component": "p/text",
+          "instanceId": "468d1ffa",
+          "ratio": 9.019136349627649,
+          "level": "AAA",
+          "isLargeText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "color": "rgb(68, 71, 74)",
+          "effectiveBackground": "rgb(250, 251, 251)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AAA at 9.0:1"
+        },
+        {
+          "page": "https://shopify.dev/docs/api/polaris",
+          "component": "a/text",
+          "instanceId": "3a9d96b2",
+          "ratio": 9.019136349627649,
+          "level": "AAA",
+          "isLargeText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "color": "rgb(68, 71, 74)",
+          "effectiveBackground": "rgb(250, 251, 251)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AAA at 9.0:1"
+        },
+        {
+          "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+          "component": "div/text",
+          "instanceId": "7c8c6849",
+          "ratio": 9.019136349627649,
+          "level": "AAA",
+          "isLargeText": false,
+          "fontSize": 14,
+          "fontWeight": 600,
+          "color": "rgb(68, 71, 74)",
+          "effectiveBackground": "rgb(250, 251, 251)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AAA at 9.0:1"
+        },
+        {
+          "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+          "component": "p/text",
+          "instanceId": "468d1ffa",
+          "ratio": 9.019136349627649,
+          "level": "AAA",
+          "isLargeText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "color": "rgb(68, 71, 74)",
+          "effectiveBackground": "rgb(250, 251, 251)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AAA at 9.0:1"
+        },
+        {
+          "page": "https://shopify.dev/docs/api/polaris/using-polaris-web-components",
+          "component": "a/text",
+          "instanceId": "3a9d96b2",
+          "ratio": 9.019136349627649,
+          "level": "AAA",
+          "isLargeText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "color": "rgb(68, 71, 74)",
+          "effectiveBackground": "rgb(250, 251, 251)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AAA at 9.0:1"
+        }
+      ]
+    }
   }
 }

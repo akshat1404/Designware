@@ -21,7 +21,7 @@
             "instances": [
               {
                 "component": "a/text",
-                "instanceId": "27b887d9",
+                "instanceId": "25a61c3c",
                 "deviations": [
                   {
                     "property": "color",
@@ -129,7 +129,7 @@
               },
               {
                 "component": "a/text",
-                "instanceId": "ca857af2",
+                "instanceId": "afd0aa5e",
                 "deviations": [
                   {
                     "property": "color",
@@ -245,7 +245,7 @@
               },
               {
                 "component": "a/text",
-                "instanceId": "95733991",
+                "instanceId": "685bebda",
                 "deviations": [
                   {
                     "property": "color",
@@ -353,7 +353,7 @@
               },
               {
                 "component": "a/text",
-                "instanceId": "fbf49916",
+                "instanceId": "9968dcf8",
                 "deviations": [
                   {
                     "property": "color",
@@ -469,7 +469,7 @@
               },
               {
                 "component": "a/text",
-                "instanceId": "bd8671c7",
+                "instanceId": "6959469d",
                 "deviations": [
                   {
                     "property": "color",
@@ -585,7 +585,7 @@
               },
               {
                 "component": "a/text",
-                "instanceId": "d8876e42",
+                "instanceId": "e0146753",
                 "deviations": [
                   {
                     "property": "color",
@@ -1393,7 +1393,7 @@
             "instances": [
               {
                 "component": "h1/text",
-                "instanceId": "95842ab2",
+                "instanceId": "bba02d7f",
                 "deviations": [
                   {
                     "property": "color",
@@ -1507,7 +1507,7 @@
             "instances": [
               {
                 "component": "span/text",
-                "instanceId": "42b42fa2",
+                "instanceId": "4d4f5f34",
                 "deviations": [
                   {
                     "property": "color",
@@ -1615,7 +1615,7 @@
               },
               {
                 "component": "span/text",
-                "instanceId": "36efa63d",
+                "instanceId": "d82ec760",
                 "deviations": [
                   {
                     "property": "color",
@@ -1723,7 +1723,7 @@
               },
               {
                 "component": "span/text",
-                "instanceId": "c5924ee1",
+                "instanceId": "e167ba63",
                 "deviations": [
                   {
                     "property": "color",
@@ -1831,7 +1831,7 @@
               },
               {
                 "component": "span/text",
-                "instanceId": "8c35f678",
+                "instanceId": "461da4d6",
                 "deviations": [
                   {
                     "property": "color",
@@ -1939,7 +1939,7 @@
               },
               {
                 "component": "span/text",
-                "instanceId": "666f5d4e",
+                "instanceId": "3a284169",
                 "deviations": [
                   {
                     "property": "color",
@@ -2053,7 +2053,7 @@
             "instances": [
               {
                 "component": "p/text",
-                "instanceId": "c6258b81",
+                "instanceId": "c26d3670",
                 "deviations": [
                   {
                     "property": "color",
@@ -2167,7 +2167,7 @@
             "instances": [
               {
                 "component": "strong/text",
-                "instanceId": "886263d1",
+                "instanceId": "f00b3fe9",
                 "deviations": [
                   {
                     "property": "color",
@@ -2403,7 +2403,7 @@
             "instances": [
               {
                 "component": "h2/text",
-                "instanceId": "3c1345d2",
+                "instanceId": "0c0244fa",
                 "deviations": [
                   {
                     "property": "color",
@@ -2517,7 +2517,7 @@
             "instances": [
               {
                 "component": "div/text",
-                "instanceId": "1b99411e",
+                "instanceId": "018ff046",
                 "deviations": [
                   {
                     "property": "color",
@@ -2625,7 +2625,7 @@
               },
               {
                 "component": "div/text",
-                "instanceId": "d999c3dd",
+                "instanceId": "cdde346d",
                 "deviations": [
                   {
                     "property": "color",
@@ -2733,7 +2733,7 @@
               },
               {
                 "component": "div/text",
-                "instanceId": "00a94019",
+                "instanceId": "603c272c",
                 "deviations": [
                   {
                     "property": "color",
@@ -2847,7 +2847,7 @@
             "instances": [
               {
                 "component": "label/text",
-                "instanceId": "bf8c8b19",
+                "instanceId": "3bfeadaa",
                 "deviations": [
                   {
                     "property": "color",
@@ -2994,6 +2994,274 @@
             "meanNormalized": 0,
             "count": 9
           }
+        ],
+        "accessibility": [
+          {
+            "page": "https://jira.atlassian.com/",
+            "component": "a/text",
+            "instanceId": "25a61c3c",
+            "ratio": 14.335249149356793,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 16,
+            "fontWeight": 400,
+            "color": "rgb(41, 42, 46)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": false,
+            "humanReadable": "text here passes AAA at 14.3:1"
+          },
+          {
+            "page": "https://jira.atlassian.com/",
+            "component": "a/text",
+            "instanceId": "afd0aa5e",
+            "ratio": 18.772532253316175,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 16,
+            "fontWeight": 400,
+            "color": "rgb(16, 18, 20)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 18.8:1"
+          },
+          {
+            "page": "https://jira.atlassian.com/",
+            "component": "a/text",
+            "instanceId": "685bebda",
+            "ratio": 14.335249149356793,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 16,
+            "fontWeight": 400,
+            "color": "rgb(41, 42, 46)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 14.3:1"
+          },
+          {
+            "page": "https://jira.atlassian.com/",
+            "component": "a/text",
+            "instanceId": "9968dcf8",
+            "ratio": 5.195629728468178,
+            "level": "AA",
+            "isLargeText": false,
+            "fontSize": 16,
+            "fontWeight": 500,
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackground": "rgb(24, 104, 219)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AA at 5.2:1 but falls short of AAA (needs 7:1)"
+          },
+          {
+            "page": "https://jira.atlassian.com/",
+            "component": "h1/text",
+            "instanceId": "bba02d7f",
+            "ratio": 18.772532253316175,
+            "level": "AAA",
+            "isLargeText": true,
+            "fontSize": 48,
+            "fontWeight": 800,
+            "color": "rgb(16, 18, 20)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": false,
+            "humanReadable": "text here passes AAA at 18.8:1"
+          },
+          {
+            "page": "https://jira.atlassian.com/",
+            "component": "a/text",
+            "instanceId": "6959469d",
+            "ratio": 5.195629728468178,
+            "level": "AA",
+            "isLargeText": false,
+            "fontSize": 20,
+            "fontWeight": 500,
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackground": "rgb(24, 104, 219)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AA at 5.2:1 but falls short of AAA (needs 7:1)"
+          },
+          {
+            "page": "https://jira.atlassian.com/",
+            "component": "span/text",
+            "instanceId": "4d4f5f34",
+            "ratio": 5.195629728468178,
+            "level": "AA",
+            "isLargeText": false,
+            "fontSize": 16,
+            "fontWeight": 400,
+            "color": "rgb(24, 104, 219)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": false,
+            "humanReadable": "text here passes AA at 5.2:1 but falls short of AAA (needs 7:1)"
+          },
+          {
+            "page": "https://jira.atlassian.com/",
+            "component": "p/text",
+            "instanceId": "c26d3670",
+            "ratio": 14.335249149356793,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 16,
+            "fontWeight": 400,
+            "color": "rgb(41, 42, 46)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": false,
+            "humanReadable": "text here passes AAA at 14.3:1"
+          },
+          {
+            "page": "https://jira.atlassian.com/",
+            "component": "strong/text",
+            "instanceId": "f00b3fe9",
+            "ratio": 14.335249149356793,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 16,
+            "fontWeight": 700,
+            "color": "rgb(41, 42, 46)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": false,
+            "humanReadable": "text here passes AAA at 14.3:1"
+          },
+          {
+            "page": "https://jira.atlassian.com/",
+            "component": "a/text",
+            "instanceId": "e0146753",
+            "ratio": 5.195629728468178,
+            "level": "AA",
+            "isLargeText": false,
+            "fontSize": 16,
+            "fontWeight": 400,
+            "color": "rgb(24, 104, 219)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": false,
+            "humanReadable": "text here passes AA at 5.2:1 but falls short of AAA (needs 7:1)"
+          },
+          {
+            "page": "https://jira.atlassian.com/",
+            "component": "span/text",
+            "instanceId": "d82ec760",
+            "ratio": 17.676318786542,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 700,
+            "color": "rgb(16, 18, 20)",
+            "effectiveBackground": "rgb(248, 248, 248)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 17.7:1"
+          },
+          {
+            "page": "https://jira.atlassian.com/",
+            "component": "h2/text",
+            "instanceId": "0c0244fa",
+            "ratio": 17.676318786542,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 13,
+            "fontWeight": 700,
+            "color": "rgb(16, 18, 20)",
+            "effectiveBackground": "rgb(248, 248, 248)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 17.7:1"
+          },
+          {
+            "page": "https://jira.atlassian.com/",
+            "component": "span/text",
+            "instanceId": "e167ba63",
+            "ratio": 17.676318786542,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(16, 18, 20)",
+            "effectiveBackground": "rgb(248, 248, 248)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 17.7:1"
+          },
+          {
+            "page": "https://jira.atlassian.com/",
+            "component": "span/text",
+            "instanceId": "461da4d6",
+            "ratio": 13.418684951835644,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 500,
+            "color": "rgb(28, 43, 66)",
+            "effectiveBackground": "rgb(248, 248, 248)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 13.4:1"
+          },
+          {
+            "page": "https://jira.atlassian.com/",
+            "component": "div/text",
+            "instanceId": "018ff046",
+            "ratio": 7.809803365612806,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(80, 82, 88)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 7.8:1"
+          },
+          {
+            "page": "https://jira.atlassian.com/",
+            "component": "span/text",
+            "instanceId": "3a284169",
+            "ratio": 14.335249149356793,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(41, 42, 46)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 14.3:1"
+          },
+          {
+            "page": "https://jira.atlassian.com/",
+            "component": "label/text",
+            "instanceId": "3bfeadaa",
+            "ratio": 14.335249149356793,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 16,
+            "fontWeight": 400,
+            "color": "rgb(41, 42, 46)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 14.3:1"
+          },
+          {
+            "page": "https://jira.atlassian.com/",
+            "component": "div/text",
+            "instanceId": "cdde346d",
+            "ratio": 7.883695877316398,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(66, 82, 110)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 7.9:1"
+          },
+          {
+            "page": "https://jira.atlassian.com/",
+            "component": "div/text",
+            "instanceId": "603c272c",
+            "ratio": 7.883695877316398,
+            "level": "AAA",
+            "isLargeText": true,
+            "fontSize": 24,
+            "fontWeight": 400,
+            "color": "rgb(66, 82, 110)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 7.9:1"
+          }
         ]
       },
       {
@@ -3126,7 +3394,7 @@
             "instances": [
               {
                 "component": "span/text",
-                "instanceId": "afb6f4cc",
+                "instanceId": "7e0e6678",
                 "deviations": [
                   {
                     "property": "color",
@@ -3234,7 +3502,7 @@
               },
               {
                 "component": "span/text",
-                "instanceId": "16ad459a",
+                "instanceId": "715483ea",
                 "deviations": [
                   {
                     "property": "color",
@@ -3342,7 +3610,7 @@
               },
               {
                 "component": "span/text",
-                "instanceId": "00704847",
+                "instanceId": "144f366f",
                 "deviations": [
                   {
                     "property": "color",
@@ -3456,7 +3724,7 @@
             "instances": [
               {
                 "component": "a/text",
-                "instanceId": "14286593",
+                "instanceId": "9438a088",
                 "deviations": [
                   {
                     "property": "color",
@@ -3564,7 +3832,7 @@
               },
               {
                 "component": "a/text",
-                "instanceId": "6d9f8afa",
+                "instanceId": "a23c9f94",
                 "deviations": [
                   {
                     "property": "color",
@@ -3672,7 +3940,7 @@
               },
               {
                 "component": "a/text",
-                "instanceId": "5ba0963e",
+                "instanceId": "bf8bfb8e",
                 "deviations": [
                   {
                     "property": "color",
@@ -3780,7 +4048,7 @@
               },
               {
                 "component": "a/text",
-                "instanceId": "a5e28bb9",
+                "instanceId": "813db131",
                 "deviations": [
                   {
                     "property": "color",
@@ -3888,7 +4156,7 @@
               },
               {
                 "component": "a/text",
-                "instanceId": "6f78ad0d",
+                "instanceId": "ae3f4c59",
                 "deviations": [
                   {
                     "property": "color",
@@ -3996,7 +4264,7 @@
               },
               {
                 "component": "a/text",
-                "instanceId": "f0a8baf7",
+                "instanceId": "b4a4a935",
                 "deviations": [
                   {
                     "property": "color",
@@ -4104,7 +4372,7 @@
               },
               {
                 "component": "a/text",
-                "instanceId": "2b398dcd",
+                "instanceId": "0cbbebf7",
                 "deviations": [
                   {
                     "property": "color",
@@ -4349,7 +4617,7 @@
             "instances": [
               {
                 "component": "section/text",
-                "instanceId": "9a4b17ed",
+                "instanceId": "9e197e04",
                 "deviations": [
                   {
                     "property": "color",
@@ -5054,7 +5322,7 @@
             "instances": [
               {
                 "component": "button/text",
-                "instanceId": "a7e986f5",
+                "instanceId": "5421472d",
                 "deviations": [
                   {
                     "property": "color",
@@ -5168,7 +5436,7 @@
             "instances": [
               {
                 "component": "iframe/text",
-                "instanceId": "fbbc943f",
+                "instanceId": "0cfb23cc",
                 "deviations": [
                   {
                     "property": "color",
@@ -5282,7 +5550,7 @@
             "instances": [
               {
                 "component": "dt/text",
-                "instanceId": "911ab6ec",
+                "instanceId": "7e829f33",
                 "deviations": [
                   {
                     "property": "color",
@@ -5390,7 +5658,7 @@
               },
               {
                 "component": "dt/text",
-                "instanceId": "15470720",
+                "instanceId": "51310ad4",
                 "deviations": [
                   {
                     "property": "color",
@@ -5504,7 +5772,7 @@
             "instances": [
               {
                 "component": "dd/text",
-                "instanceId": "a8081384",
+                "instanceId": "4beadaf7",
                 "deviations": [
                   {
                     "property": "color",
@@ -5618,7 +5886,7 @@
             "instances": [
               {
                 "component": "li/text",
-                "instanceId": "486d2e46",
+                "instanceId": "a0f5f216",
                 "deviations": [
                   {
                     "property": "color",
@@ -5770,6 +6038,246 @@
             "meanNormalized": 0,
             "count": 24
           }
+        ],
+        "accessibility": [
+          {
+            "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
+            "component": "span/text",
+            "instanceId": "7e0e6678",
+            "ratio": 8.533240647164215,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 0,
+            "fontWeight": 400,
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackground": "rgb(7, 71, 166)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 8.5:1"
+          },
+          {
+            "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
+            "component": "a/text",
+            "instanceId": "9438a088",
+            "ratio": 8.533240647164215,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackground": "rgb(7, 71, 166)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 8.5:1"
+          },
+          {
+            "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
+            "component": "a/text",
+            "instanceId": "a23c9f94",
+            "ratio": 8.533240647164215,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackground": "rgb(7, 71, 166)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 8.5:1"
+          },
+          {
+            "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
+            "component": "section/text",
+            "instanceId": "9e197e04",
+            "ratio": 14.102034448456891,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(23, 43, 77)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 14.1:1"
+          },
+          {
+            "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
+            "component": "a/text",
+            "instanceId": "bf8bfb8e",
+            "ratio": 13.262427970524927,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 16,
+            "fontWeight": 700,
+            "color": "rgb(23, 43, 77)",
+            "effectiveBackground": "rgb(247, 248, 249)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 13.3:1"
+          },
+          {
+            "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
+            "component": "span/text",
+            "instanceId": "715483ea",
+            "ratio": 7.1988363778226665,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(68, 84, 111)",
+            "effectiveBackground": "rgb(247, 248, 249)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 7.2:1"
+          },
+          {
+            "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
+            "component": "span/text",
+            "instanceId": "144f366f",
+            "ratio": 14.102034448456891,
+            "level": "AAA",
+            "isLargeText": true,
+            "fontSize": 24,
+            "fontWeight": 500,
+            "color": "rgb(23, 43, 77)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 14.1:1"
+          },
+          {
+            "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
+            "component": "button/text",
+            "instanceId": "5421472d",
+            "ratio": 5.202567845713788,
+            "level": "AA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(12, 102, 228)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AA at 5.2:1 but falls short of AAA (needs 7:1)"
+          },
+          {
+            "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
+            "component": "iframe/text",
+            "instanceId": "0cfb23cc",
+            "ratio": 14.102034448456891,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(23, 43, 77)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 14.1:1"
+          },
+          {
+            "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
+            "component": "dt/text",
+            "instanceId": "7e829f33",
+            "ratio": 14.102034448456891,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(23, 43, 77)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 14.1:1"
+          },
+          {
+            "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
+            "component": "a/text",
+            "instanceId": "813db131",
+            "ratio": 5.202567845713788,
+            "level": "AA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(12, 102, 228)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AA at 5.2:1 but falls short of AAA (needs 7:1)"
+          },
+          {
+            "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
+            "component": "dt/text",
+            "instanceId": "51310ad4",
+            "ratio": 14.102034448456891,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(23, 43, 77)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 14.1:1"
+          },
+          {
+            "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
+            "component": "dd/text",
+            "instanceId": "4beadaf7",
+            "ratio": 14.102034448456891,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(23, 43, 77)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 14.1:1"
+          },
+          {
+            "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
+            "component": "a/text",
+            "instanceId": "ae3f4c59",
+            "ratio": 5.202567845713788,
+            "level": "AA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(12, 102, 228)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AA at 5.2:1 but falls short of AAA (needs 7:1)"
+          },
+          {
+            "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
+            "component": "li/text",
+            "instanceId": "a0f5f216",
+            "ratio": 7.6545741710702595,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 12,
+            "fontWeight": 400,
+            "color": "rgb(68, 84, 111)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 7.7:1"
+          },
+          {
+            "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
+            "component": "a/text",
+            "instanceId": "b4a4a935",
+            "ratio": 5.202567845713788,
+            "level": "AA",
+            "isLargeText": false,
+            "fontSize": 12,
+            "fontWeight": 400,
+            "color": "rgb(12, 102, 228)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AA at 5.2:1 but falls short of AAA (needs 7:1)"
+          },
+          {
+            "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
+            "component": "a/text",
+            "instanceId": "0cbbebf7",
+            "ratio": 5.202567845713788,
+            "level": "AA",
+            "isLargeText": false,
+            "fontSize": 12,
+            "fontWeight": 400,
+            "color": "rgb(12, 102, 228)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AA at 5.2:1 but falls short of AAA (needs 7:1)"
+          }
         ]
       },
       {
@@ -5902,7 +6410,7 @@
             "instances": [
               {
                 "component": "span/text",
-                "instanceId": "afb6f4cc",
+                "instanceId": "7e0e6678",
                 "deviations": [
                   {
                     "property": "color",
@@ -6010,7 +6518,7 @@
               },
               {
                 "component": "span/text",
-                "instanceId": "16ad459a",
+                "instanceId": "715483ea",
                 "deviations": [
                   {
                     "property": "color",
@@ -6118,7 +6626,7 @@
               },
               {
                 "component": "span/text",
-                "instanceId": "00704847",
+                "instanceId": "144f366f",
                 "deviations": [
                   {
                     "property": "color",
@@ -6232,7 +6740,7 @@
             "instances": [
               {
                 "component": "a/text",
-                "instanceId": "14286593",
+                "instanceId": "9438a088",
                 "deviations": [
                   {
                     "property": "color",
@@ -6340,7 +6848,7 @@
               },
               {
                 "component": "a/text",
-                "instanceId": "6d9f8afa",
+                "instanceId": "a23c9f94",
                 "deviations": [
                   {
                     "property": "color",
@@ -6448,7 +6956,7 @@
               },
               {
                 "component": "a/text",
-                "instanceId": "5ba0963e",
+                "instanceId": "bf8bfb8e",
                 "deviations": [
                   {
                     "property": "color",
@@ -6556,7 +7064,7 @@
               },
               {
                 "component": "a/text",
-                "instanceId": "6f78ad0d",
+                "instanceId": "ae3f4c59",
                 "deviations": [
                   {
                     "property": "color",
@@ -6664,7 +7172,7 @@
               },
               {
                 "component": "a/text",
-                "instanceId": "a5e28bb9",
+                "instanceId": "813db131",
                 "deviations": [
                   {
                     "property": "color",
@@ -6772,7 +7280,7 @@
               },
               {
                 "component": "a/text",
-                "instanceId": "f0a8baf7",
+                "instanceId": "b4a4a935",
                 "deviations": [
                   {
                     "property": "color",
@@ -6880,7 +7388,7 @@
               },
               {
                 "component": "a/text",
-                "instanceId": "2b398dcd",
+                "instanceId": "0cbbebf7",
                 "deviations": [
                   {
                     "property": "color",
@@ -7125,7 +7633,7 @@
             "instances": [
               {
                 "component": "section/text",
-                "instanceId": "9a4b17ed",
+                "instanceId": "9e197e04",
                 "deviations": [
                   {
                     "property": "color",
@@ -7830,7 +8338,7 @@
             "instances": [
               {
                 "component": "button/text",
-                "instanceId": "a7e986f5",
+                "instanceId": "5421472d",
                 "deviations": [
                   {
                     "property": "color",
@@ -7944,7 +8452,7 @@
             "instances": [
               {
                 "component": "h3/text",
-                "instanceId": "ab9a923d",
+                "instanceId": "40ac3117",
                 "deviations": [
                   {
                     "property": "color",
@@ -8058,7 +8566,7 @@
             "instances": [
               {
                 "component": "p/text",
-                "instanceId": "8d81e064",
+                "instanceId": "3ac74f99",
                 "deviations": [
                   {
                     "property": "color",
@@ -8172,7 +8680,7 @@
             "instances": [
               {
                 "component": "b/text",
-                "instanceId": "7cf233bf",
+                "instanceId": "2d7f4fe2",
                 "deviations": [
                   {
                     "property": "color",
@@ -8286,7 +8794,7 @@
             "instances": [
               {
                 "component": "iframe/text",
-                "instanceId": "fbbc943f",
+                "instanceId": "0cfb23cc",
                 "deviations": [
                   {
                     "property": "color",
@@ -8400,7 +8908,7 @@
             "instances": [
               {
                 "component": "dt/text",
-                "instanceId": "911ab6ec",
+                "instanceId": "7e829f33",
                 "deviations": [
                   {
                     "property": "color",
@@ -8508,7 +9016,7 @@
               },
               {
                 "component": "dt/text",
-                "instanceId": "15470720",
+                "instanceId": "51310ad4",
                 "deviations": [
                   {
                     "property": "color",
@@ -8622,7 +9130,7 @@
             "instances": [
               {
                 "component": "dd/text",
-                "instanceId": "a8081384",
+                "instanceId": "4beadaf7",
                 "deviations": [
                   {
                     "property": "color",
@@ -8736,7 +9244,7 @@
             "instances": [
               {
                 "component": "li/text",
-                "instanceId": "486d2e46",
+                "instanceId": "a0f5f216",
                 "deviations": [
                   {
                     "property": "color",
@@ -8888,6 +9396,288 @@
             "meanNormalized": 0,
             "count": 27
           }
+        ],
+        "accessibility": [
+          {
+            "page": "https://jira.atlassian.com/projects/CONFCLOUD/summary",
+            "component": "span/text",
+            "instanceId": "7e0e6678",
+            "ratio": 8.533240647164215,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 0,
+            "fontWeight": 400,
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackground": "rgb(7, 71, 166)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 8.5:1"
+          },
+          {
+            "page": "https://jira.atlassian.com/projects/CONFCLOUD/summary",
+            "component": "a/text",
+            "instanceId": "9438a088",
+            "ratio": 8.533240647164215,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackground": "rgb(7, 71, 166)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 8.5:1"
+          },
+          {
+            "page": "https://jira.atlassian.com/projects/CONFCLOUD/summary",
+            "component": "a/text",
+            "instanceId": "a23c9f94",
+            "ratio": 8.533240647164215,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackground": "rgb(7, 71, 166)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 8.5:1"
+          },
+          {
+            "page": "https://jira.atlassian.com/projects/CONFCLOUD/summary",
+            "component": "section/text",
+            "instanceId": "9e197e04",
+            "ratio": 14.102034448456891,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(23, 43, 77)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 14.1:1"
+          },
+          {
+            "page": "https://jira.atlassian.com/projects/CONFCLOUD/summary",
+            "component": "a/text",
+            "instanceId": "bf8bfb8e",
+            "ratio": 13.262427970524927,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 16,
+            "fontWeight": 700,
+            "color": "rgb(23, 43, 77)",
+            "effectiveBackground": "rgb(247, 248, 249)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 13.3:1"
+          },
+          {
+            "page": "https://jira.atlassian.com/projects/CONFCLOUD/summary",
+            "component": "span/text",
+            "instanceId": "715483ea",
+            "ratio": 7.1988363778226665,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(68, 84, 111)",
+            "effectiveBackground": "rgb(247, 248, 249)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 7.2:1"
+          },
+          {
+            "page": "https://jira.atlassian.com/projects/CONFCLOUD/summary",
+            "component": "span/text",
+            "instanceId": "144f366f",
+            "ratio": 14.102034448456891,
+            "level": "AAA",
+            "isLargeText": true,
+            "fontSize": 24,
+            "fontWeight": 500,
+            "color": "rgb(23, 43, 77)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 14.1:1"
+          },
+          {
+            "page": "https://jira.atlassian.com/projects/CONFCLOUD/summary",
+            "component": "button/text",
+            "instanceId": "5421472d",
+            "ratio": 5.202567845713788,
+            "level": "AA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(12, 102, 228)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AA at 5.2:1 but falls short of AAA (needs 7:1)"
+          },
+          {
+            "page": "https://jira.atlassian.com/projects/CONFCLOUD/summary",
+            "component": "h3/text",
+            "instanceId": "40ac3117",
+            "ratio": 14.102034448456891,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 16,
+            "fontWeight": 500,
+            "color": "rgb(23, 43, 77)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 14.1:1"
+          },
+          {
+            "page": "https://jira.atlassian.com/projects/CONFCLOUD/summary",
+            "component": "p/text",
+            "instanceId": "3ac74f99",
+            "ratio": 14.102034448456891,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(23, 43, 77)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 14.1:1"
+          },
+          {
+            "page": "https://jira.atlassian.com/projects/CONFCLOUD/summary",
+            "component": "b/text",
+            "instanceId": "2d7f4fe2",
+            "ratio": 14.102034448456891,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 700,
+            "color": "rgb(23, 43, 77)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 14.1:1"
+          },
+          {
+            "page": "https://jira.atlassian.com/projects/CONFCLOUD/summary",
+            "component": "a/text",
+            "instanceId": "ae3f4c59",
+            "ratio": 5.202567845713788,
+            "level": "AA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(12, 102, 228)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AA at 5.2:1 but falls short of AAA (needs 7:1)"
+          },
+          {
+            "page": "https://jira.atlassian.com/projects/CONFCLOUD/summary",
+            "component": "iframe/text",
+            "instanceId": "0cfb23cc",
+            "ratio": 14.102034448456891,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(23, 43, 77)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 14.1:1"
+          },
+          {
+            "page": "https://jira.atlassian.com/projects/CONFCLOUD/summary",
+            "component": "dt/text",
+            "instanceId": "7e829f33",
+            "ratio": 14.102034448456891,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(23, 43, 77)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 14.1:1"
+          },
+          {
+            "page": "https://jira.atlassian.com/projects/CONFCLOUD/summary",
+            "component": "a/text",
+            "instanceId": "813db131",
+            "ratio": 5.202567845713788,
+            "level": "AA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(12, 102, 228)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AA at 5.2:1 but falls short of AAA (needs 7:1)"
+          },
+          {
+            "page": "https://jira.atlassian.com/projects/CONFCLOUD/summary",
+            "component": "dt/text",
+            "instanceId": "51310ad4",
+            "ratio": 14.102034448456891,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(23, 43, 77)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 14.1:1"
+          },
+          {
+            "page": "https://jira.atlassian.com/projects/CONFCLOUD/summary",
+            "component": "dd/text",
+            "instanceId": "4beadaf7",
+            "ratio": 14.102034448456891,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(23, 43, 77)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 14.1:1"
+          },
+          {
+            "page": "https://jira.atlassian.com/projects/CONFCLOUD/summary",
+            "component": "li/text",
+            "instanceId": "a0f5f216",
+            "ratio": 7.6545741710702595,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 12,
+            "fontWeight": 400,
+            "color": "rgb(68, 84, 111)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 7.7:1"
+          },
+          {
+            "page": "https://jira.atlassian.com/projects/CONFCLOUD/summary",
+            "component": "a/text",
+            "instanceId": "b4a4a935",
+            "ratio": 5.202567845713788,
+            "level": "AA",
+            "isLargeText": false,
+            "fontSize": 12,
+            "fontWeight": 400,
+            "color": "rgb(12, 102, 228)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AA at 5.2:1 but falls short of AAA (needs 7:1)"
+          },
+          {
+            "page": "https://jira.atlassian.com/projects/CONFCLOUD/summary",
+            "component": "a/text",
+            "instanceId": "0cbbebf7",
+            "ratio": 5.202567845713788,
+            "level": "AA",
+            "isLargeText": false,
+            "fontSize": 12,
+            "fontWeight": 400,
+            "color": "rgb(12, 102, 228)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AA at 5.2:1 but falls short of AAA (needs 7:1)"
+          }
         ]
       },
       {
@@ -9020,7 +9810,7 @@
             "instances": [
               {
                 "component": "span/text",
-                "instanceId": "afb6f4cc",
+                "instanceId": "7e0e6678",
                 "deviations": [
                   {
                     "property": "color",
@@ -9128,7 +9918,7 @@
               },
               {
                 "component": "span/text",
-                "instanceId": "16ad459a",
+                "instanceId": "715483ea",
                 "deviations": [
                   {
                     "property": "color",
@@ -9236,7 +10026,7 @@
               },
               {
                 "component": "span/text",
-                "instanceId": "00704847",
+                "instanceId": "144f366f",
                 "deviations": [
                   {
                     "property": "color",
@@ -9350,7 +10140,7 @@
             "instances": [
               {
                 "component": "a/text",
-                "instanceId": "14286593",
+                "instanceId": "9438a088",
                 "deviations": [
                   {
                     "property": "color",
@@ -9458,7 +10248,7 @@
               },
               {
                 "component": "a/text",
-                "instanceId": "6d9f8afa",
+                "instanceId": "a23c9f94",
                 "deviations": [
                   {
                     "property": "color",
@@ -9566,7 +10356,7 @@
               },
               {
                 "component": "a/text",
-                "instanceId": "5ba0963e",
+                "instanceId": "bf8bfb8e",
                 "deviations": [
                   {
                     "property": "color",
@@ -9674,7 +10464,7 @@
               },
               {
                 "component": "a/text",
-                "instanceId": "a5e28bb9",
+                "instanceId": "813db131",
                 "deviations": [
                   {
                     "property": "color",
@@ -9782,7 +10572,7 @@
               },
               {
                 "component": "a/text",
-                "instanceId": "f0a8baf7",
+                "instanceId": "b4a4a935",
                 "deviations": [
                   {
                     "property": "color",
@@ -9890,7 +10680,7 @@
               },
               {
                 "component": "a/text",
-                "instanceId": "2b398dcd",
+                "instanceId": "0cbbebf7",
                 "deviations": [
                   {
                     "property": "color",
@@ -10135,7 +10925,7 @@
             "instances": [
               {
                 "component": "section/text",
-                "instanceId": "9a4b17ed",
+                "instanceId": "9e197e04",
                 "deviations": [
                   {
                     "property": "color",
@@ -10840,7 +11630,7 @@
             "instances": [
               {
                 "component": "button/text",
-                "instanceId": "a7e986f5",
+                "instanceId": "5421472d",
                 "deviations": [
                   {
                     "property": "color",
@@ -10954,7 +11744,7 @@
             "instances": [
               {
                 "component": "div/text",
-                "instanceId": "cafde6ae",
+                "instanceId": "9f0e7484",
                 "deviations": [
                   {
                     "property": "color",
@@ -11068,7 +11858,7 @@
             "instances": [
               {
                 "component": "iframe/text",
-                "instanceId": "fbbc943f",
+                "instanceId": "0cfb23cc",
                 "deviations": [
                   {
                     "property": "color",
@@ -11182,7 +11972,7 @@
             "instances": [
               {
                 "component": "dt/text",
-                "instanceId": "911ab6ec",
+                "instanceId": "7e829f33",
                 "deviations": [
                   {
                     "property": "color",
@@ -11290,7 +12080,7 @@
               },
               {
                 "component": "dt/text",
-                "instanceId": "15470720",
+                "instanceId": "51310ad4",
                 "deviations": [
                   {
                     "property": "color",
@@ -11404,7 +12194,7 @@
             "instances": [
               {
                 "component": "dd/text",
-                "instanceId": "a8081384",
+                "instanceId": "4beadaf7",
                 "deviations": [
                   {
                     "property": "color",
@@ -11518,7 +12308,7 @@
             "instances": [
               {
                 "component": "li/text",
-                "instanceId": "486d2e46",
+                "instanceId": "a0f5f216",
                 "deviations": [
                   {
                     "property": "color",
@@ -11670,6 +12460,246 @@
             "meanNormalized": 0,
             "count": 24
           }
+        ],
+        "accessibility": [
+          {
+            "page": "https://jira.atlassian.com/projects/JSWCLOUD/summary",
+            "component": "span/text",
+            "instanceId": "7e0e6678",
+            "ratio": 8.533240647164215,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 0,
+            "fontWeight": 400,
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackground": "rgb(7, 71, 166)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 8.5:1"
+          },
+          {
+            "page": "https://jira.atlassian.com/projects/JSWCLOUD/summary",
+            "component": "a/text",
+            "instanceId": "9438a088",
+            "ratio": 8.533240647164215,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackground": "rgb(7, 71, 166)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 8.5:1"
+          },
+          {
+            "page": "https://jira.atlassian.com/projects/JSWCLOUD/summary",
+            "component": "a/text",
+            "instanceId": "a23c9f94",
+            "ratio": 8.533240647164215,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(255, 255, 255)",
+            "effectiveBackground": "rgb(7, 71, 166)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 8.5:1"
+          },
+          {
+            "page": "https://jira.atlassian.com/projects/JSWCLOUD/summary",
+            "component": "section/text",
+            "instanceId": "9e197e04",
+            "ratio": 14.102034448456891,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(23, 43, 77)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 14.1:1"
+          },
+          {
+            "page": "https://jira.atlassian.com/projects/JSWCLOUD/summary",
+            "component": "a/text",
+            "instanceId": "bf8bfb8e",
+            "ratio": 13.262427970524927,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 16,
+            "fontWeight": 700,
+            "color": "rgb(23, 43, 77)",
+            "effectiveBackground": "rgb(247, 248, 249)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 13.3:1"
+          },
+          {
+            "page": "https://jira.atlassian.com/projects/JSWCLOUD/summary",
+            "component": "span/text",
+            "instanceId": "715483ea",
+            "ratio": 7.1988363778226665,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(68, 84, 111)",
+            "effectiveBackground": "rgb(247, 248, 249)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 7.2:1"
+          },
+          {
+            "page": "https://jira.atlassian.com/projects/JSWCLOUD/summary",
+            "component": "span/text",
+            "instanceId": "144f366f",
+            "ratio": 14.102034448456891,
+            "level": "AAA",
+            "isLargeText": true,
+            "fontSize": 24,
+            "fontWeight": 500,
+            "color": "rgb(23, 43, 77)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 14.1:1"
+          },
+          {
+            "page": "https://jira.atlassian.com/projects/JSWCLOUD/summary",
+            "component": "button/text",
+            "instanceId": "5421472d",
+            "ratio": 5.202567845713788,
+            "level": "AA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(12, 102, 228)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AA at 5.2:1 but falls short of AAA (needs 7:1)"
+          },
+          {
+            "page": "https://jira.atlassian.com/projects/JSWCLOUD/summary",
+            "component": "div/text",
+            "instanceId": "9f0e7484",
+            "ratio": 14.102034448456891,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(23, 43, 77)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 14.1:1"
+          },
+          {
+            "page": "https://jira.atlassian.com/projects/JSWCLOUD/summary",
+            "component": "iframe/text",
+            "instanceId": "0cfb23cc",
+            "ratio": 14.102034448456891,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(23, 43, 77)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 14.1:1"
+          },
+          {
+            "page": "https://jira.atlassian.com/projects/JSWCLOUD/summary",
+            "component": "dt/text",
+            "instanceId": "7e829f33",
+            "ratio": 14.102034448456891,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(23, 43, 77)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 14.1:1"
+          },
+          {
+            "page": "https://jira.atlassian.com/projects/JSWCLOUD/summary",
+            "component": "a/text",
+            "instanceId": "813db131",
+            "ratio": 5.202567845713788,
+            "level": "AA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(12, 102, 228)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AA at 5.2:1 but falls short of AAA (needs 7:1)"
+          },
+          {
+            "page": "https://jira.atlassian.com/projects/JSWCLOUD/summary",
+            "component": "dt/text",
+            "instanceId": "51310ad4",
+            "ratio": 14.102034448456891,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(23, 43, 77)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 14.1:1"
+          },
+          {
+            "page": "https://jira.atlassian.com/projects/JSWCLOUD/summary",
+            "component": "dd/text",
+            "instanceId": "4beadaf7",
+            "ratio": 14.102034448456891,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 14,
+            "fontWeight": 400,
+            "color": "rgb(23, 43, 77)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 14.1:1"
+          },
+          {
+            "page": "https://jira.atlassian.com/projects/JSWCLOUD/summary",
+            "component": "li/text",
+            "instanceId": "a0f5f216",
+            "ratio": 7.6545741710702595,
+            "level": "AAA",
+            "isLargeText": false,
+            "fontSize": 12,
+            "fontWeight": 400,
+            "color": "rgb(68, 84, 111)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AAA at 7.7:1"
+          },
+          {
+            "page": "https://jira.atlassian.com/projects/JSWCLOUD/summary",
+            "component": "a/text",
+            "instanceId": "b4a4a935",
+            "ratio": 5.202567845713788,
+            "level": "AA",
+            "isLargeText": false,
+            "fontSize": 12,
+            "fontWeight": 400,
+            "color": "rgb(12, 102, 228)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AA at 5.2:1 but falls short of AAA (needs 7:1)"
+          },
+          {
+            "page": "https://jira.atlassian.com/projects/JSWCLOUD/summary",
+            "component": "a/text",
+            "instanceId": "0cbbebf7",
+            "ratio": 5.202567845713788,
+            "level": "AA",
+            "isLargeText": false,
+            "fontSize": 12,
+            "fontWeight": 400,
+            "color": "rgb(12, 102, 228)",
+            "effectiveBackground": "rgb(255, 255, 255)",
+            "backgroundResolved": true,
+            "humanReadable": "text here passes AA at 5.2:1 but falls short of AAA (needs 7:1)"
+          }
         ]
       }
     ],
@@ -11720,7 +12750,7 @@
       {
         "page": "https://jira.atlassian.com/",
         "component": "a/text",
-        "instanceId": "ca857af2",
+        "instanceId": "afd0aa5e",
         "property": "spacing",
         "detail": "padding-top",
         "rawValue": 10,
@@ -11732,7 +12762,7 @@
       {
         "page": "https://jira.atlassian.com/",
         "component": "a/text",
-        "instanceId": "ca857af2",
+        "instanceId": "afd0aa5e",
         "property": "spacing",
         "detail": "padding-bottom",
         "rawValue": 10,
@@ -11744,7 +12774,7 @@
       {
         "page": "https://jira.atlassian.com/",
         "component": "a/text",
-        "instanceId": "95733991",
+        "instanceId": "685bebda",
         "property": "border-radius",
         "detail": "border-top-left-radius",
         "rawValue": 3,
@@ -11756,7 +12786,7 @@
       {
         "page": "https://jira.atlassian.com/",
         "component": "a/text",
-        "instanceId": "fbf49916",
+        "instanceId": "9968dcf8",
         "property": "border-radius",
         "detail": "border-top-left-radius",
         "rawValue": 10000,
@@ -11768,7 +12798,7 @@
       {
         "page": "https://jira.atlassian.com/",
         "component": "a/text",
-        "instanceId": "fbf49916",
+        "instanceId": "9968dcf8",
         "property": "spacing",
         "detail": "padding-right",
         "rawValue": 22,
@@ -11780,7 +12810,7 @@
       {
         "page": "https://jira.atlassian.com/",
         "component": "a/text",
-        "instanceId": "fbf49916",
+        "instanceId": "9968dcf8",
         "property": "spacing",
         "detail": "padding-left",
         "rawValue": 22,
@@ -11792,7 +12822,7 @@
       {
         "page": "https://jira.atlassian.com/",
         "component": "a/text",
-        "instanceId": "bd8671c7",
+        "instanceId": "6959469d",
         "property": "border-radius",
         "detail": "border-top-left-radius",
         "rawValue": 10000,
@@ -11804,7 +12834,7 @@
       {
         "page": "https://jira.atlassian.com/",
         "component": "a/text",
-        "instanceId": "bd8671c7",
+        "instanceId": "6959469d",
         "property": "spacing",
         "detail": "padding-right",
         "rawValue": 22,
@@ -11816,7 +12846,7 @@
       {
         "page": "https://jira.atlassian.com/",
         "component": "a/text",
-        "instanceId": "bd8671c7",
+        "instanceId": "6959469d",
         "property": "spacing",
         "detail": "padding-left",
         "rawValue": 22,
@@ -11912,7 +12942,7 @@
       {
         "page": "https://jira.atlassian.com/",
         "component": "h1/text",
-        "instanceId": "95842ab2",
+        "instanceId": "bba02d7f",
         "property": "font-size",
         "rawValue": 48,
         "nearestToken": "font-size:32",
@@ -11923,7 +12953,7 @@
       {
         "page": "https://jira.atlassian.com/",
         "component": "h1/text",
-        "instanceId": "95842ab2",
+        "instanceId": "bba02d7f",
         "property": "font-weight",
         "rawValue": 800,
         "nearestToken": "font-weight:653",
@@ -11969,7 +12999,7 @@
       {
         "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
         "component": "span/text",
-        "instanceId": "afb6f4cc",
+        "instanceId": "7e0e6678",
         "property": "font-family",
         "rawValue": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif",
         "nearestToken": "font-family:Atlassian Sans",
@@ -11980,7 +13010,7 @@
       {
         "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
         "component": "span/text",
-        "instanceId": "16ad459a",
+        "instanceId": "715483ea",
         "property": "font-family",
         "rawValue": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif",
         "nearestToken": "font-family:Atlassian Sans",
@@ -11991,7 +13021,7 @@
       {
         "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
         "component": "span/text",
-        "instanceId": "00704847",
+        "instanceId": "144f366f",
         "property": "font-family",
         "rawValue": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif",
         "nearestToken": "font-family:Atlassian Sans",
@@ -12002,7 +13032,7 @@
       {
         "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
         "component": "a/text",
-        "instanceId": "14286593",
+        "instanceId": "9438a088",
         "property": "font-family",
         "rawValue": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif",
         "nearestToken": "font-family:Atlassian Sans",
@@ -12013,7 +13043,7 @@
       {
         "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
         "component": "a/text",
-        "instanceId": "14286593",
+        "instanceId": "9438a088",
         "property": "spacing",
         "detail": "padding-left",
         "rawValue": 10,
@@ -12025,7 +13055,7 @@
       {
         "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
         "component": "a/text",
-        "instanceId": "6d9f8afa",
+        "instanceId": "a23c9f94",
         "property": "font-family",
         "rawValue": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif",
         "nearestToken": "font-family:Atlassian Sans",
@@ -12036,7 +13066,7 @@
       {
         "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
         "component": "a/text",
-        "instanceId": "6d9f8afa",
+        "instanceId": "a23c9f94",
         "property": "spacing",
         "detail": "padding-right",
         "rawValue": 10,
@@ -12048,7 +13078,7 @@
       {
         "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
         "component": "a/text",
-        "instanceId": "6d9f8afa",
+        "instanceId": "a23c9f94",
         "property": "spacing",
         "detail": "padding-left",
         "rawValue": 10,
@@ -12060,7 +13090,7 @@
       {
         "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
         "component": "a/text",
-        "instanceId": "5ba0963e",
+        "instanceId": "bf8bfb8e",
         "property": "font-family",
         "rawValue": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif",
         "nearestToken": "font-family:Atlassian Sans",
@@ -12071,7 +13101,7 @@
       {
         "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
         "component": "a/text",
-        "instanceId": "a5e28bb9",
+        "instanceId": "813db131",
         "property": "font-family",
         "rawValue": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif",
         "nearestToken": "font-family:Atlassian Sans",
@@ -12082,7 +13112,7 @@
       {
         "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
         "component": "a/text",
-        "instanceId": "a5e28bb9",
+        "instanceId": "813db131",
         "property": "spacing",
         "detail": "padding-left",
         "rawValue": 29,
@@ -12094,7 +13124,7 @@
       {
         "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
         "component": "a/text",
-        "instanceId": "6f78ad0d",
+        "instanceId": "ae3f4c59",
         "property": "font-family",
         "rawValue": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif",
         "nearestToken": "font-family:Atlassian Sans",
@@ -12105,7 +13135,7 @@
       {
         "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
         "component": "a/text",
-        "instanceId": "f0a8baf7",
+        "instanceId": "b4a4a935",
         "property": "font-family",
         "rawValue": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif",
         "nearestToken": "font-family:Atlassian Sans",
@@ -12116,7 +13146,7 @@
       {
         "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
         "component": "a/text",
-        "instanceId": "2b398dcd",
+        "instanceId": "0cbbebf7",
         "property": "font-family",
         "rawValue": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif",
         "nearestToken": "font-family:Atlassian Sans",
@@ -12127,7 +13157,7 @@
       {
         "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
         "component": "a/text",
-        "instanceId": "2b398dcd",
+        "instanceId": "0cbbebf7",
         "property": "spacing",
         "detail": "margin-right",
         "rawValue": 426.5,
@@ -12139,7 +13169,7 @@
       {
         "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
         "component": "a/text",
-        "instanceId": "2b398dcd",
+        "instanceId": "0cbbebf7",
         "property": "spacing",
         "detail": "margin-left",
         "rawValue": 426.5,
@@ -12198,7 +13228,7 @@
       {
         "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
         "component": "section/text",
-        "instanceId": "9a4b17ed",
+        "instanceId": "9e197e04",
         "property": "font-family",
         "rawValue": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif",
         "nearestToken": "font-family:Atlassian Sans",
@@ -12299,6 +13329,713 @@
         "humanReadable": "using \"-apple-system\" instead of \"Atlassian Sans\""
       }
     ],
-    "unstablePages": []
+    "unstablePages": [],
+    "accessibility": {
+      "totalChecked": 73,
+      "passCount": 73,
+      "failCount": 0,
+      "worstOffenders": [
+        {
+          "page": "https://jira.atlassian.com/",
+          "component": "a/text",
+          "instanceId": "9968dcf8",
+          "ratio": 5.195629728468178,
+          "level": "AA",
+          "isLargeText": false,
+          "fontSize": 16,
+          "fontWeight": 500,
+          "color": "rgb(255, 255, 255)",
+          "effectiveBackground": "rgb(24, 104, 219)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AA at 5.2:1 but falls short of AAA (needs 7:1)"
+        },
+        {
+          "page": "https://jira.atlassian.com/",
+          "component": "a/text",
+          "instanceId": "6959469d",
+          "ratio": 5.195629728468178,
+          "level": "AA",
+          "isLargeText": false,
+          "fontSize": 20,
+          "fontWeight": 500,
+          "color": "rgb(255, 255, 255)",
+          "effectiveBackground": "rgb(24, 104, 219)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AA at 5.2:1 but falls short of AAA (needs 7:1)"
+        },
+        {
+          "page": "https://jira.atlassian.com/",
+          "component": "span/text",
+          "instanceId": "4d4f5f34",
+          "ratio": 5.195629728468178,
+          "level": "AA",
+          "isLargeText": false,
+          "fontSize": 16,
+          "fontWeight": 400,
+          "color": "rgb(24, 104, 219)",
+          "effectiveBackground": "rgb(255, 255, 255)",
+          "backgroundResolved": false,
+          "humanReadable": "text here passes AA at 5.2:1 but falls short of AAA (needs 7:1)"
+        },
+        {
+          "page": "https://jira.atlassian.com/",
+          "component": "a/text",
+          "instanceId": "e0146753",
+          "ratio": 5.195629728468178,
+          "level": "AA",
+          "isLargeText": false,
+          "fontSize": 16,
+          "fontWeight": 400,
+          "color": "rgb(24, 104, 219)",
+          "effectiveBackground": "rgb(255, 255, 255)",
+          "backgroundResolved": false,
+          "humanReadable": "text here passes AA at 5.2:1 but falls short of AAA (needs 7:1)"
+        },
+        {
+          "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
+          "component": "button/text",
+          "instanceId": "5421472d",
+          "ratio": 5.202567845713788,
+          "level": "AA",
+          "isLargeText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "color": "rgb(12, 102, 228)",
+          "effectiveBackground": "rgb(255, 255, 255)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AA at 5.2:1 but falls short of AAA (needs 7:1)"
+        },
+        {
+          "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
+          "component": "a/text",
+          "instanceId": "813db131",
+          "ratio": 5.202567845713788,
+          "level": "AA",
+          "isLargeText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "color": "rgb(12, 102, 228)",
+          "effectiveBackground": "rgb(255, 255, 255)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AA at 5.2:1 but falls short of AAA (needs 7:1)"
+        },
+        {
+          "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
+          "component": "a/text",
+          "instanceId": "ae3f4c59",
+          "ratio": 5.202567845713788,
+          "level": "AA",
+          "isLargeText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "color": "rgb(12, 102, 228)",
+          "effectiveBackground": "rgb(255, 255, 255)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AA at 5.2:1 but falls short of AAA (needs 7:1)"
+        },
+        {
+          "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
+          "component": "a/text",
+          "instanceId": "b4a4a935",
+          "ratio": 5.202567845713788,
+          "level": "AA",
+          "isLargeText": false,
+          "fontSize": 12,
+          "fontWeight": 400,
+          "color": "rgb(12, 102, 228)",
+          "effectiveBackground": "rgb(255, 255, 255)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AA at 5.2:1 but falls short of AAA (needs 7:1)"
+        },
+        {
+          "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
+          "component": "a/text",
+          "instanceId": "0cbbebf7",
+          "ratio": 5.202567845713788,
+          "level": "AA",
+          "isLargeText": false,
+          "fontSize": 12,
+          "fontWeight": 400,
+          "color": "rgb(12, 102, 228)",
+          "effectiveBackground": "rgb(255, 255, 255)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AA at 5.2:1 but falls short of AAA (needs 7:1)"
+        },
+        {
+          "page": "https://jira.atlassian.com/projects/CONFCLOUD/summary",
+          "component": "button/text",
+          "instanceId": "5421472d",
+          "ratio": 5.202567845713788,
+          "level": "AA",
+          "isLargeText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "color": "rgb(12, 102, 228)",
+          "effectiveBackground": "rgb(255, 255, 255)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AA at 5.2:1 but falls short of AAA (needs 7:1)"
+        },
+        {
+          "page": "https://jira.atlassian.com/projects/CONFCLOUD/summary",
+          "component": "a/text",
+          "instanceId": "ae3f4c59",
+          "ratio": 5.202567845713788,
+          "level": "AA",
+          "isLargeText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "color": "rgb(12, 102, 228)",
+          "effectiveBackground": "rgb(255, 255, 255)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AA at 5.2:1 but falls short of AAA (needs 7:1)"
+        },
+        {
+          "page": "https://jira.atlassian.com/projects/CONFCLOUD/summary",
+          "component": "a/text",
+          "instanceId": "813db131",
+          "ratio": 5.202567845713788,
+          "level": "AA",
+          "isLargeText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "color": "rgb(12, 102, 228)",
+          "effectiveBackground": "rgb(255, 255, 255)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AA at 5.2:1 but falls short of AAA (needs 7:1)"
+        },
+        {
+          "page": "https://jira.atlassian.com/projects/CONFCLOUD/summary",
+          "component": "a/text",
+          "instanceId": "b4a4a935",
+          "ratio": 5.202567845713788,
+          "level": "AA",
+          "isLargeText": false,
+          "fontSize": 12,
+          "fontWeight": 400,
+          "color": "rgb(12, 102, 228)",
+          "effectiveBackground": "rgb(255, 255, 255)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AA at 5.2:1 but falls short of AAA (needs 7:1)"
+        },
+        {
+          "page": "https://jira.atlassian.com/projects/CONFCLOUD/summary",
+          "component": "a/text",
+          "instanceId": "0cbbebf7",
+          "ratio": 5.202567845713788,
+          "level": "AA",
+          "isLargeText": false,
+          "fontSize": 12,
+          "fontWeight": 400,
+          "color": "rgb(12, 102, 228)",
+          "effectiveBackground": "rgb(255, 255, 255)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AA at 5.2:1 but falls short of AAA (needs 7:1)"
+        },
+        {
+          "page": "https://jira.atlassian.com/projects/JSWCLOUD/summary",
+          "component": "button/text",
+          "instanceId": "5421472d",
+          "ratio": 5.202567845713788,
+          "level": "AA",
+          "isLargeText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "color": "rgb(12, 102, 228)",
+          "effectiveBackground": "rgb(255, 255, 255)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AA at 5.2:1 but falls short of AAA (needs 7:1)"
+        },
+        {
+          "page": "https://jira.atlassian.com/projects/JSWCLOUD/summary",
+          "component": "a/text",
+          "instanceId": "813db131",
+          "ratio": 5.202567845713788,
+          "level": "AA",
+          "isLargeText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "color": "rgb(12, 102, 228)",
+          "effectiveBackground": "rgb(255, 255, 255)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AA at 5.2:1 but falls short of AAA (needs 7:1)"
+        },
+        {
+          "page": "https://jira.atlassian.com/projects/JSWCLOUD/summary",
+          "component": "a/text",
+          "instanceId": "b4a4a935",
+          "ratio": 5.202567845713788,
+          "level": "AA",
+          "isLargeText": false,
+          "fontSize": 12,
+          "fontWeight": 400,
+          "color": "rgb(12, 102, 228)",
+          "effectiveBackground": "rgb(255, 255, 255)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AA at 5.2:1 but falls short of AAA (needs 7:1)"
+        },
+        {
+          "page": "https://jira.atlassian.com/projects/JSWCLOUD/summary",
+          "component": "a/text",
+          "instanceId": "0cbbebf7",
+          "ratio": 5.202567845713788,
+          "level": "AA",
+          "isLargeText": false,
+          "fontSize": 12,
+          "fontWeight": 400,
+          "color": "rgb(12, 102, 228)",
+          "effectiveBackground": "rgb(255, 255, 255)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AA at 5.2:1 but falls short of AAA (needs 7:1)"
+        },
+        {
+          "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
+          "component": "span/text",
+          "instanceId": "715483ea",
+          "ratio": 7.1988363778226665,
+          "level": "AAA",
+          "isLargeText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "color": "rgb(68, 84, 111)",
+          "effectiveBackground": "rgb(247, 248, 249)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AAA at 7.2:1"
+        },
+        {
+          "page": "https://jira.atlassian.com/projects/CONFCLOUD/summary",
+          "component": "span/text",
+          "instanceId": "715483ea",
+          "ratio": 7.1988363778226665,
+          "level": "AAA",
+          "isLargeText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "color": "rgb(68, 84, 111)",
+          "effectiveBackground": "rgb(247, 248, 249)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AAA at 7.2:1"
+        },
+        {
+          "page": "https://jira.atlassian.com/projects/JSWCLOUD/summary",
+          "component": "span/text",
+          "instanceId": "715483ea",
+          "ratio": 7.1988363778226665,
+          "level": "AAA",
+          "isLargeText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "color": "rgb(68, 84, 111)",
+          "effectiveBackground": "rgb(247, 248, 249)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AAA at 7.2:1"
+        },
+        {
+          "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
+          "component": "li/text",
+          "instanceId": "a0f5f216",
+          "ratio": 7.6545741710702595,
+          "level": "AAA",
+          "isLargeText": false,
+          "fontSize": 12,
+          "fontWeight": 400,
+          "color": "rgb(68, 84, 111)",
+          "effectiveBackground": "rgb(255, 255, 255)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AAA at 7.7:1"
+        },
+        {
+          "page": "https://jira.atlassian.com/projects/CONFCLOUD/summary",
+          "component": "li/text",
+          "instanceId": "a0f5f216",
+          "ratio": 7.6545741710702595,
+          "level": "AAA",
+          "isLargeText": false,
+          "fontSize": 12,
+          "fontWeight": 400,
+          "color": "rgb(68, 84, 111)",
+          "effectiveBackground": "rgb(255, 255, 255)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AAA at 7.7:1"
+        },
+        {
+          "page": "https://jira.atlassian.com/projects/JSWCLOUD/summary",
+          "component": "li/text",
+          "instanceId": "a0f5f216",
+          "ratio": 7.6545741710702595,
+          "level": "AAA",
+          "isLargeText": false,
+          "fontSize": 12,
+          "fontWeight": 400,
+          "color": "rgb(68, 84, 111)",
+          "effectiveBackground": "rgb(255, 255, 255)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AAA at 7.7:1"
+        },
+        {
+          "page": "https://jira.atlassian.com/",
+          "component": "div/text",
+          "instanceId": "018ff046",
+          "ratio": 7.809803365612806,
+          "level": "AAA",
+          "isLargeText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "color": "rgb(80, 82, 88)",
+          "effectiveBackground": "rgb(255, 255, 255)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AAA at 7.8:1"
+        },
+        {
+          "page": "https://jira.atlassian.com/",
+          "component": "div/text",
+          "instanceId": "cdde346d",
+          "ratio": 7.883695877316398,
+          "level": "AAA",
+          "isLargeText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "color": "rgb(66, 82, 110)",
+          "effectiveBackground": "rgb(255, 255, 255)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AAA at 7.9:1"
+        },
+        {
+          "page": "https://jira.atlassian.com/",
+          "component": "div/text",
+          "instanceId": "603c272c",
+          "ratio": 7.883695877316398,
+          "level": "AAA",
+          "isLargeText": true,
+          "fontSize": 24,
+          "fontWeight": 400,
+          "color": "rgb(66, 82, 110)",
+          "effectiveBackground": "rgb(255, 255, 255)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AAA at 7.9:1"
+        },
+        {
+          "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
+          "component": "span/text",
+          "instanceId": "7e0e6678",
+          "ratio": 8.533240647164215,
+          "level": "AAA",
+          "isLargeText": false,
+          "fontSize": 0,
+          "fontWeight": 400,
+          "color": "rgb(255, 255, 255)",
+          "effectiveBackground": "rgb(7, 71, 166)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AAA at 8.5:1"
+        },
+        {
+          "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
+          "component": "a/text",
+          "instanceId": "9438a088",
+          "ratio": 8.533240647164215,
+          "level": "AAA",
+          "isLargeText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "color": "rgb(255, 255, 255)",
+          "effectiveBackground": "rgb(7, 71, 166)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AAA at 8.5:1"
+        },
+        {
+          "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
+          "component": "a/text",
+          "instanceId": "a23c9f94",
+          "ratio": 8.533240647164215,
+          "level": "AAA",
+          "isLargeText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "color": "rgb(255, 255, 255)",
+          "effectiveBackground": "rgb(7, 71, 166)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AAA at 8.5:1"
+        },
+        {
+          "page": "https://jira.atlassian.com/projects/CONFCLOUD/summary",
+          "component": "span/text",
+          "instanceId": "7e0e6678",
+          "ratio": 8.533240647164215,
+          "level": "AAA",
+          "isLargeText": false,
+          "fontSize": 0,
+          "fontWeight": 400,
+          "color": "rgb(255, 255, 255)",
+          "effectiveBackground": "rgb(7, 71, 166)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AAA at 8.5:1"
+        },
+        {
+          "page": "https://jira.atlassian.com/projects/CONFCLOUD/summary",
+          "component": "a/text",
+          "instanceId": "9438a088",
+          "ratio": 8.533240647164215,
+          "level": "AAA",
+          "isLargeText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "color": "rgb(255, 255, 255)",
+          "effectiveBackground": "rgb(7, 71, 166)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AAA at 8.5:1"
+        },
+        {
+          "page": "https://jira.atlassian.com/projects/CONFCLOUD/summary",
+          "component": "a/text",
+          "instanceId": "a23c9f94",
+          "ratio": 8.533240647164215,
+          "level": "AAA",
+          "isLargeText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "color": "rgb(255, 255, 255)",
+          "effectiveBackground": "rgb(7, 71, 166)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AAA at 8.5:1"
+        },
+        {
+          "page": "https://jira.atlassian.com/projects/JSWCLOUD/summary",
+          "component": "span/text",
+          "instanceId": "7e0e6678",
+          "ratio": 8.533240647164215,
+          "level": "AAA",
+          "isLargeText": false,
+          "fontSize": 0,
+          "fontWeight": 400,
+          "color": "rgb(255, 255, 255)",
+          "effectiveBackground": "rgb(7, 71, 166)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AAA at 8.5:1"
+        },
+        {
+          "page": "https://jira.atlassian.com/projects/JSWCLOUD/summary",
+          "component": "a/text",
+          "instanceId": "9438a088",
+          "ratio": 8.533240647164215,
+          "level": "AAA",
+          "isLargeText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "color": "rgb(255, 255, 255)",
+          "effectiveBackground": "rgb(7, 71, 166)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AAA at 8.5:1"
+        },
+        {
+          "page": "https://jira.atlassian.com/projects/JSWCLOUD/summary",
+          "component": "a/text",
+          "instanceId": "a23c9f94",
+          "ratio": 8.533240647164215,
+          "level": "AAA",
+          "isLargeText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "color": "rgb(255, 255, 255)",
+          "effectiveBackground": "rgb(7, 71, 166)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AAA at 8.5:1"
+        },
+        {
+          "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
+          "component": "a/text",
+          "instanceId": "bf8bfb8e",
+          "ratio": 13.262427970524927,
+          "level": "AAA",
+          "isLargeText": false,
+          "fontSize": 16,
+          "fontWeight": 700,
+          "color": "rgb(23, 43, 77)",
+          "effectiveBackground": "rgb(247, 248, 249)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AAA at 13.3:1"
+        },
+        {
+          "page": "https://jira.atlassian.com/projects/CONFCLOUD/summary",
+          "component": "a/text",
+          "instanceId": "bf8bfb8e",
+          "ratio": 13.262427970524927,
+          "level": "AAA",
+          "isLargeText": false,
+          "fontSize": 16,
+          "fontWeight": 700,
+          "color": "rgb(23, 43, 77)",
+          "effectiveBackground": "rgb(247, 248, 249)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AAA at 13.3:1"
+        },
+        {
+          "page": "https://jira.atlassian.com/projects/JSWCLOUD/summary",
+          "component": "a/text",
+          "instanceId": "bf8bfb8e",
+          "ratio": 13.262427970524927,
+          "level": "AAA",
+          "isLargeText": false,
+          "fontSize": 16,
+          "fontWeight": 700,
+          "color": "rgb(23, 43, 77)",
+          "effectiveBackground": "rgb(247, 248, 249)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AAA at 13.3:1"
+        },
+        {
+          "page": "https://jira.atlassian.com/",
+          "component": "span/text",
+          "instanceId": "461da4d6",
+          "ratio": 13.418684951835644,
+          "level": "AAA",
+          "isLargeText": false,
+          "fontSize": 14,
+          "fontWeight": 500,
+          "color": "rgb(28, 43, 66)",
+          "effectiveBackground": "rgb(248, 248, 248)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AAA at 13.4:1"
+        },
+        {
+          "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
+          "component": "section/text",
+          "instanceId": "9e197e04",
+          "ratio": 14.102034448456891,
+          "level": "AAA",
+          "isLargeText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "color": "rgb(23, 43, 77)",
+          "effectiveBackground": "rgb(255, 255, 255)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AAA at 14.1:1"
+        },
+        {
+          "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
+          "component": "span/text",
+          "instanceId": "144f366f",
+          "ratio": 14.102034448456891,
+          "level": "AAA",
+          "isLargeText": true,
+          "fontSize": 24,
+          "fontWeight": 500,
+          "color": "rgb(23, 43, 77)",
+          "effectiveBackground": "rgb(255, 255, 255)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AAA at 14.1:1"
+        },
+        {
+          "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
+          "component": "iframe/text",
+          "instanceId": "0cfb23cc",
+          "ratio": 14.102034448456891,
+          "level": "AAA",
+          "isLargeText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "color": "rgb(23, 43, 77)",
+          "effectiveBackground": "rgb(255, 255, 255)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AAA at 14.1:1"
+        },
+        {
+          "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
+          "component": "dt/text",
+          "instanceId": "7e829f33",
+          "ratio": 14.102034448456891,
+          "level": "AAA",
+          "isLargeText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "color": "rgb(23, 43, 77)",
+          "effectiveBackground": "rgb(255, 255, 255)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AAA at 14.1:1"
+        },
+        {
+          "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
+          "component": "dt/text",
+          "instanceId": "51310ad4",
+          "ratio": 14.102034448456891,
+          "level": "AAA",
+          "isLargeText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "color": "rgb(23, 43, 77)",
+          "effectiveBackground": "rgb(255, 255, 255)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AAA at 14.1:1"
+        },
+        {
+          "page": "https://jira.atlassian.com/projects/JRACLOUD/summary",
+          "component": "dd/text",
+          "instanceId": "4beadaf7",
+          "ratio": 14.102034448456891,
+          "level": "AAA",
+          "isLargeText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "color": "rgb(23, 43, 77)",
+          "effectiveBackground": "rgb(255, 255, 255)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AAA at 14.1:1"
+        },
+        {
+          "page": "https://jira.atlassian.com/projects/CONFCLOUD/summary",
+          "component": "section/text",
+          "instanceId": "9e197e04",
+          "ratio": 14.102034448456891,
+          "level": "AAA",
+          "isLargeText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "color": "rgb(23, 43, 77)",
+          "effectiveBackground": "rgb(255, 255, 255)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AAA at 14.1:1"
+        },
+        {
+          "page": "https://jira.atlassian.com/projects/CONFCLOUD/summary",
+          "component": "span/text",
+          "instanceId": "144f366f",
+          "ratio": 14.102034448456891,
+          "level": "AAA",
+          "isLargeText": true,
+          "fontSize": 24,
+          "fontWeight": 500,
+          "color": "rgb(23, 43, 77)",
+          "effectiveBackground": "rgb(255, 255, 255)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AAA at 14.1:1"
+        },
+        {
+          "page": "https://jira.atlassian.com/projects/CONFCLOUD/summary",
+          "component": "h3/text",
+          "instanceId": "40ac3117",
+          "ratio": 14.102034448456891,
+          "level": "AAA",
+          "isLargeText": false,
+          "fontSize": 16,
+          "fontWeight": 500,
+          "color": "rgb(23, 43, 77)",
+          "effectiveBackground": "rgb(255, 255, 255)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AAA at 14.1:1"
+        },
+        {
+          "page": "https://jira.atlassian.com/projects/CONFCLOUD/summary",
+          "component": "p/text",
+          "instanceId": "3ac74f99",
+          "ratio": 14.102034448456891,
+          "level": "AAA",
+          "isLargeText": false,
+          "fontSize": 14,
+          "fontWeight": 400,
+          "color": "rgb(23, 43, 77)",
+          "effectiveBackground": "rgb(255, 255, 255)",
+          "backgroundResolved": true,
+          "humanReadable": "text here passes AAA at 14.1:1"
+        }
+      ]
+    }
   }
 }
