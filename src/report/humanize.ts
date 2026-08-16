@@ -1,4 +1,5 @@
 import type { PropertyDeviation } from "../matchers/types.js";
+import type { WcagLevel } from "../accessibility/types.js";
 import { parseCssColor } from "../color/convert.js";
 
 /** First font name in a CSS font-family stack, quotes stripped, original case kept (unlike matchFontFamily's lowercased comparison copy — this one is for display). */
@@ -88,4 +89,31 @@ export function humanizeDeviation(deviation: PropertyDeviation, resolvedValue: s
     case "border-color":
       return colorSentence(deviation, resolvedValue as string);
   }
+}
+
+function levelClause(level: WcagLevel): string {
+  return level === "fail" ? "fails AA" : `passes ${level}`;
+}
+
+/**
+ * Plain-English sentence for one contrast finding, in the same voice as
+ * humanizeDeviation — a failure names the shortfall against the threshold it
+ * missed; a pass just states where it lands, since there's nothing wrong to
+ * describe.
+ */
+export function humanizeContrast(ratio: number, level: WcagLevel, isLargeText: boolean): string {
+  const aaThreshold = isLargeText ? 3 : 4.5;
+  const aaaThreshold = isLargeText ? 4.5 : 7;
+  if (level === "fail") {
+    return `text here is barely readable against its background — ${ratio.toFixed(1)}:1, needs at least ${aaThreshold}:1 for AA`;
+  }
+  if (level === "AA") {
+    return `text here passes AA at ${ratio.toFixed(1)}:1 but falls short of AAA (needs ${aaaThreshold}:1)`;
+  }
+  return `text here passes AAA at ${ratio.toFixed(1)}:1`;
+}
+
+/** The resolveToken tie-in note: what correcting to the nearest spec token would do to a failing/borderline contrast ratio. Only call this once the caller has confirmed the correction actually crosses a threshold — see ContrastTieIn's doc comment. */
+export function humanizeContrastTieIn(currentRatio: number, currentLevel: WcagLevel, correctedRatio: number, correctedLevel: WcagLevel): string {
+  return `currently ${currentRatio.toFixed(1)}:1 (${levelClause(currentLevel)}) — the spec token would give you ${correctedRatio.toFixed(1)}:1 (passes ${correctedLevel})`;
 }
