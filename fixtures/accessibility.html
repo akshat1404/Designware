@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Accessibility fixture</title>
+</head>
+<body>
+  <!-- Own background-color is transparent two levels up; the real visual
+       background is the outer div's #204060 (rgb(32, 64, 96)). -->
+  <div style="background-color:#204060; padding:20px;">
+    <div>
+      <p style="color:#ffffff; font-size:16px; margin:0;">Nested text over an ancestor's background</p>
+    </div>
+  </div>
+
+  <!-- No element in the ancestor chain (including html/body) sets a
+       non-transparent background-color — nothing to resolve to. -->
+  <div style="background-color:transparent; padding:20px;">
+    <p style="color:#333333; font-size:16px; margin:0;">Text with no resolvable ancestor background</p>
+  </div>
+</body>
+</html>
