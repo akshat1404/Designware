@@ -23,19 +23,31 @@ estimation (CV is parked as a fallback for the canvas/SVG/raster long tail).
   secondary numeric check.
 - **Aggregation** — instance → component → page → product rollup into a
   0–100 deviation score.
+- **Accessibility (WCAG contrast)** — a second, separate finding category,
+  not blended into the score above: for every text-containing sampled
+  element, walks up the DOM to resolve the actual (non-transparent)
+  background it renders against, then checks the color/background pair
+  against WCAG 2.1's own AA/AAA contrast thresholds. An element can be
+  perfectly on-spec and still fail contrast, or off-spec and still pass —
+  these are answering different questions, so they're reported side by
+  side rather than folded together. Failing/borderline findings that are
+  also a flagged color deviation get a tie-in note: what the contrast ratio
+  would be if corrected to the nearest spec token, when that correction
+  would actually cross a pass threshold.
 
 ## Project layout
 
 ```
 src/
   schema/tokenSpec.ts       token spec shape + validator (the diff target)
-  color/convert.ts          sRGB -> Lab, CIEDE2000
+  color/convert.ts          sRGB -> Lab, CIEDE2000, WCAG relative luminance + contrast ratio
   matchers/                 color / scale / font matchers -> PropertyDeviation
+  accessibility/contrast.ts WCAG contrast checking -> AccessibilityFinding (separate from PropertyDeviation)
   extractor/
     extract.ts               tag-based extraction (data-component), used by fixtures
-    sample.ts                 generic visible-element sampling for real pages
+    sample.ts                 generic visible-element sampling for real pages, incl. effective-background resolution
     stabilize.ts               animation-disable, cookie-banner dismissal, lazy-load trigger
-  aggregator/aggregate.ts    instance -> component -> page -> product rollup, worst-offenders, breakdown
+  aggregator/aggregate.ts    instance -> component -> page -> product rollup, worst-offenders, breakdown, accessibility
   adapters/                  per-company token-package -> TokenSpec normalizers (Level 2)
   targets/                   per-company crawl target definitions + registry (Level 2)
   cache/cache.ts             content-addressed extraction cache (Level 2, gitignored)
@@ -70,14 +82,24 @@ target per company, validated against real, publicly reachable pages
 (URL lists checked against each site's robots.txt, cached locally, capped
 at a handful of pages per site):
 
-| Target | Kind | Score | Notable finding | Report |
-|---|---|---|---|---|
-| GitHub (github.com) | real-app | 7.1/100 | Font-family is the largest contributor — resolves to `"Mona Sans"` in places, not the token's `"Mona Sans VF"` — a marketing-vs-app font naming inconsistency | [view](https://htmlpreview.github.io/?https://github.com/akshat1404/Specular/blob/main/reports/github/report.html) |
-| Carbon (carbondesignsystem.com) | on-spec | 1.8/100 | Residual noise is doc-site-shell CSS resets, not component drift | [view](https://htmlpreview.github.io/?https://github.com/akshat1404/Specular/blob/main/reports/carbon-onspec/report.html) |
-| IBM (ibm.com) | real-app | 2.0/100 | Helvetica fallback where Plex is expected; marketing-hero type/spacing/radius beyond the core component scale | [view](https://htmlpreview.github.io/?https://github.com/akshat1404/Specular/blob/main/reports/ibm-real-app/report.html) |
-| Atlassian Design (atlassian.design) | on-spec | 1.9/100 | Near-zero; residual noise is oversized marketing headings | [view](https://htmlpreview.github.io/?https://github.com/akshat1404/Specular/blob/main/reports/atlassian-onspec/report.html) |
-| Jira (jira.atlassian.com) | real-app | 18.3/100 | Legacy `/projects/<KEY>/summary` pages resolve to a generic OS font stack, not `"Atlassian Sans"` — drift concentrates in older, unmigrated UI, not the homepage | [view](https://htmlpreview.github.io/?https://github.com/akshat1404/Specular/blob/main/reports/jira-real-app/report.html) |
-| Shopify Polaris (shopify.dev) | on-spec, **unverified** | 15.5/100 | Not a matcher bug, but not a trustworthy baseline either: confirmed via DOM inspection that neither page (nor any other publicly reachable shopify.dev/polaris.shopify.com/storybook URL) renders actual Polaris components — no `Polaris-` classes, no Polaris custom elements. This is a generic docs-shell score, not comparable to the other three companies' on-spec numbers | [view](https://htmlpreview.github.io/?https://github.com/akshat1404/Specular/blob/main/reports/polaris-onspec/report.html) |
+| Target | Kind | Score | Contrast (WCAG) | Notable finding | Report |
+|---|---|---|---|---|---|
+| GitHub (github.com) | real-app | 5.3/100 | 17 fail / 251 checked | Font-family is the largest contributor — resolves to `"Mona Sans"` in places, not the token's `"Mona Sans VF"` — a marketing-vs-app font naming inconsistency | [view](https://htmlpreview.github.io/?https://github.com/akshat1404/Specular/blob/main/reports/github/report.html) |
+| Carbon (carbondesignsystem.com) | on-spec | 1.8/100 | 0 fail / 233 checked | Residual noise is doc-site-shell CSS resets, not component drift | [view](https://htmlpreview.github.io/?https://github.com/akshat1404/Specular/blob/main/reports/carbon-onspec/report.html) |
+| IBM (ibm.com) | real-app | 2.0/100 | 7 fail / 189 checked | Helvetica fallback where Plex is expected; marketing-hero type/spacing/radius beyond the core component scale | [view](https://htmlpreview.github.io/?https://github.com/akshat1404/Specular/blob/main/reports/ibm-real-app/report.html) |
+| Atlassian Design (atlassian.design) | on-spec | 1.9/100 | 10 fail / 190 checked | Near-zero; residual noise is oversized marketing headings | [view](https://htmlpreview.github.io/?https://github.com/akshat1404/Specular/blob/main/reports/atlassian-onspec/report.html) |
+| Jira (jira.atlassian.com) | real-app | 18.3/100 | 0 fail / 73 checked | Legacy `/projects/<KEY>/summary` pages resolve to a generic OS font stack, not `"Atlassian Sans"` — drift concentrates in older, unmigrated UI, not the homepage | [view](https://htmlpreview.github.io/?https://github.com/akshat1404/Specular/blob/main/reports/jira-real-app/report.html) |
+| Shopify Polaris (shopify.dev) | on-spec, **unverified** | 15.5/100 | 3 fail / 71 checked | Not a matcher bug, but not a trustworthy baseline either: confirmed via DOM inspection that neither page (nor any other publicly reachable shopify.dev/polaris.shopify.com/storybook URL) renders actual Polaris components — no `Polaris-` classes, no Polaris custom elements. This is a generic docs-shell score, not comparable to the other three companies' on-spec numbers | [view](https://htmlpreview.github.io/?https://github.com/akshat1404/Specular/blob/main/reports/polaris-onspec/report.html) |
+
+Contrast counts are independent of the Score column (see Approach) — e.g.
+Jira scores worst on deviation (18.3) but has zero contrast failures, while
+Atlassian's own on-spec site scores near-zero on deviation but still has 10
+real contrast failures. Most captured failures are near-1:1 (e.g. white text
+over a translucent white overlay) — the effective-background resolver takes
+the first non-transparent ancestor color as-is, so a semi-transparent
+overlay's own faint color is used rather than what visually composites
+underneath it or through a `backdrop-filter`; worth keeping in mind when
+reading ratios near 1:1 on frosted-glass/overlay UI.
 
 Two real bugs were found and fixed during this validation (not synthetic
 fixtures — genuinely surfaced by messy real-world pages):
