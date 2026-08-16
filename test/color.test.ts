@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { parseCssColor, rgbToLab, deltaE2000, deltaE2000Rgb } from "../src/color/convert.js";
+import { parseCssColor, rgbToLab, deltaE2000, deltaE2000Rgb, relativeLuminance, contrastRatio } from "../src/color/convert.js";
 
 describe("parseCssColor", () => {
   it("parses hex 6-digit", () => {
@@ -75,5 +75,38 @@ describe("deltaE2000Rgb", () => {
   it("reports a near-zero distance for a subtle shift", () => {
     const d = deltaE2000Rgb({ r: 51, g: 102, b: 255, a: 1 }, { r: 52, g: 103, b: 255, a: 1 });
     expect(d).toBeLessThan(1);
+  });
+});
+
+describe("relativeLuminance", () => {
+  it("is 1 for white and 0 for black", () => {
+    expect(relativeLuminance({ r: 255, g: 255, b: 255, a: 1 })).toBeCloseTo(1, 6);
+    expect(relativeLuminance({ r: 0, g: 0, b: 0, a: 1 })).toBeCloseTo(0, 6);
+  });
+});
+
+describe("contrastRatio", () => {
+  it("is exactly 21:1 for black on white (WCAG's own worked example)", () => {
+    expect(contrastRatio({ r: 0, g: 0, b: 0, a: 1 }, { r: 255, g: 255, b: 255, a: 1 })).toBeCloseTo(21, 6);
+  });
+
+  it("is order-independent", () => {
+    const c1 = { r: 20, g: 90, b: 180, a: 1 };
+    const c2 = { r: 240, g: 240, b: 230, a: 1 };
+    expect(contrastRatio(c1, c2)).toBeCloseTo(contrastRatio(c2, c1), 10);
+  });
+
+  it("is 1:1 for identical colors", () => {
+    const c = { r: 100, g: 150, b: 200, a: 1 };
+    expect(contrastRatio(c, c)).toBeCloseTo(1, 6);
+  });
+
+  // #767676 on white is widely cited (WebAIM, and several published design
+  // systems' own docs) as the standard "just clears 4.5:1 AA" gray-on-white
+  // reference pair — a real published value, not a hand-computed guess.
+  it("matches the published #767676-on-white reference ratio", () => {
+    const gray = parseCssColor("#767676");
+    const white = parseCssColor("#FFFFFF");
+    expect(contrastRatio(gray, white)).toBeCloseTo(4.54, 2);
   });
 });

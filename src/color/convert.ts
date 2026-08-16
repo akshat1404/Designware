@@ -55,9 +55,33 @@ export function parseCssColor(input: string): RGBA {
   throw new Error(`unrecognized CSS color format: "${input}"`);
 }
 
-function srgbChannelToLinear(c: number): number {
+export function srgbChannelToLinear(c: number): number {
   const v = c / 255;
   return v <= 0.04045 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4);
+}
+
+/**
+ * WCAG 2.1 relative luminance (https://www.w3.org/TR/WCAG21/#dfn-relative-luminance):
+ * same sRGB gamma-decode as the Lab pipeline above (srgbChannelToLinear),
+ * weighted by the standard's own (rounded) luminosity coefficients rather
+ * than the unrounded XYZ Y-row used for Lab — WCAG's published formula and
+ * conformance tools (e.g. WebAIM) use these exact constants, so matching
+ * them here is what makes computed ratios line up with published examples.
+ */
+export function relativeLuminance({ r, g, b }: RGBA): number {
+  const rl = srgbChannelToLinear(r);
+  const gl = srgbChannelToLinear(g);
+  const bl = srgbChannelToLinear(b);
+  return 0.2126 * rl + 0.7152 * gl + 0.0722 * bl;
+}
+
+/** WCAG contrast ratio (https://www.w3.org/TR/WCAG21/#dfn-contrast-ratio) between two sRGB colors, ignoring alpha — always >= 1, order-independent. */
+export function contrastRatio(c1: RGBA, c2: RGBA): number {
+  const l1 = relativeLuminance(c1);
+  const l2 = relativeLuminance(c2);
+  const lighter = Math.max(l1, l2);
+  const darker = Math.min(l1, l2);
+  return (lighter + 0.05) / (darker + 0.05);
 }
 
 // D65 reference white, sRGB primaries.
