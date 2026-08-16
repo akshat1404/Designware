@@ -76,6 +76,25 @@ function summaryMarkdown(target: CrawlTarget, report: ProductReport, overlayLink
   }
   lines.push("");
 
+  if (report.accessibility && report.accessibility.totalChecked > 0) {
+    lines.push("## Accessibility — WCAG contrast");
+    lines.push("");
+    lines.push(
+      `_Separate from the deviation score above: this checks captured text against WCAG 2.1's own contrast thresholds, independent of the brand spec — an element can be on-spec and still fail contrast, or off-spec and still pass._`
+    );
+    lines.push("");
+    lines.push(`Checked: ${report.accessibility.totalChecked}, passing: ${report.accessibility.passCount}, failing: ${report.accessibility.failCount}`);
+    lines.push("");
+    lines.push("| finding | page | component | ratio | level | spec-token fix |");
+    lines.push("|---|---|---|---|---|---|");
+    for (const f of report.accessibility.worstOffenders) {
+      const finding = f.humanReadable.replace(/\|/g, "\\|");
+      const fix = f.tieIn ? f.tieIn.humanReadable.replace(/\|/g, "\\|") : "—";
+      lines.push(`| ${finding} | ${f.page} | ${f.component} | ${f.ratio.toFixed(1)}:1 | ${f.level} | ${fix} |`);
+    }
+    lines.push("");
+  }
+
   return lines.join("\n");
 }
 

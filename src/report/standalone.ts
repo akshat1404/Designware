@@ -77,6 +77,30 @@ ${rows}
 }
 
 /**
+ * A separate section, not merged into the breakdown/offenders tables above:
+ * WCAG contrast is an external, objective pass/fail against the standard's
+ * own thresholds, independent of the brand token spec.
+ */
+function renderAccessibilitySection(report: ProductReport): string {
+  const a = report.accessibility;
+  if (!a || a.totalChecked === 0) return "";
+
+  const rows = a.worstOffenders
+    .map(
+      (f) =>
+        `<tr><td>${escapeHtml(f.humanReadable)}</td><td>${escapeHtml(f.page)}</td><td>${escapeHtml(f.component)}</td><td>${f.ratio.toFixed(1)}:1</td><td>${escapeHtml(f.level)}</td><td>${f.tieIn ? escapeHtml(f.tieIn.humanReadable) : "—"}</td></tr>`
+    )
+    .join("\n");
+
+  return `<h2>Accessibility — WCAG contrast</h2>
+<p class="a11y-note">Separate from the deviation score above: this checks captured text against WCAG 2.1's own contrast thresholds, independent of the brand spec — an element can be on-spec and still fail contrast, or off-spec and still pass.</p>
+<p>Checked: ${a.totalChecked}, passing: ${a.passCount}, failing: ${a.failCount}</p>
+<table><thead><tr><th>finding</th><th>page</th><th>component</th><th>ratio</th><th>level</th><th>spec-token fix</th></tr></thead><tbody>
+${rows}
+</tbody></table>`;
+}
+
+/**
  * Renders the whole product report — score, breakdown, worst offenders
  * (with the Part A plain-English sentence as the primary column), and
  * every page's visual diagnostics — as one self-contained HTML document.
@@ -110,6 +134,7 @@ export function renderStandaloneReportHtml(target: CrawlTarget, report: ProductR
   th, td { border: 1px solid #333; padding: 6px 10px; text-align: left; font-size: 13px; vertical-align: top; }
   th { background: #222; }
   .unverified-banner { margin: 16px 24px 0; padding: 12px 16px; background: #4a2e00; border: 2px solid #d9822b; border-radius: 4px; color: #ffd8a8; font-size: 14px; }
+  .a11y-note { color: #999; font-size: 13px; max-width: 70ch; }
   .page { margin-bottom: 40px; border-top: 1px solid #333; padding-top: 16px; }
   .page-visuals { display: flex; gap: 16px; flex-wrap: wrap; align-items: flex-start; }
   .overlay, .corrected { max-width: 100%; overflow: auto; }
@@ -126,6 +151,7 @@ ${renderUnverifiedBanner(target)}
 <main>
 ${renderBreakdownTable(report)}
 ${renderOffendersTable(report)}
+${renderAccessibilitySection(report)}
 ${pageSections}
 </main>
 </body>

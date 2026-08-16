@@ -150,6 +150,56 @@ describe("writeReport", () => {
     expect(html).not.toContain("fake.png");
   });
 
+  it("omits the accessibility section from summary.md and report.html when there's nothing to report", () => {
+    writeReport(target, report);
+    const summary = readFileSync(path.resolve(process.cwd(), "reports", TEST_KEY, "summary.md"), "utf-8");
+    const html = readFileSync(path.resolve(process.cwd(), "reports", TEST_KEY, "report.html"), "utf-8");
+    expect(summary).not.toContain("WCAG contrast");
+    expect(html).not.toContain("WCAG contrast");
+  });
+
+  it("adds an accessibility section to summary.md and report.html, separate from the deviation breakdown/offenders", () => {
+    const withAccessibility: ProductReport = {
+      ...report,
+      accessibility: {
+        totalChecked: 2,
+        passCount: 1,
+        failCount: 1,
+        worstOffenders: [
+          {
+            page: "https://example.com/",
+            component: "p/text",
+            instanceId: "def456",
+            ratio: 2.1,
+            level: "fail",
+            isLargeText: false,
+            fontSize: 16,
+            fontWeight: 400,
+            color: "rgb(255, 255, 255)",
+            effectiveBackground: "rgb(238, 238, 238)",
+            backgroundResolved: true,
+            humanReadable: "text here is barely readable against its background — 2.1:1, needs at least 4.5:1 for AA",
+            tieIn: {
+              correctedRatio: 4.6,
+              correctedLevel: "AA",
+              humanReadable: "currently 2.1:1 (fails AA) — the spec token would give you 4.6:1 (passes AA)",
+            },
+          },
+        ],
+      },
+    };
+    writeReport(target, withAccessibility);
+    const summary = readFileSync(path.resolve(process.cwd(), "reports", TEST_KEY, "summary.md"), "utf-8");
+    const html = readFileSync(path.resolve(process.cwd(), "reports", TEST_KEY, "report.html"), "utf-8");
+
+    for (const doc of [summary, html]) {
+      expect(doc).toContain("WCAG contrast");
+      expect(doc).toContain("barely readable");
+      expect(doc).toContain("the spec token would give you 4.6:1");
+      expect(doc).toContain("Checked: 2");
+    }
+  });
+
   it("shows the unverified-baseline warning in report.html when target.unverified is set, and omits it otherwise", () => {
     const unverifiedTarget: CrawlTarget = { ...target, unverified: "Could not confirm these pages render actual Polaris components." };
     writeReport(unverifiedTarget, report);
