@@ -3,6 +3,10 @@ import type { ExtractedElement, ExtractedPage, Position } from "../extractor/typ
 import type { PageReport } from "../aggregator/aggregate.js";
 import { categoryOf, type Category } from "../aggregator/aggregate.js";
 import type { PropertyDeviation } from "../matchers/types.js";
+import type { AccessibilityFinding } from "../accessibility/types.js";
+import type { TokenSpec } from "../schema/tokenSpec.js";
+import { resolveToken } from "../matchers/resolve.js";
+import { humanizeDeviation } from "./humanize.js";
 
 /**
  * Below this instance score (0-100, the same category-weighted scale as
@@ -28,14 +32,44 @@ export const CATEGORY_COLORS: Record<Category, string> = {
   radius: "#805ad5",
 };
 
-export interface OverlayBox {
+/**
+ * Deliberately not drawn from CATEGORY_COLORS: a contrast failure isn't a
+ * fifth deviation category (it's not scored, not spec-relative, and can
+ * fire on an otherwise perfectly on-spec element), so it gets its own color
+ * rather than borrowing one of the four that implies it's part of that
+ * scoring. A warm amber reads as a caution/warning color without
+ * colliding with color's red or spacing's orange.
+ */
+export const ACCESSIBILITY_COLOR = "#ecc94b";
+
+interface BaseBox {
   instanceId: string;
   component: string;
+  position: Position;
+}
+
+export interface DeviationBox extends BaseBox {
+  kind: "deviation";
   category: Category;
   score: number;
-  position: Position;
   deviations: PropertyDeviation[];
 }
+
+/** Only ever built for level === "fail" findings — a passing (AA/AAA) contrast result isn't something to highlight as a problem. */
+export interface AccessibilityBox extends BaseBox {
+  kind: "accessibility";
+  finding: AccessibilityFinding;
+}
+
+/**
+ * Deliberately a discriminated union, not one flat shape with optional
+ * fields: a deviation box and an accessibility box represent two different
+ * kinds of finding (spec-relative score vs. external WCAG pass/fail — see
+ * accessibility/types.ts) and should stay clearly distinguishable in the
+ * data, the same way PageReport/ProductReport keep them as separate fields
+ * rather than blending accessibility in as a fifth deviation category.
+ */
+export type OverlayBox = DeviationBox | AccessibilityBox;
 
 /**
  * An instance can deviate across more than one category at once (e.g. off
@@ -71,6 +105,13 @@ function dominantCategory(deviations: PropertyDeviation[]): Category {
  * visible everywhere it appears, not collapsed to a single sample box.
  * Instances with no captured positions (tag-based fixture extraction,
  * not real-page sampling) contribute no boxes.
+ *
+ * Returns both deviation boxes (gated by `threshold`, as before) and
+ * accessibility boxes (gated by `level === "fail"` — a fixed, non-tunable
+ * cutoff, since "passing" isn't a matter of degree the way a deviation
+ * score is) in one array — callers (the per-page overlay and the
+ * aggregate standalone report) draw and count them together, distinguished
+ * by `kind`.
  */
 export function buildOverlayBoxes(page: ExtractedPage, pageReport: PageReport, threshold = OVERLAY_SCORE_THRESHOLD): OverlayBox[] {
   const elementsById = new Map<string, ExtractedElement>();
@@ -86,6 +127,7 @@ export function buildOverlayBoxes(page: ExtractedPage, pageReport: PageReport, t
       const category = dominantCategory(instance.deviations);
       for (const position of positions) {
         boxes.push({
+          kind: "deviation",
           instanceId: instance.instanceId,
           component: instance.component,
           category,
@@ -96,6 +138,23 @@ export function buildOverlayBoxes(page: ExtractedPage, pageReport: PageReport, t
       }
     }
   }
+
+  for (const finding of pageReport.accessibility ?? []) {
+    if (finding.level !== "fail") continue;
+    const positions = elementsById.get(finding.instanceId)?.positions ?? [];
+    if (positions.length === 0) continue;
+
+    for (const position of positions) {
+      boxes.push({
+        kind: "accessibility",
+        instanceId: finding.instanceId,
+        component: finding.component,
+        position,
+        finding,
+      });
+    }
+  }
+
   return boxes;
 }
 
@@ -119,11 +178,24 @@ export function escapeHtml(s: string): string {
   return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 }
 
-function boxLabel(box: OverlayBox): string {
+/** Plain-English tooltip body, one sentence per line — same humanizeDeviation used for the worst-offenders table, reused here rather than the raw property/value/distance format. */
+function deviationBoxLabel(box: DeviationBox, spec: TokenSpec): string {
   return box.deviations
     .filter((d) => categoryOf(d.property) === box.category)
-    .map((d) => `${d.property}${d.detail ? ` (${d.detail})` : ""}: ${d.rawValue} -> ${d.nearestToken} (distance ${d.distance.toFixed(2)})`)
+    .map((d) => humanizeDeviation(d, resolveToken(d.nearestToken, spec)))
     .join("\n");
+}
+
+function boxColor(box: OverlayBox): string {
+  return box.kind === "accessibility" ? ACCESSIBILITY_COLOR : CATEGORY_COLORS[box.category];
+}
+
+/** Already-written plain English for accessibility (finding.humanReadable, no re-humanization needed); resolves + humanizes on the fly for deviations. */
+function boxTitle(box: OverlayBox, spec: TokenSpec): string {
+  if (box.kind === "accessibility") {
+    return `${box.component} #${box.instanceId} — contrast ${box.finding.ratio.toFixed(1)}:1 (${box.finding.level})\n${box.finding.humanReadable}`;
+  }
+  return `${box.component} #${box.instanceId} — score ${box.score.toFixed(1)}\n${deviationBoxLabel(box, spec)}`;
 }
 
 /** Shared `<style>` body for both the standalone per-page overlay and the aggregate standalone report — kept in one place so the two never drift apart. */
@@ -137,26 +209,30 @@ export const OVERLAY_CSS = `
   .dev-box { position: absolute; border: 2px solid; background: rgba(255, 255, 255, 0.08); box-sizing: border-box; cursor: help; }
 `;
 
-/** The sticky legend bar: page URL, category color key, flagged-occurrence count. */
+/** The sticky legend bar: page URL, category color key (deviations + accessibility), flagged-occurrence count. */
 export function renderOverlayLegend(pageUrl: string, boxes: OverlayBox[]): string {
   const legend = (Object.entries(CATEGORY_COLORS) as [Category, string][])
     .map(([category, color]) => `<span class="legend-item"><span class="swatch" style="background:${color}"></span>${category}</span>`)
     .join("");
+  const accessibilityItem = `<span class="legend-item"><span class="swatch" style="background:${ACCESSIBILITY_COLOR}"></span>accessibility (WCAG fail)</span>`;
+
+  const deviationCount = boxes.filter((b) => b.kind === "deviation").length;
+  const accessibilityCount = boxes.filter((b) => b.kind === "accessibility").length;
 
   return `<div class="legend">
   <strong>${escapeHtml(pageUrl)}</strong>
   ${legend}
-  <span class="count">${boxes.length} flagged occurrence${boxes.length === 1 ? "" : "s"} (score &gt; ${OVERLAY_SCORE_THRESHOLD})</span>
+  ${accessibilityItem}
+  <span class="count">${deviationCount} deviation${deviationCount === 1 ? "" : "s"} (score &gt; ${OVERLAY_SCORE_THRESHOLD}), ${accessibilityCount} contrast failure${accessibilityCount === 1 ? "" : "s"}</span>
 </div>`;
 }
 
-/** The screenshot + absolutely-positioned deviation boxes on top of it. `screenshotSrc` should be a `data:` URI so the markup has no outside file dependency wherever it's embedded. */
-export function renderOverlayStage(screenshotSrc: string, boxes: OverlayBox[]): string {
+/** The screenshot + absolutely-positioned finding boxes (deviations and accessibility failures alike) on top of it. `screenshotSrc` should be a `data:` URI so the markup has no outside file dependency wherever it's embedded. */
+export function renderOverlayStage(screenshotSrc: string, boxes: OverlayBox[], spec: TokenSpec): string {
   const boxDivs = boxes
     .map((box) => {
-      const color = CATEGORY_COLORS[box.category];
-      const title = escapeHtml(`${box.component} #${box.instanceId} — score ${box.score.toFixed(1)}\n${boxLabel(box)}`);
-      return `<div class="dev-box" style="left:${box.position.x}px;top:${box.position.y}px;width:${box.position.width}px;height:${box.position.height}px;border-color:${color};" title="${title}"></div>`;
+      const title = escapeHtml(boxTitle(box, spec));
+      return `<div class="dev-box" style="left:${box.position.x}px;top:${box.position.y}px;width:${box.position.width}px;height:${box.position.height}px;border-color:${boxColor(box)};" title="${title}"></div>`;
     })
     .join("\n  ");
 
@@ -174,7 +250,7 @@ export function renderOverlayStage(screenshotSrc: string, boxes: OverlayBox[]): 
  * file has no dependency on cache/, the report directory, or any relative
  * path surviving outside the checkout that produced it.
  */
-export function renderOverlayHtml(pageUrl: string, screenshotSrc: string, boxes: OverlayBox[]): string {
+export function renderOverlayHtml(pageUrl: string, screenshotSrc: string, boxes: OverlayBox[], spec: TokenSpec): string {
   return `<!doctype html>
 <html>
 <head>
@@ -187,7 +263,7 @@ ${OVERLAY_CSS}
 </head>
 <body>
 ${renderOverlayLegend(pageUrl, boxes)}
-${renderOverlayStage(screenshotSrc, boxes)}
+${renderOverlayStage(screenshotSrc, boxes, spec)}
 </body>
 </html>
 `;

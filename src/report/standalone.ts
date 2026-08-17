@@ -3,6 +3,7 @@ import path from "node:path";
 import type { CrawlTarget } from "../targets/types.js";
 import type { PageReport, ProductReport } from "../aggregator/aggregate.js";
 import type { ExtractedPage } from "../extractor/types.js";
+import type { TokenSpec } from "../schema/tokenSpec.js";
 import { buildOverlayBoxes, escapeHtml, OVERLAY_CSS, renderOverlayLegend, renderOverlayStage } from "./overlay.js";
 
 function toDataUri(relativePath: string): string {
@@ -18,7 +19,7 @@ function toDataUri(relativePath: string): string {
  * see them. Pages with no captured screenshot (Level 1 fixture runs)
  * contribute no section, same as the per-file overlay.
  */
-function renderPageSection(pageReport: PageReport, extracted: ExtractedPage | undefined): string {
+function renderPageSection(pageReport: PageReport, extracted: ExtractedPage | undefined, spec: TokenSpec): string {
   if (!extracted?.screenshotPath) return "";
 
   const boxes = buildOverlayBoxes(extracted, pageReport);
@@ -36,7 +37,7 @@ function renderPageSection(pageReport: PageReport, extracted: ExtractedPage | un
 <div class="page-visuals">
 <div class="overlay">
 ${renderOverlayLegend(pageReport.page, boxes)}
-${renderOverlayStage(screenshotDataUri, boxes)}
+${renderOverlayStage(screenshotDataUri, boxes, spec)}
 </div>
 ${corrected}
 </div>
@@ -108,14 +109,14 @@ ${rows}
  * report.json, summary.md, the per-page overlay files, or cache/: open it
  * anywhere, hand it to anyone, it just works.
  */
-export function renderStandaloneReportHtml(target: CrawlTarget, report: ProductReport, extractedByUrl: Map<string, ExtractedPage>): string {
+export function renderStandaloneReportHtml(target: CrawlTarget, report: ProductReport, extractedByUrl: Map<string, ExtractedPage>, spec: TokenSpec): string {
   const scoreLine =
     report.pages.length === 0
       ? "Score: N/A — every crawled page was excluded as unstable, there is no data to score."
       : `Score: ${report.score.toFixed(1)} / 100 — 0 is fully on-spec, 100 is maximally deviant.`;
 
   const pageSections = report.pages
-    .map((p) => renderPageSection(p, extractedByUrl.get(p.page)))
+    .map((p) => renderPageSection(p, extractedByUrl.get(p.page), spec))
     .filter((s) => s !== "")
     .join("\n");
 
@@ -160,6 +161,6 @@ ${pageSections}
 }
 
 /** Writes reports/<target-key>/report.html — see renderStandaloneReportHtml. */
-export function writeStandaloneReport(dir: string, target: CrawlTarget, report: ProductReport, extractedByUrl: Map<string, ExtractedPage>): void {
-  writeFileSync(path.join(dir, "report.html"), renderStandaloneReportHtml(target, report, extractedByUrl), "utf-8");
+export function writeStandaloneReport(dir: string, target: CrawlTarget, report: ProductReport, extractedByUrl: Map<string, ExtractedPage>, spec: TokenSpec): void {
+  writeFileSync(path.join(dir, "report.html"), renderStandaloneReportHtml(target, report, extractedByUrl, spec), "utf-8");
 }

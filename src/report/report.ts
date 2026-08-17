@@ -3,6 +3,7 @@ import path from "node:path";
 import type { PageReport, ProductReport } from "../aggregator/aggregate.js";
 import type { CrawlTarget } from "../targets/types.js";
 import type { ExtractedPage } from "../extractor/types.js";
+import type { TokenSpec } from "../schema/tokenSpec.js";
 import { buildOverlayBoxes, overlayFilename, pageSlug, renderOverlayHtml } from "./overlay.js";
 import { writeStandaloneReport } from "./standalone.js";
 
@@ -111,7 +112,7 @@ function summaryMarkdown(target: CrawlTarget, report: ProductReport, overlayLink
  * other than the exact checkout that produced it. A data URI makes the
  * file genuinely standalone — open it anywhere, hand it to anyone.
  */
-function writePageOverlays(dir: string, pages: PageReport[], extractedByUrl: Map<string, ExtractedPage>): Map<string, string> {
+function writePageOverlays(dir: string, pages: PageReport[], extractedByUrl: Map<string, ExtractedPage>, spec: TokenSpec): Map<string, string> {
   const links = new Map<string, string>();
   for (const pageReport of pages) {
     const extracted = extractedByUrl.get(pageReport.page);
@@ -122,7 +123,7 @@ function writePageOverlays(dir: string, pages: PageReport[], extractedByUrl: Map
     const screenshotDataUri = `data:image/png;base64,${readFileSync(screenshotAbsPath).toString("base64")}`;
 
     const filename = overlayFilename(pageReport.page);
-    writeFileSync(path.join(dir, filename), renderOverlayHtml(pageReport.page, screenshotDataUri, boxes), "utf-8");
+    writeFileSync(path.join(dir, filename), renderOverlayHtml(pageReport.page, screenshotDataUri, boxes, spec), "utf-8");
     links.set(pageReport.page, filename);
   }
   return links;
@@ -156,15 +157,15 @@ function writePageCorrectedScreenshots(dir: string, pages: PageReport[], extract
  * (Level 2 real-page crawls — Level 1 fixture runs don't pass this and
  * simply get no visual artifacts).
  */
-export function writeReport(target: CrawlTarget, report: ProductReport, extractedPages: ExtractedPage[] = []): void {
+export function writeReport(target: CrawlTarget, report: ProductReport, spec: TokenSpec, extractedPages: ExtractedPage[] = []): void {
   const dir = path.join(REPORTS_ROOT, target.key);
   mkdirSync(dir, { recursive: true });
 
   const extractedByUrl = new Map(extractedPages.map((p) => [p.page, p]));
-  const overlayLinks = writePageOverlays(dir, report.pages, extractedByUrl);
+  const overlayLinks = writePageOverlays(dir, report.pages, extractedByUrl, spec);
   const correctedLinks = writePageCorrectedScreenshots(dir, report.pages, extractedByUrl);
 
   writeFileSync(path.join(dir, "report.json"), JSON.stringify({ target, report }, null, 2), "utf-8");
   writeFileSync(path.join(dir, "summary.md"), summaryMarkdown(target, report, overlayLinks, correctedLinks), "utf-8");
-  writeStandaloneReport(dir, target, report, extractedByUrl);
+  writeStandaloneReport(dir, target, report, extractedByUrl, spec);
 }
