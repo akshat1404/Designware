@@ -3,11 +3,21 @@ import { mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { writeReport } from "../src/report/report.js";
 import { overlayFilename } from "../src/report/overlay.js";
+import { validateTokenSpec, type TokenSpec } from "../src/schema/tokenSpec.js";
 import type { CrawlTarget } from "../src/targets/types.js";
 import type { PageReport, ProductReport } from "../src/aggregator/aggregate.js";
 import type { ExtractedPage } from "../src/extractor/types.js";
 
 const TEST_KEY = "test-report-target";
+
+const TEST_SPEC: TokenSpec = validateTokenSpec({
+  colors: { "brand-primary": "#3366FF" },
+  spacing: [4, 8, 16],
+  radius: [4, 8],
+  fontSize: [12, 16, 24],
+  fontFamily: ["Arial", "sans-serif"],
+  fontWeight: [400, 700],
+});
 
 // Smallest possible valid PNG (1x1, transparent) — enough to round-trip through readFileSync/base64.
 const FAKE_PNG = Buffer.from("iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=", "base64");
@@ -54,7 +64,7 @@ const report: ProductReport = {
 
 describe("writeReport", () => {
   it("writes report.json with the full target and report data", () => {
-    writeReport(target, report);
+    writeReport(target, report, TEST_SPEC);
     const jsonPath = path.resolve(process.cwd(), "reports", TEST_KEY, "report.json");
     const parsed = JSON.parse(readFileSync(jsonPath, "utf-8"));
     expect(parsed.target.key).toBe(TEST_KEY);
@@ -62,7 +72,7 @@ describe("writeReport", () => {
   });
 
   it("writes a human-readable summary.md with score, breakdown, offenders, and unstable pages", () => {
-    writeReport(target, report);
+    writeReport(target, report, TEST_SPEC);
     const mdPath = path.resolve(process.cwd(), "reports", TEST_KEY, "summary.md");
     const summary = readFileSync(mdPath, "utf-8");
     expect(summary).toContain("42.5 / 100");
@@ -72,7 +82,7 @@ describe("writeReport", () => {
   });
 
   it("flags on-spec targets with a note that they should score near zero", () => {
-    writeReport({ ...target, kind: "on-spec" }, report);
+    writeReport({ ...target, kind: "on-spec" }, report, TEST_SPEC);
     const mdPath = path.resolve(process.cwd(), "reports", TEST_KEY, "summary.md");
     const summary = readFileSync(mdPath, "utf-8");
     expect(summary).toMatch(/treat that as a matcher bug/i);
@@ -80,7 +90,7 @@ describe("writeReport", () => {
 
   it('reports "N/A" rather than a misleading 0.0/100 when every page was excluded as unstable', () => {
     const allUnstable: ProductReport = { ...report, pages: [], unstablePages: target.urls };
-    writeReport(target, allUnstable);
+    writeReport(target, allUnstable, TEST_SPEC);
     const mdPath = path.resolve(process.cwd(), "reports", TEST_KEY, "summary.md");
     const summary = readFileSync(mdPath, "utf-8");
     expect(summary).toContain("N/A");
@@ -101,7 +111,7 @@ describe("writeReport", () => {
       },
     ];
 
-    writeReport(target, report, extractedPages);
+    writeReport(target, report, TEST_SPEC, extractedPages);
 
     const overlayPath = path.resolve(process.cwd(), "reports", TEST_KEY, overlayFilename(scoredPage.page));
     const overlayHtml = readFileSync(overlayPath, "utf-8");
@@ -112,7 +122,7 @@ describe("writeReport", () => {
   });
 
   it("links the standalone report.html from the top of summary.md", () => {
-    writeReport(target, report);
+    writeReport(target, report, TEST_SPEC);
     const mdPath = path.resolve(process.cwd(), "reports", TEST_KEY, "summary.md");
     const summary = readFileSync(mdPath, "utf-8");
     expect(summary).toContain("(./report.html)");
@@ -132,7 +142,7 @@ describe("writeReport", () => {
       },
     ];
 
-    writeReport(target, report, extractedPages);
+    writeReport(target, report, TEST_SPEC, extractedPages);
 
     const htmlPath = path.resolve(process.cwd(), "reports", TEST_KEY, "report.html");
     const html = readFileSync(htmlPath, "utf-8");
@@ -151,7 +161,7 @@ describe("writeReport", () => {
   });
 
   it("omits the accessibility section from summary.md and report.html when there's nothing to report", () => {
-    writeReport(target, report);
+    writeReport(target, report, TEST_SPEC);
     const summary = readFileSync(path.resolve(process.cwd(), "reports", TEST_KEY, "summary.md"), "utf-8");
     const html = readFileSync(path.resolve(process.cwd(), "reports", TEST_KEY, "report.html"), "utf-8");
     expect(summary).not.toContain("WCAG contrast");
@@ -188,7 +198,7 @@ describe("writeReport", () => {
         ],
       },
     };
-    writeReport(target, withAccessibility);
+    writeReport(target, withAccessibility, TEST_SPEC);
     const summary = readFileSync(path.resolve(process.cwd(), "reports", TEST_KEY, "summary.md"), "utf-8");
     const html = readFileSync(path.resolve(process.cwd(), "reports", TEST_KEY, "report.html"), "utf-8");
 
@@ -202,12 +212,12 @@ describe("writeReport", () => {
 
   it("shows the unverified-baseline warning in report.html when target.unverified is set, and omits it otherwise", () => {
     const unverifiedTarget: CrawlTarget = { ...target, unverified: "Could not confirm these pages render actual Polaris components." };
-    writeReport(unverifiedTarget, report);
+    writeReport(unverifiedTarget, report, TEST_SPEC);
     const unverifiedHtml = readFileSync(path.resolve(process.cwd(), "reports", TEST_KEY, "report.html"), "utf-8");
     expect(unverifiedHtml).toContain("UNVERIFIED ON-SPEC BASELINE");
     expect(unverifiedHtml).toContain("Could not confirm these pages render actual Polaris components.");
 
-    writeReport(target, report);
+    writeReport(target, report, TEST_SPEC);
     const regularHtml = readFileSync(path.resolve(process.cwd(), "reports", TEST_KEY, "report.html"), "utf-8");
     expect(regularHtml).not.toContain("UNVERIFIED ON-SPEC BASELINE");
   });
