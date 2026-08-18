@@ -52,6 +52,7 @@ src/
   targets/                   per-company crawl target definitions + registry (Level 2)
   cache/cache.ts             content-addressed extraction cache (Level 2, gitignored)
   report/report.ts           JSON + markdown report writer (Level 2, gitignored output)
+  report/overlay.ts          deviation + accessibility box overlay: humanized tooltips, per-finding-kind color coding
   pipeline.ts                Level 1 orchestrator: spec -> extract -> match -> aggregate
   validate.ts                Level 2 CLI: spec (via adapter) -> crawl -> match -> aggregate -> report
   cli.ts                     Level 1 CLI: runs pipeline against the synthetic fixtures
@@ -124,11 +125,16 @@ ordering becoming directionally correct (real-app now scores at or above
 its own on-spec baseline, not below it).
 
 Each target's `reports/<key>/` also has an HTML overlay (captured
-screenshot with flagged deviations boxed, color-coded by category) and a
+screenshot with flagged deviations boxed and color-coded by category, plus
+failing WCAG contrast findings boxed in a fifth, distinct amber) and a
 corrected-render PNG (same page, layout-safe properties — color,
 background-color, border-color, border-radius, font-family — patched to
 their nearest token in the same live session, before the page closes) per
-crawled page, linked from that target's `summary.md`.
+crawled page, linked from that target's `summary.md` and embedded directly
+in `report.html`. Box tooltips are plain-English sentences (the same
+humanizer used for the worst-offenders table), not raw property/value/token
+dumps — hover any box for "top-left corner radius is 3px, should be 2px"
+rather than a distance number.
 
 Deliberately unresolved for now (deployment/integration decisions, not
 blocking the core math):
