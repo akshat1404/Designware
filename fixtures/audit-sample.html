@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Audit entrypoint fixture</title>
+</head>
+<body style="margin:0; font-family: Arial, sans-serif;">
+  <!-- Nav: two on-spec buttons, one deliberately off-brand (audit.ts test doesn't
+       assert exact scoring, but a real deviation here makes the demo output
+       actually show something, same spirit as fixtures/deviant.html. -->
+  <nav style="padding:16px; background-color:#FFFFFF;">
+    <button style="background-color:#3366FF;color:#FFFFFF;padding:8px 16px;border-radius:8px;font-size:14px;font-weight:700;border:none;margin-right:8px;">Home</button>
+    <button style="background-color:#3366FF;color:#FFFFFF;padding:8px 16px;border-radius:8px;font-size:14px;font-weight:700;border:none;margin-right:8px;">Docs</button>
+    <button style="background-color:#00CC44;color:#FFFFFF;padding:8px 16px;border-radius:8px;font-size:14px;font-weight:700;border:none;">Contact</button>
+  </nav>
+
+  <header style="padding:24px; background-color:#FFFFFF;">
+    <h1 style="color:#111111; font-size:24px; font-weight:700; margin:0;">Audit entrypoint fixture</h1>
+    <p style="color:#111111; font-size:16px; margin:8px 0 0;">A small local page for exercising the ad-hoc audit pipeline end to end.</p>
+    <!-- Deliberately low contrast: near-white text on white, for the
+         accessibility-check path to have something real to flag. -->
+    <span style="color:#eeeeee; font-size:14px;">barely visible badge text</span>
+  </header>
+
+  <main style="padding:24px; background-color:#FFFFFF;">
+    <div style="background-color:#FFFFFF; border:1px solid #111111; padding:16px; border-radius:8px; margin-bottom:16px;">
+      <h3 style="color:#111111; font-size:20px; font-weight:500; margin:0;">Card one</h3>
+      <p style="color:#111111; font-size:16px; margin:8px 0 0;">First card body text.</p>
+    </div>
+    <div style="background-color:#FFFFFF; border:1px solid #111111; padding:16px; border-radius:8px; margin-bottom:16px;">
+      <h3 style="color:#111111; font-size:20px; font-weight:500; margin:0;">Card two</h3>
+      <p style="color:#111111; font-size:16px; margin:8px 0 0;">Second card body text.</p>
+    </div>
+    <div style="background-color:#FFFFFF; border:1px solid #111111; padding:16px; border-radius:8px;">
+      <h3 style="color:#111111; font-size:20px; font-weight:500; margin:0;">Card three</h3>
+      <p style="color:#111111; font-size:16px; margin:8px 0 0;">Third card body text.</p>
+    </div>
+  </main>
+
+  <footer style="padding:16px; background-color:#111111;">
+    <p style="color:#FFFFFF; font-size:12px; margin:0;">&copy; Audit fixture footer</p>
+  </footer>
+</body>
+</html>
