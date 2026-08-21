@@ -53,8 +53,10 @@ src/
   cache/cache.ts             content-addressed extraction cache (Level 2, gitignored)
   report/report.ts           JSON + markdown report writer (Level 2, gitignored output)
   report/overlay.ts          deviation + accessibility box overlay: humanized tooltips, per-finding-kind color coding
+  runCrawlTarget.ts          shared crawl -> score -> report driver, used by both validate.ts and audit.ts
   pipeline.ts                Level 1 orchestrator: spec -> extract -> match -> aggregate
-  validate.ts                Level 2 CLI: spec (via adapter) -> crawl -> match -> aggregate -> report
+  validate.ts                Level 2 CLI: registry target (spec via adapter) -> crawl -> match -> aggregate -> report
+  audit.ts                   generic CLI: your own TokenSpec + URLs, no registry entry required — see "Try it on your own site" below
   cli.ts                     Level 1 CLI: runs pipeline against the synthetic fixtures
 fixtures/                    synthetic compliant/deviant HTML + token spec
 test/                        unit tests + end-to-end pipeline test
@@ -70,6 +72,28 @@ npm run report                          # Level 1: run against synthetic fixture
 npm run validate -- --target=github     # Level 2: run against a real company (see targets/registry.ts)
 npm run validate -- --target=all        # Level 2: run against every registered target
 ```
+
+## Try it on your own site
+
+Every target above is hardwired into `targets/registry.ts`, but the pipeline itself
+doesn't need a registry entry — that machinery only exists to translate a specific
+company's npm token package into a `TokenSpec`. If you already have (or hand-write) a
+`TokenSpec`-shaped JSON file (see `fixtures/token-spec.json` for the shape: `colors`,
+optional `themes`, `spacing`/`radius`/`fontSize`/`fontWeight` scales, `fontFamily`), you
+can point Specular at your own site directly, no adapter, no fork, no registry entry:
+
+```
+npm run audit -- --spec=./my-tokens.json --urls=https://example.com,https://example.com/about --label="My Company" --key=my-company
+```
+
+`--label` and `--key` are optional (derived from the first URL and from the label,
+respectively, if omitted); `--urls-file=<path>` accepts a longer list, one URL per line,
+as an alternative to `--urls`; `--kind=on-spec` opts a target into the "should score
+near-zero" baseline framing (defaults to `real-app`, since an arbitrary site has no
+guarantee of being a clean baseline the way this project's four hand-verified on-spec
+targets are); `--refresh` bypasses the cache, same as `validate`. Output lands in
+`reports/<key>/` — the same `report.json`/`summary.md`/`report.html`, overlay, and
+accessibility findings every registered target gets, from the exact same pipeline.
 
 ## Status
 
